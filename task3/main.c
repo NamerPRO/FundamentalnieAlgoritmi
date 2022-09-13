@@ -100,6 +100,7 @@ int main(int argc, char* argv[]) {
   }
   FILE* output_file = NULL;
   if ((output_file = fopen(path, "w")) == NULL) {
+    fclose(input_file);
     return FILE_EXCEPTION;
   }
   char symbol;
@@ -128,6 +129,8 @@ int main(int argc, char* argv[]) {
         int is_overflowed_letters = 0;
         count_letters = safe_sum(count_letters, 1, &is_overflowed_letters);
         if (is_overflowed_letters) {
+          fclose(input_file);
+          fclose(output_file);
           return VARIABLE_OVERFLOWED_EXCEPTION;
         }
       }
@@ -148,6 +151,8 @@ int main(int argc, char* argv[]) {
         int is_overflowed_symbols = 0;
         count_symbols = safe_sum(count_symbols, 1, &is_overflowed_symbols);
         if (is_overflowed_symbols) {
+          fclose(input_file);
+          fclose(output_file);
           return VARIABLE_OVERFLOWED_EXCEPTION;
         }
       }
@@ -168,18 +173,18 @@ int main(int argc, char* argv[]) {
   case F: ;
     int string_counter = 1;
     char string[255];
+    int str_length;
     while (!feof(input_file)) {
       string[0] = '\0';
+      str_length = 0;
       while ((symbol = fgetc(input_file)) != EOF) {
-        if (symbol != ' ' && symbol != '\n') {
-          char str_symbol[2];
-          str_symbol[0] = symbol;
-          str_symbol[1] = '\0';
-          strcat(string, str_symbol);
+        if (!isspace(symbol)) {
+          string[str_length++] = symbol;
           continue;
         }
         break;
       }
+      string[str_length] = '\0';
       if (string_counter % 2 == 0 && string_counter % 5 != 0) {
         to_lower_case(string);
         fprintf(output_file, "%s", string);
@@ -206,6 +211,8 @@ int main(int argc, char* argv[]) {
     }
     break;
   case UNKNOWN:
+    fclose(input_file);
+    fclose(output_file);
     return UNKNOWN_FLAG_EXCEPTION;
   }
   fclose(input_file);
