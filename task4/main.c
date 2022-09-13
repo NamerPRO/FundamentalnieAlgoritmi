@@ -18,14 +18,20 @@ int main(int argc, char* argv[]) {
   FILE* file3 = NULL;
 
   if ((file1 = fopen("./f1", "w")) == NULL) {
+    fclose(working_file);
     return FILE_EXCEPTION;
   }
 
   if ((file2 = fopen("./f2", "w")) == NULL) {
+    fclose(file1);
+    fclose(working_file);
     return FILE_EXCEPTION;
   }
 
   if ((file3 = fopen("./f3", "w")) == NULL) {
+    fclose(file1);
+    fclose(file2);
+    fclose(working_file);
     return FILE_EXCEPTION;
   }
 
@@ -58,14 +64,20 @@ int main(int argc, char* argv[]) {
   }
 
   if ((file1 = fopen("./f1", "r")) == NULL) {
+    fclose(working_file);
     return FILE_EXCEPTION;
   }
 
   if ((file2 = fopen("./f2", "r")) == NULL) {
+    fclose(file1);
+    fclose(working_file);
     return FILE_EXCEPTION;
   }
 
   if ((file3 = fopen("./f3", "r")) == NULL) {
+    fclose(file1);
+    fclose(file2);
+    fclose(working_file);
     return FILE_EXCEPTION;
   }
 
