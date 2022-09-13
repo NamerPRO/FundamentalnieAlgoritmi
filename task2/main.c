@@ -3,6 +3,7 @@
 #include <string.h>
 #include <float.h>
 #include <math.h>
+#include <ctype.h>
 
 #include "overflow.h"
 
@@ -129,6 +130,45 @@ double max(double a, double b) {
   return (a > b) ? a : b;
 }
 
+double solve_quadratic_equotion(double a, double b, double c) {
+  printf("Solution of %lfx^2+(%lf)x+(%lf)=0 is:\n", a, b, c);
+  if (fabs(a) > DBL_EPSILON) {
+    int is_overflowed_equation = 0;
+    double d = safe_mult(b, b, &is_overflowed_equation);
+    if (is_overflowed_equation) {
+      return VARIABLE_OVERFLOW_EXCEPTION;
+    }
+    double p = safe_mult(4, a, &is_overflowed_equation);
+    if (is_overflowed_equation) {
+      return VARIABLE_OVERFLOW_EXCEPTION;
+    }
+    p = safe_mult(p, c, &is_overflowed_equation);
+    if (is_overflowed_equation) {
+      return VARIABLE_OVERFLOW_EXCEPTION;
+    }
+    d = safe_min(d, p, &is_overflowed_equation);
+    if (is_overflowed_equation) {
+      return VARIABLE_OVERFLOW_EXCEPTION;
+    }
+    //double d = b * b - 4 * a * c;
+
+    if (fabs(d) < DBL_EPSILON) {
+      printf("x=%lf\n", -b / (2 * a));
+    } else if (d > 0) {
+      printf("x=%lf\n", (-b + sqrt(d)) / (2 * a));
+      printf("x=%lf\n", (-b - sqrt(d)) / (2 * a));
+    } else {
+      printf("Equotion has no real roots :(\n");
+    }
+  } else if (fabs(b) > DBL_EPSILON) {
+    printf("x=%lf\n", -c / b);
+  } else if (fabs(c) < DBL_EPSILON) {
+    printf("x=any number\n");
+  } else {
+    printf("Given identically false equotion!\n");
+  }
+}
+
 int main(int argc, char* argv[]) {
   if (argc < 2) {
     //printf("NO_FLAG_GIVEN\n");
@@ -158,42 +198,12 @@ int main(int argc, char* argv[]) {
       //printf("WRONG_NUMBER_EXCEPTION\n");
       return WRONG_NUMBER_EXCEPTION;
     }
-    printf("Solution of %lfx^2+(%lf)x+(%lf)=0 is:\n", a, b, c);
-    if (fabs(a) > DBL_EPSILON) {
-      int is_overflowed_equation = 0;
-      double d = safe_mult(b, b, &is_overflowed_equation);
-      if (is_overflowed_equation) {
-        return VARIABLE_OVERFLOW_EXCEPTION;
-      }
-      double p = safe_mult(4, a, &is_overflowed_equation);
-      if (is_overflowed_equation) {
-        return VARIABLE_OVERFLOW_EXCEPTION;
-      }
-      p = safe_mult(p, c, &is_overflowed_equation);
-      if (is_overflowed_equation) {
-        return VARIABLE_OVERFLOW_EXCEPTION;
-      }
-      d = safe_min(d, p, &is_overflowed_equation);
-      if (is_overflowed_equation) {
-        return VARIABLE_OVERFLOW_EXCEPTION;
-      }
-      //double d = b * b - 4 * a * c;
-
-      if (fabs(d) < DBL_EPSILON) {
-        printf("x=%lf\n", -b / (2 * a));
-      } else if (d > 0) {
-        printf("x=%lf\n", (-b + sqrt(d)) / (2 * a));
-        printf("x=%lf\n", (-b - sqrt(d)) / (2 * a));
-      } else {
-        printf("Equotion has no real roots :(\n");
-      }
-    } else if (fabs(b) > DBL_EPSILON) {
-      printf("x=%lf\n", -c / b);
-    } else if (fabs(c) < DBL_EPSILON) {
-      printf("x=any number\n");
-    } else {
-      printf("Given identically false equotion!\n");
-    }
+    solve_quadratic_equotion(a, b, c);
+    solve_quadratic_equotion(a, c, b);
+    solve_quadratic_equotion(b, a, c);
+    solve_quadratic_equotion(b, c, a);
+    solve_quadratic_equotion(c, a, b);
+    solve_quadratic_equotion(c, b, a);
     break;
   case M:
     if (argc != 4) {
