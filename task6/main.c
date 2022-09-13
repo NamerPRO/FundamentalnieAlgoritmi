@@ -13,10 +13,14 @@ int max(const int a, const int b) {
 }
 
 int safe_get_minimal_system(char* number, int* is_number) {
+  int i = 0;
+  if (*number == '-') {
+    ++i;
+  }
   int max_digit = 0;
   int digit_to_int = 0;
   *is_number = 1;
-  for (int i = 0; number[i] != '\0'; ++i) {
+  for (; number[i] != '\0'; ++i) {
     digit_to_int = get_decimal_value(number[i]);
     if (digit_to_int == -1) {
       *is_number = 0;

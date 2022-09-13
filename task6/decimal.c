@@ -1,15 +1,21 @@
 #include "decimal.h"
 
 int safe_to_dec(char* num, int sys, int* is_flagged) {
+  int i = 0;
+  int negative_flag = 1;
+  if (*num == '-') {
+    negative_flag = -1;
+    ++i;
+  }
   int dec_result = 0;
   *is_flagged = 0;
-  int power = safe_pow(sys, strlen(num) - 1, is_flagged);
+  int power = safe_pow(sys, strlen(num) - 1 - i, is_flagged);
   if (*is_flagged) {
     return -1;
   }
   int digit_to_int;
   int pre_result;
-  for (int i = 0; num[i] != '\0' && !*is_flagged; ++i) {
+  for (; num[i] != '\0' && !*is_flagged; ++i) {
     digit_to_int = get_decimal_value(num[i]);
     if (digit_to_int == -1) {
       *is_flagged = 1;
@@ -25,7 +31,7 @@ int safe_to_dec(char* num, int sys, int* is_flagged) {
     }
     power /= sys;
   }
-  return dec_result;
+  return dec_result * negative_flag;
 }
 
 int get_decimal_value(char symbol) {
