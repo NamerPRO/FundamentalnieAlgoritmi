@@ -12,6 +12,10 @@
 #define WRONG_NUMBER_EXCEPTION 3
 #define UNKNOWN_FLAG_EXCEPTION 4
 #define VARIABLE_OVERFLOW_EXCEPTION 5
+#define ONE_ROOT 6
+#define TWO_ROOTS 7
+#define ANY_NUMBER 8
+#define IDENTICALLY_FALSE 9
 
 typedef enum FLAG_TYPE {
   Q,
@@ -19,6 +23,10 @@ typedef enum FLAG_TYPE {
   T,
   UNKNOWN
 } FLAG_TYPE;
+
+typedef struct roots {
+  double x1, x2;
+} roots;
 
 int char_to_digit(char x) {
   return x - '0';
@@ -130,8 +138,7 @@ double max(double a, double b) {
   return (a > b) ? a : b;
 }
 
-double solve_quadratic_equotion(double a, double b, double c) {
-  printf("Solution of %lfx^2+(%lf)x+(%lf)=0 is:\n", a, b, c);
+int solve_quadratic_equotion(double a, double b, double c, roots* eq_roots) {
   if (fabs(a) > DBL_EPSILON) {
     int is_overflowed_equation = 0;
     double d = safe_mult(b, b, &is_overflowed_equation);
@@ -153,19 +160,49 @@ double solve_quadratic_equotion(double a, double b, double c) {
     //double d = b * b - 4 * a * c;
 
     if (fabs(d) < DBL_EPSILON) {
-      printf("x=%lf\n", -b / (2 * a));
+      // printf("x=%lf\n", -b / (2 * a));
+      eq_roots->x1 = -b / (2 * a);
+      eq_roots->x2 = -b / (2 * a);
+      return TWO_ROOTS;
     } else if (d > 0) {
-      printf("x=%lf\n", (-b + sqrt(d)) / (2 * a));
-      printf("x=%lf\n", (-b - sqrt(d)) / (2 * a));
+      // printf("x=%lf\n", (-b + sqrt(d)) / (2 * a));
+      // printf("x=%lf\n", (-b - sqrt(d)) / (2 * a));
+      eq_roots->x1 = (-b + sqrt(d)) / (2 * a);
+      eq_roots->x2 = (-b - sqrt(d)) / (2 * a);
+      return TWO_ROOTS;
     } else {
-      printf("Equotion has no real roots :(\n");
+      // printf("Equotion has no real roots :(\n");
+      return IDENTICALLY_FALSE;
     }
   } else if (fabs(b) > DBL_EPSILON) {
-    printf("x=%lf\n", -c / b);
+    // printf("x=%lf\n", -c / b);
+    eq_roots->x1 = -c / b;
+    return ONE_ROOT;
   } else if (fabs(c) < DBL_EPSILON) {
-    printf("x=any number\n");
+    // printf("x=any number\n");
+    return ANY_NUMBER;
   } else {
-    printf("Given identically false equotion!\n");
+    // printf("Given identically false equotion!\n");
+    return IDENTICALLY_FALSE;
+  }
+}
+
+void solve_text_output(double a, double b, double c, roots* eq_roots) {
+  printf("Solution of %lfx^2+(%lf)x+(%lf)=0 is:\n", a, b, c);
+  int code = solve_quadratic_equotion(a, b, c, eq_roots);
+  switch (code) {
+    case ONE_ROOT:
+      printf("x=%lf\n", eq_roots->x1);
+      break;
+    case TWO_ROOTS:
+      printf("x1=%lf\nx2=%lf\n", eq_roots->x1, eq_roots->x2);
+      break;
+    case ANY_NUMBER:
+      printf("Any number is a solution.\n");
+      break;
+    case IDENTICALLY_FALSE:
+      printf("Equation is identically false.\n");
+      break;
   }
 }
 
@@ -198,12 +235,13 @@ int main(int argc, char* argv[]) {
       //printf("WRONG_NUMBER_EXCEPTION\n");
       return WRONG_NUMBER_EXCEPTION;
     }
-    solve_quadratic_equotion(a, b, c);
-    solve_quadratic_equotion(a, c, b);
-    solve_quadratic_equotion(b, a, c);
-    solve_quadratic_equotion(b, c, a);
-    solve_quadratic_equotion(c, a, b);
-    solve_quadratic_equotion(c, b, a);
+    roots eq_roots;
+    solve_text_output(a, b, c, &eq_roots);
+    solve_text_output(a, c, b, &eq_roots);
+    solve_text_output(b, a, c, &eq_roots);
+    solve_text_output(b, c, a, &eq_roots);
+    solve_text_output(c, a, b, &eq_roots);
+    solve_text_output(c, b, a, &eq_roots);
     break;
   case M:
     if (argc != 4) {
