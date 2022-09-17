@@ -203,6 +203,9 @@ void solve_text_output(double a, double b, double c, roots* eq_roots) {
     case IDENTICALLY_FALSE:
       printf("Equation is identically false.\n");
       break;
+    default:
+      printf("Something went wrong while solving quadratic equation!\n");
+      break;
   }
 }
 
