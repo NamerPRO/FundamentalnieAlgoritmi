@@ -1,16 +1,33 @@
 #include "cinteger.h"
 
-unsigned int get_digit_from_string(char* str, int* is_overflowed_input) {
-  unsigned int number = 0;
-  for (unsigned int i = 0; i < strlen(str) && !*is_overflowed_input; ++i) {
+int is_symbol_digit(char symbol) {
+  return (symbol >= '0') && (symbol <= '9');
+}
+
+int get_digit_from_string(char* str, int* execute_status) {
+  int negative_flag = 1;
+  int i = 0;
+  if (str[0] == '-') {
+    negative_flag = -1;
+    ++i;
+  }
+  int number = 0;
+  for (; i < (int)strlen(str); ++i) {
     if (!is_symbol_digit(str[i])) {
+      *execute_status = NAN;
       return 0;
     }
-    number = safe_mult(number, 10, is_overflowed_input);
-    if (*is_overflowed_input) {
+    number = safe_mult(number, 10, execute_status);
+    if (*execute_status == OVERFLOW) {
       break;
     }
-    number = safe_sum(number, str[i] - '0', is_overflowed_input);
+    number = safe_sum(number, str[i] - '0', execute_status);
+    if (*execute_status == OVERFLOW) {
+      break;
+    }
   }
-  return number;
+  if (*execute_status != OVERFLOW) {
+    *execute_status = NUMBER;
+  }
+  return negative_flag * number;
 }

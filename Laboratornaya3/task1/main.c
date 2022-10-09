@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 #include "cinteger.h"
 #include "coverflow.h"
+#include "cstring.h"
 
-#define STANDART_STRING_SIZE 35
 #define CONVERTATION_EXCEPTION 1
+#define OVERFLOW_EXCEPTION 2
+#define NAN_EXCEPTION 3
+#define INPUT_EXCEPTION 4
 
 typedef struct cnumber {
   char* real_start;
@@ -16,7 +20,7 @@ char to_system(int symbol) {
   return (symbol < 10) ? symbol + '0' : symbol - 10 + 'A';
 }
 
-cnumber convert(int number, int r) {
+cnumber convert(int number, int r, int negative_flag) {
   char* buffer = (char*)malloc(sizeof(char) * STANDART_STRING_SIZE);
   if (buffer == NULL) {
     return (cnumber){ .real_start = NULL, .data_start = NULL };
@@ -27,6 +31,9 @@ cnumber convert(int number, int r) {
   do {
     *--buffer_ptr = to_system(number & mask);
   } while (number = (number >> r));
+  if (negative_flag == -1) {
+    *--buffer_ptr = '-';
+  }
   return (cnumber){ .real_start = buffer, .data_start = buffer_ptr };
 }
 
@@ -43,10 +50,55 @@ void free_number(cnumber number) {
 }
 
 int main() {
-  int number, r;
   printf("Enter a number and r:");
-  scanf("%d%d", &number, &r);
-  cnumber converted_number = convert(number, r);
+
+  string str_number;
+  if (create_string(&str_number) == MEMORY_ALLOCATE_EXCEPTION) {
+    return MEMORY_ALLOCATE_EXCEPTION;
+  }
+  if (read_string(&str_number, isspace) == MEMORY_ALLOCATE_EXCEPTION) {
+    free_string(str_number);
+    return MEMORY_ALLOCATE_EXCEPTION;
+  }
+
+  char* str_r;
+  if (create_string(&str_r) == MEMORY_ALLOCATE_EXCEPTION) {
+    return MEMORY_ALLOCATE_EXCEPTION;
+  }
+  if (read_string(&str_r, isspace) == MEMORY_ALLOCATE_EXCEPTION) {
+    free_string(str_r);
+    return MEMORY_ALLOCATE_EXCEPTION;
+  }
+
+  int number, r, status;
+  number = get_digit_from_string(str_number, &status);
+  free_string(str_number);
+  if (status == OVERFLOW) {
+    free_string(str_r);
+    return OVERFLOW_EXCEPTION;
+  }
+  if (status == NAN) {
+    free_string(str_r);
+    return NAN_EXCEPTION;
+  }
+  r = get_digit_from_string(str_r, &status);
+  free_string(str_r);
+  if (status == OVERFLOW) {
+    return OVERFLOW_EXCEPTION;
+  }
+  if (status == NAN) {
+    return NAN_EXCEPTION;
+  }
+  if (r < 1 || r > 5) {
+    return INPUT_EXCEPTION;
+  }
+
+  int negative_flag = 1;
+  if (number < 0) {
+    negative_flag = -1;
+  }
+
+  cnumber converted_number = convert(negative_flag * number, r, negative_flag);
   if (has_number(converted_number)) {
     printf("Converted number = %s\n", get_number(converted_number));
     free_number(converted_number);
