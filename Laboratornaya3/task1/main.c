@@ -20,7 +20,12 @@ char to_system(int symbol) {
   return (symbol < 10) ? symbol + '0' : symbol - 10 + 'A';
 }
 
-cnumber convert(int number, int r, int negative_flag) {
+cnumber convert(int number, int r) {
+  int negative_flag = 1;
+  if (number < 0) {
+    negative_flag = -1;
+  }
+  number *= negative_flag;
   char* buffer = (char*)malloc(sizeof(char) * STANDART_STRING_SIZE);
   if (buffer == NULL) {
     return (cnumber){ .real_start = NULL, .data_start = NULL };
@@ -93,12 +98,7 @@ int main() {
     return INPUT_EXCEPTION;
   }
 
-  int negative_flag = 1;
-  if (number < 0) {
-    negative_flag = -1;
-  }
-
-  cnumber converted_number = convert(negative_flag * number, r, negative_flag);
+  cnumber converted_number = convert(number, r);
   if (has_number(converted_number)) {
     printf("Converted number = %s\n", get_number(converted_number));
     free_number(converted_number);
