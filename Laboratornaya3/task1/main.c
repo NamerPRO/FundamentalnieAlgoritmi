@@ -68,9 +68,11 @@ int main() {
 
   char* str_r;
   if (create_string(&str_r) == MEMORY_ALLOCATE_EXCEPTION) {
+    free_string(str_number);
     return MEMORY_ALLOCATE_EXCEPTION;
   }
   if (read_string(&str_r, isspace) == MEMORY_ALLOCATE_EXCEPTION) {
+    free_string(str_number);
     free_string(str_r);
     return MEMORY_ALLOCATE_EXCEPTION;
   }
