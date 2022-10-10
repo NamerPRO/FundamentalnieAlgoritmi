@@ -16,7 +16,6 @@ typedef struct string {
   unsigned long int size;
 } string;
 
-
 void create_string(string* str, char* value);
 int create_empty_string(string* str);
 int read_string(FILE* stream, string* str, int (*cmp)(int x));
@@ -29,7 +28,7 @@ int string_compare(string* str1, string* str2, int (*cmp)(string* str1, string* 
 int create_string_duplicate(string* str, string* cpy_str);
 int string_concat(unsigned long int count, string* out_str, ...);
 int string_copy(string* from, string* to);
-char* remove_data_from_string(string* str, unsigned long int left_bound, unsigned long int right_bound);
-
+void remove_data_from_string(string* str, unsigned long int left_bound, unsigned long int right_bound);
+char* str(char* value);
 
 #endif

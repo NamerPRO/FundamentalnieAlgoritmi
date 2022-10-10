@@ -5,6 +5,16 @@ void create_string(string* str, char* value) {
   str->size = STANDART_STRING_SIZE * (strlen(value) / STANDART_STRING_SIZE + 1);
 }
 
+char* str(char* value) {
+  unsigned long int size = strlen(value);
+  char* dinamic_str = (char*)malloc(sizeof(char) * size);
+  for (unsigned long int i = 0; i < size; ++i) {
+    dinamic_str[i] = value[i];
+  }
+  dinamic_str[size] = '\0';
+  return dinamic_str;
+}
+
 int create_empty_string(string* str) {
   str->str = (char*)malloc(sizeof(char) * STANDART_STRING_SIZE);
   if (str->str == NULL) {
@@ -80,14 +90,11 @@ int string_compare(string* str1, string* str2, int (*cmp)(string* str1, string* 
   return cmp(str1, str2);
 }
 
-//передавать неинициализированный cpy_str!
-//иначе утечка памяти
 int create_string_duplicate(string* str, string* cpy_str) {
   char* new_str = (char*)malloc(sizeof(char) * str->size);
   if (new_str == NULL) {
     return MEMORY_ALLOCATE_EXCEPTION;
   }
-  // free(cpy_str->str);
   cpy_str->str = new_str;
   unsigned int i = 0;
   for (; str->str[i]; ++i) {
@@ -101,7 +108,6 @@ int create_string_duplicate(string* str, string* cpy_str) {
 int string_concat(unsigned long int count, string* out_str, ...) {
   va_list args;
   va_start(args, out_str);
-  // string* out_str = va_arg(args, &string);
   unsigned long int current_length = get_string_size(out_str);
   unsigned long int max_symbols_in_str = out_str->size;
   for (unsigned long int i = 1; i < count; ++i) {
@@ -131,7 +137,7 @@ int string_copy(string* from, string* to) {
   free(to->str);
   to->str = backup;
   to->size = from->size;
-  int i = 0;
+  unsigned long int i = 0;
   for (; from->str[i]; ++i) {
     to->str[i] = from->str[i];
   }
@@ -139,32 +145,9 @@ int string_copy(string* from, string* to) {
   return SUCCESS_FUNCTION_RETURN;
 }
 
-//[left_bound; right_bound]
-char* remove_data_from_string(string* str, unsigned long int left_bound, unsigned long int right_bound) {
+void remove_data_from_string(string* str, unsigned long int left_bound, unsigned long int right_bound) {
   for (unsigned long int i = right_bound + 1; str->str[i]; ++i) {
     str->str[left_bound++] = str->str[i];
   }
   str->str[left_bound] = '\0';
 }
-
-// int create_string_array(string** str_arr) {
-//   *str_arr = (string*)malloc(sizeof(string) * STANDART_ARRAY_SIZE);
-//   if (*str_arr == NULL) {
-//     return MEMORY_ALLOCATE_EXCEPTION;
-//   }
-//   for (int i = 0; i < STANDART_ARRAY_SIZE; ++i) {
-//     (*str_arr)[i] = (string)malloc(sizeof(char) * STANDART_STRING_SIZE);
-//     if ((*str_arr)[i] == NULL) {
-//       for (int j = 0; j < i; ++j) {
-//         free_string((*str_arr)[j]);
-//       }
-//       free(*str_arr);
-//       return MEMORY_ALLOCATE_EXCEPTION;
-//     }
-//   }
-//   return SUCCESS_FUNCTION_RETURN;
-// }
-//
-// int free_string_array(string* str_arr) {
-//   for (int i = 0; i <= )
-// }
