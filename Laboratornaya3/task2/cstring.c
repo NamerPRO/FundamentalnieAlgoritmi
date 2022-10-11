@@ -63,7 +63,7 @@ char* get_trimmed_string(string* str, int* execute_status) {
     *execute_status = MEMORY_ALLOCATE_EXCEPTION;
     return NULL;
   }
-  int i = 0;
+  unsigned long int i = 0;
   char* raw_string = get_raw_string(str);
   for (; raw_string[i]; ++i) {
     output[i] = raw_string[i];
