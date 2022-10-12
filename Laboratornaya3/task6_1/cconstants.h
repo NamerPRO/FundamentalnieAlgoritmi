@@ -1,0 +1,7 @@
+#ifndef ___CCONSTANTS___
+#define ___CCONSTANTS___
+
+#define MEMORY_ALLOCATE_EXCEPTION 5
+#define SUCCESS_FUNCTION_RETURN 6
+
+#endif

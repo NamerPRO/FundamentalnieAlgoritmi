@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
+#include "cconstants.h"
 #include "cstring.h"
 
 int toenter(int x) {

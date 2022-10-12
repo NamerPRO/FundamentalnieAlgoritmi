@@ -6,10 +6,9 @@
 #include <string.h>
 #include <stdarg.h>
 
+#include "cconstants.h"
+
 #define STANDART_STRING_SIZE 255
-#define STANDART_ARRAY_SIZE 25
-#define MEMORY_ALLOCATE_EXCEPTION 5
-#define SUCCESS_FUNCTION_RETURN 6
 
 typedef struct string {
   char* str;
@@ -30,5 +29,7 @@ int string_concat(unsigned long int count, string* out_str, ...);
 int string_copy(string* from, string* to);
 void remove_data_from_string(string* str, unsigned long int left_bound, unsigned long int right_bound);
 char* str(char* value);
+int reset_string(string* str);
+char* get_trimmed_string(string* str, int* execute_status);
 
 #endif

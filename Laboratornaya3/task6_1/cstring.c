@@ -7,7 +7,10 @@ void create_string(string* str, char* value) {
 
 char* str(char* value) {
   unsigned long int size = strlen(value);
-  char* dinamic_str = (char*)malloc(sizeof(char) * size);
+  char* dinamic_str = (char*)malloc(sizeof(char) * STANDART_STRING_SIZE);
+  if (dinamic_str == NULL) {
+    return NULL;
+  }
   for (unsigned long int i = 0; i < size; ++i) {
     dinamic_str[i] = value[i];
   }
@@ -52,6 +55,33 @@ unsigned long int get_string_size(string* str) {
   unsigned long int i = 0;
   for (; str->str[i]; ++i) {}
   return i;
+}
+
+char* get_trimmed_string(string* str, int* execute_status) {
+  char* output = (char*)malloc(sizeof(char) * (get_string_size(str) + 1));
+  if (output == NULL) {
+    *execute_status = MEMORY_ALLOCATE_EXCEPTION;
+    return NULL;
+  }
+  unsigned long int i = 0;
+  char* raw_string = get_raw_string(str);
+  for (; raw_string[i]; ++i) {
+    output[i] = raw_string[i];
+  }
+  output[i] = '\0';
+  *execute_status = SUCCESS_FUNCTION_RETURN;
+  return output;
+}
+
+int reset_string(string* str) {
+  char* possible_str = (char*)malloc(sizeof(char) * STANDART_STRING_SIZE);
+  if (possible_str == NULL) {
+    return MEMORY_ALLOCATE_EXCEPTION;
+  }
+  free(str->str);
+  str->str = possible_str;
+  str->size = STANDART_STRING_SIZE;
+  return SUCCESS_FUNCTION_RETURN;
 }
 
 void free_string(string* str) {
