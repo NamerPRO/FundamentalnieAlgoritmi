@@ -39,7 +39,7 @@ int reset_string(string* str);
 char* get_trimmed_string(string* str, int* execute_status);
 char standart_random_character(unsigned long int position);
 int get_random_string(string* str, unsigned long int size, char (*rnd_char)(unsigned long int position));
-int contains_only(string* str, int (*in_range)(char symbol));
+int string_contains_only(string* str, int (*in_range)(char symbol));
 int standart_string_range(char symbol);
 int standart_alphabet_comporator(string* str1, string* str2);
 void to_upper_case(string* str);
@@ -48,5 +48,7 @@ int not(int status_code);
 int to_string(string* str_str, char* pattern, ...);
 int string_assign(string* str_str, char* str_new);
 void string_reverse(string* str_str, unsigned long int lhs, unsigned long int rhs);
+int string_is_integer(string* str_str);
+int standart_numeric_range(char symbol);
 
 #endif

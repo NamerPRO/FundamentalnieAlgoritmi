@@ -263,14 +263,13 @@ int string_compare(char* pattern, int (*cmp)(string* str1, string* str2), string
   va_list arg;
   va_start(arg, str1);
   int cmp_result;
-  if (!strcmp(pattern, "%s\0")) {
+  if (pattern[1] == 's') {
     cmp_result = cmp(str1, va_arg(arg, string*));
-  } else {
+  } else if (pattern[1] == 'p') {
     int execute_status;
     string str2;
-    create_string(&str2, str(va_arg(arg, char*), &execute_status));
-    if (execute_status != SUCCESS_FUNCTION_RETURN) {
-      return execute_status;
+    if (create_string(&str2, va_arg(arg, char*)) == MEMORY_ALLOCATE_EXCEPTION) {
+      return MEMORY_ALLOCATE_EXCEPTION;
     }
     cmp_result = cmp(str1, &str2);
     free_string(&str2);
@@ -425,7 +424,11 @@ int standart_string_range(char symbol) {
   return (symbol >= 'a' && symbol <= 'z') ? 1 : (symbol >= 'A' && symbol <= 'Z') ? 1 : 0;
 }
 
-int contains_only(string* str, int (*in_range)(char symbol)) {
+int standart_numeric_range(char symbol) {
+  return (symbol >= '0' && symbol <= '9') ? 1 : 0;
+}
+
+int string_contains_only(string* str, int (*in_range)(char symbol)) {
   char* raw_str = get_raw_string(str);
   for (unsigned long int i = 0; raw_str[i]; ++i) {
     if (!in_range(raw_str[i])) {
@@ -433,6 +436,10 @@ int contains_only(string* str, int (*in_range)(char symbol)) {
     }
   }
   return 1;
+}
+
+int string_is_integer(string* str_str) {
+  return string_contains_only(str_str, standart_numeric_range);
 }
 
 void to_upper_case(string* str) {

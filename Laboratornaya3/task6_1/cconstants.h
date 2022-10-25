@@ -13,4 +13,6 @@
 #define FIRST_STRING 1
 #define SECOND_STRING -1
 
+#define STANDART_EPSIOLON 1e-6
+
 #endif
