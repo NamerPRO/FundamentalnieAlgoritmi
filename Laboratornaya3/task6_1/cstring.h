@@ -49,6 +49,9 @@ int to_string(string* str_str, char* pattern, ...);
 int string_assign(string* str_str, char* str_new);
 void string_reverse(string* str_str, unsigned long int lhs, unsigned long int rhs);
 int string_is_integer(string* str_str);
+int string_is_double(string* str_str);
 int standart_numeric_range(char symbol);
+int create_string_array(string*** str_arr, unsigned long int size);
+void free_string_array(string*** str_arr, int size);
 
 #endif

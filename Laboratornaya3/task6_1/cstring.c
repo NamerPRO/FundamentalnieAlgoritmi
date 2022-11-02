@@ -439,7 +439,37 @@ int string_contains_only(string* str, int (*in_range)(char symbol)) {
 }
 
 int string_is_integer(string* str_str) {
-  return string_contains_only(str_str, standart_numeric_range);
+  unsigned long int i = 0;
+  if (str_str->str[0] == '-') {
+    i = 1;
+  }
+  for (; str_str->str[i]; ++i) {
+    if (!standart_numeric_range(str_str->str[i])) {
+      return 0;
+    }
+  }
+  return 1;
+}
+
+int string_is_double(string* str_str) {
+  unsigned long int i = 0;
+  if (str_str->str[0] == '-') {
+    i = 1;
+  }
+  int has_dot = 0;
+  for (; str_str->str[i]; ++i) {
+    if (str_str->str[i] == '.') {
+      if (has_dot == 1) {
+        return 0;
+      }
+      has_dot = 1;
+      continue;
+    }
+    if (!standart_numeric_range(str_str->str[i])) {
+      return 0;
+    }
+  }
+  return 1;
 }
 
 void to_upper_case(string* str) {
@@ -519,4 +549,29 @@ int to_string(string* str_str, char* pattern, ...) {
 
 int string_assign(string* str_str, char* str_new) {
   return to_string(str_str, "%p", str_new);
+}
+
+int create_string_array(string*** str_arr, unsigned long int size) {
+  int execute_status;
+  *str_arr = (string**)malloc(sizeof(string*) * size);
+  if (*str_arr == NULL) {
+    return MEMORY_ALLOCATE_EXCEPTION;
+  }
+  for (unsigned long int i = 0; i < size; ++i) {
+    (*str_arr)[i] = (string*)malloc(sizeof(string));
+  }
+  while (size--) {
+    if ((execute_status = create_empty_string((*str_arr)[size])) != SUCCESS_FUNCTION_RETURN) {
+      return execute_status;
+    }
+  }
+  return SUCCESS_FUNCTION_RETURN;
+}
+
+void free_string_array(string*** str_arr, int size) {
+  while (size--) {
+    free_string((*str_arr)[size]);
+    free((*str_arr)[size]);
+  }
+  free(*str_arr);
 }
