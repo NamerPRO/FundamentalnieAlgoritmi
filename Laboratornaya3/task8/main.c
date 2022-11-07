@@ -200,19 +200,27 @@ int main(int argc, char* argv[]) {
     return FILE_INTERRACT_EXCEPTION;
   }
   save_bst(file, BST_ROOT, &execute_status);
+  if (execute_status != SUCCESS_FUNCTION_RETURN) {
+    print_string(stdout, "Could not save tree to file! There may be problems with recovering it.\n");
+  }
   fclose(file);
   complete_bst_destroy(&BST_ROOT);
   file = fopen("save_bst_file", "r");
   if (file == NULL) {
     return FILE_INTERRACT_EXCEPTION;
   }
-  restore_bst(file, &BST_ROOT);
+  if ((execute_status = restore_bst(file, &BST_ROOT)) != SUCCESS_FUNCTION_RETURN) {
+    print_string(stdout, "Could not fully restore tree from file! There may be problems while interracting with it.\n");
+  }
   fclose(file);
   file = fopen("save_bst_file_recover", "w");
   if (file == NULL) {
     return FILE_INTERRACT_EXCEPTION;
   }
   save_bst(file, BST_ROOT, &execute_status);
+  if (execute_status != SUCCESS_FUNCTION_RETURN) {
+    print_string(stdout, "Could not save tree to file! There may be problems with recovering it.\n");
+  }
   fclose(file);
   complete_bst_destroy(&BST_ROOT);
   trie_destroy(prefix_tree);
