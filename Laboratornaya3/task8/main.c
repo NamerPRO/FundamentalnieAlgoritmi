@@ -10,7 +10,7 @@
 int file_separator(int symbol) {
   return (symbol == '!' || symbol == '?' || symbol == ' ' || symbol == '.'
           || symbol == ',' || symbol == '\n' || symbol == '\t' || symbol == '\v'
-          || symbol == '\f' || symbol == '\r') ? 1 : 0;
+          || symbol == '\f' || symbol == '\r' || symbol == ';') ? 1 : 0;
 }
 
 int main(int argc, char* argv[]) {
@@ -35,7 +35,17 @@ int main(int argc, char* argv[]) {
   if (cstr == NULL) {
     return MEMORY_ALLOCATE_EXCEPTION;
   }
-  create_empty_string(cstr);
+  if ((execute_status = create_empty_string(cstr)) != SUCCESS_FUNCTION_RETURN) {
+    return execute_status;
+  }
+  string longest_string, shortest_string;
+  if ((execute_status = create_empty_string(&longest_string)) != SUCCESS_FUNCTION_RETURN) {
+    return execute_status;
+  }
+  if ((execute_status = create_empty_string(&shortest_string)) != SUCCESS_FUNCTION_RETURN) {
+    return execute_status;
+  }
+  int shortest_init_flag = 1;
   while ((execute_status = read_string(file, cstr, file_separator)) != EOF) {
     if (execute_status != SUCCESS_FUNCTION_RETURN) {
       return execute_status;
@@ -43,10 +53,34 @@ int main(int argc, char* argv[]) {
     if (!string_compare("%p", standart_string_comporator, cstr, "")) {
       continue;
     }
+    unsigned long int cstr_size = get_string_size(cstr);
+    unsigned long int longest_string_size = get_string_size(&longest_string);
+    unsigned long int shortest_string_size = get_string_size(&shortest_string);
+    to_lower_case(cstr);
+    if (longest_string_size < cstr_size) {
+      string_copy(cstr, &longest_string);
+    } else if (longest_string_size == cstr_size) {
+      if (string_compare("%s", standart_string_comporator, &longest_string, cstr) == 1) {
+        string_copy(cstr, &longest_string);
+      }
+    }
+    if (shortest_init_flag || shortest_string_size > cstr_size) {
+      string_copy(cstr, &shortest_string);
+      shortest_init_flag = 0;
+    } else if (shortest_string_size == cstr_size) {
+      if (string_compare("%s", standart_string_comporator, &shortest_string, cstr) == 1) {
+        string_copy(cstr, &shortest_string);
+      }
+    }
     trie_insert(prefix_tree, 0, cstr, &BST_ROOT);
     cstr = (string*)malloc(sizeof(string));
-    create_empty_string(cstr);
+    if ((execute_status = create_empty_string(cstr)) != SUCCESS_FUNCTION_RETURN) {
+      return execute_status;
+    }
   }
+  free_string(cstr);
+  free(cstr);
+  fclose(file);
   string action;
   if ((execute_status = create_empty_string(&action)) != SUCCESS_FUNCTION_RETURN) {
     return execute_status;
@@ -99,8 +133,42 @@ int main(int argc, char* argv[]) {
       }
       continue;
     }
+    if (!string_compare("%p", standart_string_comporator, &action, "longest")) {
+      print_string(stdout, "Longest word in file is \"%s\".\n", &longest_string);
+      continue;
+    }
+    if (!string_compare("%p", standart_string_comporator, &action, "shortest")) {
+      print_string(stdout, "Shortest word in file is \"%s\".\n", &shortest_string);
+      continue;
+    }
     print_string(stdout, "Unknown command! Use one in the box above.\n");
   }
+  free_string(&longest_string);
+  free_string(&shortest_string);
+  free_string(&action);
+  //Пункт 2: определение глубины дерева
+  print_string(stdout, "Tree height is %d.\n", get_bst_height(BST_ROOT));
+  //Пункт 3: сохранение и восстановление бинарного дерева в/из файл(а)
+  file = fopen("save_bst_file", "w");
+  if (file == NULL) {
+    return FILE_INTERRACT_EXCEPTION;
+  }
+  save_bst(file, BST_ROOT, &execute_status);
   fclose(file);
+  complete_bst_destroy(&BST_ROOT);
+  file = fopen("save_bst_file", "r");
+  if (file == NULL) {
+    return FILE_INTERRACT_EXCEPTION;
+  }
+  restore_bst(file, &BST_ROOT);
+  fclose(file);
+  file = fopen("save_bst_file_recover", "w");
+  if (file == NULL) {
+    return FILE_INTERRACT_EXCEPTION;
+  }
+  save_bst(file, BST_ROOT, &execute_status);
+  fclose(file);
+  complete_bst_destroy(&BST_ROOT);
+  trie_destroy(prefix_tree);
   return 0;
 }

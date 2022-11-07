@@ -5,6 +5,7 @@ int create_trie(trie_node** t) {
   if (*t == NULL) {
     return MEMORY_ALLOCATE_EXCEPTION;
   }
+  (*t)->trie_ptr = NULL;
   (*t)->trie_ptr_size = 0;
   (*t)->symbol = 0;
   (*t)->b_node = NULL;
@@ -37,7 +38,7 @@ int trie_insert(trie_node* t, int i, string* s, bst_node** BST_ROOT) {
       }
     }
     if (t->b_node != NULL) {
-      execute_status = list_pop_by(t->b_node->data->words, s, standart_clear_function);
+      execute_status = list_pop_by(t->b_node->data->words, s, clear_list_type);
       if (execute_status != SUCCESS_FUNCTION_RETURN) {
         return execute_status;
       }
@@ -70,6 +71,7 @@ int trie_insert(trie_node* t, int i, string* s, bst_node** BST_ROOT) {
   //вставляем в позицию l
 
   trie_node** possitble_trie_ptr = (trie_node**)realloc(t->trie_ptr, sizeof(trie_node*) * (t->trie_ptr_size + 1));
+  // trie_node** possitble_trie_ptr = (trie_node**)malloc(sizeof(trie_node*) * (t->trie_ptr_size + 1));
   if (possitble_trie_ptr == NULL) {
     return MEMORY_ALLOCATE_EXCEPTION;
   }
@@ -88,7 +90,8 @@ int trie_insert(trie_node* t, int i, string* s, bst_node** BST_ROOT) {
   ++i;
   t = t->trie_ptr[l];
   for (; i < (int)get_string_size(s); ++i) {
-    trie_node** possitble_trie_ptr = (trie_node**)realloc(t->trie_ptr, sizeof(trie_node*));
+    // trie_node** possitble_trie_ptr = (trie_node**)realloc(t->trie_ptr, sizeof(trie_node*));
+    trie_node** possitble_trie_ptr = (trie_node**)malloc(sizeof(trie_node*));
     if (possitble_trie_ptr == NULL) {
       return MEMORY_ALLOCATE_EXCEPTION;
     }
@@ -126,6 +129,16 @@ int trie_insert(trie_node* t, int i, string* s, bst_node** BST_ROOT) {
     }
   }
   t->b_node = o;
-
+  t->trie_ptr = NULL;
   return SUCCESS_FUNCTION_RETURN;
+}
+
+void trie_destroy(trie_node* t) {
+  if (t->trie_ptr != NULL) {
+    for (int i = 0; i < t->trie_ptr_size; ++i) {
+      trie_destroy(t->trie_ptr[i]);
+    }
+    free(t->trie_ptr);
+  }
+  free(t);
 }

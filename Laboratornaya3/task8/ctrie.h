@@ -14,5 +14,6 @@ typedef struct trie_node {
 
 int create_trie(trie_node** t);
 int trie_insert(trie_node* t, int i, string* s, bst_node** BST_ROOT);
+void trie_destroy(trie_node* t);
 
 #endif
