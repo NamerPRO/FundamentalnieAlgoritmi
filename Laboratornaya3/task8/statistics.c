@@ -2,8 +2,6 @@
 
 int count_occurrences(trie_node* t, int i, string* s) {
   if (i == (int)get_string_size(s)) {
-    //Слово есть, если t->b_node != NULL!
-    //Вернем результата!
     if (t->b_node == NULL) {
       return -1;
     }
@@ -22,7 +20,6 @@ int count_occurrences(trie_node* t, int i, string* s) {
       return count_occurrences(t->trie_ptr[mid], i + 1, s);
     }
   }
-  //Слова нет. Печаль!
   return -1;
 }
 
@@ -30,7 +27,6 @@ void get_most_common_k_words(bst_node* b, list* lst, int* n, int* execute_status
   *execute_status = SUCCESS_FUNCTION_RETURN;
   if (b != NULL) {
     get_most_common_k_words(b->right, lst, n, execute_status);
-    //...
     if (!(*n) || *execute_status != SUCCESS_FUNCTION_RETURN) {
       return;
     }
@@ -48,7 +44,6 @@ void get_most_common_k_words(bst_node* b, list* lst, int* n, int* execute_status
     if (!(*n)) {
       return;
     }
-    //...
     get_most_common_k_words(b->left, lst, n, execute_status);
   }
 }

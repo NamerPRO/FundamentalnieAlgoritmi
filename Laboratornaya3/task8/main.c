@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
+#include "clist.h"
 #include "ctrie.h"
 #include "cbst.h"
 #include "cstring.h"
@@ -15,40 +16,60 @@ int file_separator(int symbol) {
 
 int main(int argc, char* argv[]) {
   if (argc != 2) {
+    print_string(stdout, "Incorrect usage! Pass path to file as an only argument.\n");
     return ARGUMENTS_EXCEPTION;
   }
   int execute_status;
   trie_node* prefix_tree = NULL;
   if ((execute_status = create_trie(&prefix_tree)) != SUCCESS_FUNCTION_RETURN) {
+    print_string(stdout, "Internal error occured while creating prefix tree! May be not enought memory on your device?\n");
     return execute_status;
   }
   bst_node* BST_ROOT = NULL;
-  // string cstr;
-  // create_string(&cstr, "mom");
-  // trie_insert(prefix_tree, 0, &cstr, &BST_ROOT);
   unsigned long int count;
   FILE* file = fopen(argv[1], "r");
   if (file == NULL) {
+    print_string(stdout, "Given wrong path to file! Or there is a problem wile interractiong with it.\n");
+    free(prefix_tree);
     return FILE_INTERRACT_EXCEPTION;
   }
   string* cstr = (string*)malloc(sizeof(string));
   if (cstr == NULL) {
+    print_string(stdout, "Internal error occured while creating string! May be not enought memory on your device?\n");
+    free(prefix_tree);
+    fclose(file);
     return MEMORY_ALLOCATE_EXCEPTION;
   }
   if ((execute_status = create_empty_string(cstr)) != SUCCESS_FUNCTION_RETURN) {
+    print_string(stdout, "Internal error occured while creating string! May be not enought memory on your device?\n");
+    free(prefix_tree);
+    free(cstr);
+    fclose(file);
     return execute_status;
   }
   string longest_string, shortest_string;
   if ((execute_status = create_empty_string(&longest_string)) != SUCCESS_FUNCTION_RETURN) {
+    print_string(stdout, "Internal error occured while creating string! May be not enought memory on your device?\n");
+    free(prefix_tree);
+    free_string(cstr);
+    free(cstr);
+    fclose(file);
     return execute_status;
   }
   if ((execute_status = create_empty_string(&shortest_string)) != SUCCESS_FUNCTION_RETURN) {
+    print_string(stdout, "Internal error occured while creating string! May be not enought memory on your device?\n");
+    free(prefix_tree);
+    free_string(cstr);
+    free(cstr);
+    free_string(&longest_string);
+    fclose(file);
     return execute_status;
   }
   int shortest_init_flag = 1;
   while ((execute_status = read_string(file, cstr, file_separator)) != EOF) {
     if (execute_status != SUCCESS_FUNCTION_RETURN) {
-      return execute_status;
+      print_string(stdout, "Something went wrong while reading a word! Skipping it.\n");
+      continue;
     }
     if (!string_compare("%p", standart_string_comporator, cstr, "")) {
       continue;
@@ -74,7 +95,21 @@ int main(int argc, char* argv[]) {
     }
     trie_insert(prefix_tree, 0, cstr, &BST_ROOT);
     cstr = (string*)malloc(sizeof(string));
+    if (cstr == NULL) {
+      print_string(stdout, "Internal error occured while creating string! May be not enought memory on your device?\n");
+      free_string(&longest_string);
+      free_string(&shortest_string);
+      complete_bst_destroy(&BST_ROOT);
+      trie_destroy(prefix_tree);
+      return MEMORY_ALLOCATE_EXCEPTION;
+    }
     if ((execute_status = create_empty_string(cstr)) != SUCCESS_FUNCTION_RETURN) {
+      print_string(stdout, "Internal error occured while creating string! May be not enought memory on your device?\n");
+      free(cstr);
+      free_string(&longest_string);
+      free_string(&shortest_string);
+      complete_bst_destroy(&BST_ROOT);
+      trie_destroy(prefix_tree);
       return execute_status;
     }
   }
@@ -83,18 +118,24 @@ int main(int argc, char* argv[]) {
   fclose(file);
   string action;
   if ((execute_status = create_empty_string(&action)) != SUCCESS_FUNCTION_RETURN) {
+    print_string(stdout, "Internal error occured while creating string! May be not enought memory on your device?\n");
+    complete_bst_destroy(&BST_ROOT);
+    trie_destroy(prefix_tree);
     return execute_status;
   }
   print_string(stdout, "================\ncount -> count amount of word occurrences in file\nfind -> find n most common words in file\nlongest -> get longest word from file\nshortest -> get shortest word from file\n================\n");
   while ((execute_status = read_string(stdin, &action, isspace)) != EOF) {
     if (execute_status != SUCCESS_FUNCTION_RETURN) {
-      return execute_status;
+      print_string(stdout, "Something went wrong while reading an action! Try again.\n");
+      continue;
     }
     if (!string_compare("%p", standart_string_comporator, &action, "count")) {
       string request_str;
       print_string(stdout, "Enter a word: ");
       if ((execute_status = safe_read(stdin, &count, "%s", isspace, &request_str)) != SUCCESS_FUNCTION_RETURN) {
-        return execute_status;
+        print_string(stdout, "Something went wrong while reading a word! Action rejected.\n");
+        free_string(&request_str);
+        continue;
       }
       int cnt = count_occurrences(prefix_tree, 0, &request_str);
       if (cnt == -1) {
@@ -109,20 +150,25 @@ int main(int argc, char* argv[]) {
       int n, save_n;
       print_string(stdout, "Enter n: ");
       if ((execute_status = safe_read(stdin, &count, "%d", isspace, &n)) != SUCCESS_FUNCTION_RETURN) {
-        return execute_status;
+        print_string(stdout, "Invalid number entered! Action rejected.\n");
+        continue;
       }
       save_n = n;
       list lst;
       create_list(&lst);
       get_most_common_k_words(BST_ROOT, &lst, &n, &execute_status);
       if (execute_status != SUCCESS_FUNCTION_RETURN) {
-        return execute_status;
+        print_string(stdout, "Something went wrong while getting most common words! Action rejected.\n");
+        list_clear(&lst, clear_list_type);
+        continue;
       }
       print_string(stdout, "First %d most common words: ", save_n);
       while (!list_empty(&lst)) {
         string* print_str = list_element_at(&lst, 0, &execute_status);
         if (execute_status != SUCCESS_FUNCTION_RETURN) {
-          return execute_status;
+          print_string(stdout, "Could not get certain element from list of most common words! Skipping it.\n");
+          list_pop_front(&lst, standart_clear_function);
+          continue;
         }
         print_string(stdout, "\"%s\"; ", print_str);
         list_pop_front(&lst, standart_clear_function);
