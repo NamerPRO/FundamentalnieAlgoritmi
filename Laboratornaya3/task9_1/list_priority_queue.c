@@ -13,8 +13,8 @@ int list_queue_empty(list_queue* lst) {
   return !lst->size;
 }
 
-LIST_QUEUE_T* list_queue_get_minimum(list_queue* lq) {
-  return lq->head->value;
+LIST_QUEUE_T* list_queue_get_maximum(list_queue* lq) {
+  return list_queue_empty(lq) ? NULL : lq->head->value;
 }
 
 void standart_list_queue_free(LIST_QUEUE_T* structure) {
@@ -23,7 +23,13 @@ void standart_list_queue_free(LIST_QUEUE_T* structure) {
   free(structure);
 }
 
-void list_queue_extract_min(list_queue* lq, void (*cls)(LIST_QUEUE_T* structure)) {
+void list_queue_destroy(list_queue* lq) {
+  while (!list_queue_empty(lq)) {
+    list_queue_extract_max(lq, standart_list_queue_free);
+  }
+}
+
+void list_queue_extract_max(list_queue* lq, void (*cls)(LIST_QUEUE_T* structure)) {
   if (!list_queue_empty(lq)) {
     list_queue_node* lqn = lq->head->next;
     list_queue_node* lqn_past = lq->head->past;
@@ -72,7 +78,7 @@ int list_queue_insert(list_queue* lq, LIST_QUEUE_T* elem, int (*cmp)(int lhs, in
   lqn_node->past = lqn;
   lqn_node->next = lqn_save;
   lqn_save->past = lqn_node;
-  if (!i) { //lqn->next == lq->head->past
+  if (!i) {
     lq->head = lq->head->past;
   }
   ++lq->size;
