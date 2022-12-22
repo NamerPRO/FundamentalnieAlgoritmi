@@ -1,0 +1,7 @@
+Rand B, 35, 1, 100;
+Copy B, 0, 34, A;
+sort b+;
+print b, all;
+stats b;
+print A, all;
+stats A;

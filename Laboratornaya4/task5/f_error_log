@@ -1,0 +1,4 @@
+expression=7/0 position=8 reason=devision by zero
+expression=1+(2 position=11 reason=brakets disbalance
+expression=(1+2)*(-3/(4-4)) position=12 reason=devision by zero
+expression=0/(5-5) position=13 reason=devision by zero
