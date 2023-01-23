@@ -1,0 +1,8 @@
+print;
+myvar=0;
+bg=0;
+ccc=bg+0;
+print ccc;
+myvar=0;
+bg=ccc+myvar;
+print;
