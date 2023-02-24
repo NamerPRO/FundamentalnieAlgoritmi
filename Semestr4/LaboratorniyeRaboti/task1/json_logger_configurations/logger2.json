@@ -1,0 +1,6 @@
+{
+  "trace": "file3.txt",
+  "warning": "file1.txt",
+  "error": "file2.txt",
+  "critical": ":console"
+}
