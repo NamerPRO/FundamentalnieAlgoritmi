@@ -1,0 +1,3 @@
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task3/cmake-build-debug/CMakeFiles/task3.dir
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
