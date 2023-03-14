@@ -1,0 +1,6 @@
+{
+  "warning": "file1.txt",
+  "debug": "file2.txt",
+  "information": ":console",
+  "error": "file99.txt"
+}

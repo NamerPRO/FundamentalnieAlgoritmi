@@ -1,0 +1,116 @@
+04/03/2023 18:26:57 INFORMATION Allocating memory for block of size 40.
+04/03/2023 18:26:57 INFORMATION Memory allocated (addr = 94029004514432).
+04/03/2023 18:26:57 INFORMATION Deallocating memory (addr = 94029004514432).
+04/03/2023 18:26:57 INFORMATION Byte representation: 0 0 0 0 1 
+04/03/2023 18:26:57 INFORMATION Allocating memory for block of size 13.
+04/03/2023 18:26:57 INFORMATION Memory allocated (addr = 94029004516464).
+04/03/2023 18:26:57 INFORMATION Deallocating memory (addr = 94028981656184).
+04/03/2023 18:28:29 INFORMATION Allocating memory for block of size 40.
+04/03/2023 18:28:29 INFORMATION Memory allocated (addr = 94194279629952).
+04/03/2023 18:28:29 INFORMATION Deallocating memory (addr = 94194279629952).
+04/03/2023 18:28:29 INFORMATION Byte representation: 0 0 0 0 1 
+04/03/2023 18:28:29 INFORMATION Allocating memory for block of size 13.
+04/03/2023 18:28:29 INFORMATION Memory allocated (addr = 94194279631984).
+04/03/2023 18:28:29 INFORMATION Deallocating memory (addr = 94194271844984).
+04/03/2023 18:28:45 INFORMATION Allocating memory for block of size 40.
+04/03/2023 18:28:45 INFORMATION Memory allocated (addr = 94645096088704).
+04/03/2023 18:28:45 INFORMATION Deallocating memory (addr = 94645096088704).
+04/03/2023 18:28:45 INFORMATION Byte representation: 0 0 0 0 1 
+04/03/2023 18:28:45 INFORMATION Allocating memory for block of size 13.
+04/03/2023 18:28:45 INFORMATION Memory allocated (addr = 94645096090736).
+04/03/2023 18:28:45 INFORMATION Deallocating memory (addr = 94645087357560).
+04/03/2023 18:29:36 INFORMATION Allocating memory for block of size 40.
+04/03/2023 18:29:36 INFORMATION Memory allocated (addr = 94376709194880).
+04/03/2023 18:29:36 INFORMATION Deallocating memory (addr = 94376709194880).
+04/03/2023 18:29:36 INFORMATION Byte representation: 0 0 0 0 1 
+04/03/2023 18:29:36 INFORMATION Allocating memory for block of size 13.
+04/03/2023 18:29:36 INFORMATION Memory allocated (addr = 94376709196912).
+04/03/2023 18:29:36 INFORMATION Deallocating memory (addr = 94376679250552).
+04/03/2023 18:29:49 INFORMATION Allocating memory for block of size 40.
+04/03/2023 18:29:49 INFORMATION Memory allocated (addr = 93824992629888).
+04/03/2023 18:29:57 INFORMATION Deallocating memory (addr = 93824992629888).
+04/03/2023 18:29:57 INFORMATION Byte representation: 0 0 0 0 1 
+04/03/2023 18:29:59 INFORMATION Allocating memory for block of size 13.
+04/03/2023 18:29:59 INFORMATION Memory allocated (addr = 93824992631920).
+04/03/2023 18:31:23 INFORMATION Deallocating memory (addr = 93824992459384).
+04/03/2023 18:37:11 INFORMATION Allocating memory for block of size 40.
+04/03/2023 18:37:11 INFORMATION Memory allocated (addr = 93914544346240).
+04/03/2023 18:37:11 INFORMATION Deallocating memory (addr = 93914544346240).
+04/03/2023 18:37:11 INFORMATION Byte representation: 0 0 0 0 1 
+04/03/2023 18:37:11 INFORMATION Allocating memory for block of size 13.
+04/03/2023 18:37:11 INFORMATION Memory allocated (addr = 93914544348272).
+04/03/2023 18:37:11 INFORMATION Allocating memory for block of size 4.
+04/03/2023 18:37:11 INFORMATION Memory allocated (addr = 93914544348304).
+04/03/2023 18:37:36 INFORMATION Allocating memory for block of size 40.
+04/03/2023 18:37:36 INFORMATION Memory allocated (addr = 94650593817728).
+04/03/2023 18:37:36 INFORMATION Deallocating memory (addr = 94650593817728).
+04/03/2023 18:37:36 INFORMATION Byte representation: 0 0 0 0 1 
+04/03/2023 18:37:36 INFORMATION Allocating memory for block of size 13.
+04/03/2023 18:37:36 INFORMATION Memory allocated (addr = 94650593819760).
+04/03/2023 18:37:36 INFORMATION Allocating memory for block of size 4.
+04/03/2023 18:37:36 INFORMATION Memory allocated (addr = 94650593819792).
+04/03/2023 18:38:23 INFORMATION Allocating memory for block of size 40.
+04/03/2023 18:38:23 INFORMATION Memory allocated (addr = 94839104328832).
+04/03/2023 18:38:23 INFORMATION Deallocating memory (addr = 94839104328832).
+04/03/2023 18:38:23 INFORMATION Byte representation: 0 0 0 0 1 
+04/03/2023 18:38:23 INFORMATION Allocating memory for block of size 13.
+04/03/2023 18:38:23 INFORMATION Memory allocated (addr = 94839104330864).
+04/03/2023 18:38:23 INFORMATION Allocating memory for block of size 4.
+04/03/2023 18:38:23 INFORMATION Memory allocated (addr = 94839104330896).
+04/03/2023 18:38:40 INFORMATION Allocating memory for block of size 40.
+04/03/2023 18:38:40 INFORMATION Memory allocated (addr = 94804442489984).
+04/03/2023 18:38:40 INFORMATION Deallocating memory (addr = 94804442489984).
+04/03/2023 18:38:40 INFORMATION Byte representation: 0 0 0 0 1 
+04/03/2023 18:38:40 INFORMATION Allocating memory for block of size 13.
+04/03/2023 18:38:40 INFORMATION Memory allocated (addr = 94804442492016).
+04/03/2023 18:38:40 INFORMATION Allocating memory for block of size 4.
+04/03/2023 18:38:40 INFORMATION Memory allocated (addr = 94804442492048).
+04/03/2023 18:38:56 INFORMATION Allocating memory for block of size 40.
+04/03/2023 18:38:56 INFORMATION Memory allocated (addr = 94084617557120).
+04/03/2023 18:38:56 INFORMATION Deallocating memory (addr = 94084617557120).
+04/03/2023 18:38:56 INFORMATION Byte representation: 0 0 0 0 1 
+04/03/2023 18:38:56 INFORMATION Allocating memory for block of size 13.
+04/03/2023 18:38:56 INFORMATION Memory allocated (addr = 94084617559152).
+04/03/2023 18:38:56 INFORMATION Allocating memory for block of size 4.
+04/03/2023 18:38:56 INFORMATION Memory allocated (addr = 94084617559184).
+04/03/2023 18:38:56 INFORMATION Deallocating memory (addr = 94084617559184).
+04/03/2023 18:38:56 INFORMATION Byte representation: 123 0 0 
+04/03/2023 18:43:41 INFORMATION Allocating memory for block of size 40.
+04/03/2023 18:43:41 INFORMATION Memory allocated (addr = 94300579542144).
+04/03/2023 18:43:41 INFORMATION Deallocating memory (addr = 94300579542144).
+04/03/2023 18:43:41 INFORMATION Byte representation: 0 0 0 0 1 
+04/03/2023 18:43:41 INFORMATION Allocating memory for block of size 13.
+04/03/2023 18:43:41 INFORMATION Memory allocated (addr = 94300579544176).
+04/03/2023 18:43:41 INFORMATION Allocating memory for block of size 4.
+04/03/2023 18:43:41 INFORMATION Memory allocated (addr = 94300579544208).
+04/03/2023 18:43:41 INFORMATION Deallocating memory (addr = 94300579544208).
+04/03/2023 18:43:41 INFORMATION Byte representation: 123 0 0 
+04/03/2023 18:43:48 INFORMATION Allocating memory for block of size 40.
+04/03/2023 18:43:48 INFORMATION Memory allocated (addr = 85708592).
+04/03/2023 18:43:48 INFORMATION Deallocating memory (addr = 85708592).
+04/03/2023 18:43:48 INFORMATION Byte representation: 0 0 0 0 1 
+04/03/2023 18:43:48 INFORMATION Allocating memory for block of size 13.
+04/03/2023 18:43:48 INFORMATION Memory allocated (addr = 85710976).
+04/03/2023 18:43:48 INFORMATION Allocating memory for block of size 4.
+04/03/2023 18:43:48 INFORMATION Memory allocated (addr = 85711728).
+04/03/2023 18:43:48 INFORMATION Deallocating memory (addr = 85711728).
+04/03/2023 18:43:48 INFORMATION Byte representation: 123 
+04/03/2023 18:44:07 INFORMATION Allocating memory for block of size 40.
+04/03/2023 18:44:07 INFORMATION Memory allocated (addr = 94493237425280).
+04/03/2023 18:44:07 INFORMATION Deallocating memory (addr = 94493237425280).
+04/03/2023 18:44:07 INFORMATION Byte representation: 0 0 0 0 1 
+04/03/2023 18:44:07 INFORMATION Allocating memory for block of size 13.
+04/03/2023 18:44:07 INFORMATION Memory allocated (addr = 94493237427312).
+04/03/2023 18:44:07 INFORMATION Deallocating memory (addr = 94493232609912).
+04/03/2023 19:46:57 INFORMATION Allocating memory for block of size 40.
+04/03/2023 19:46:57 INFORMATION Memory allocated (addr = 94429602473088).
+04/03/2023 19:46:57 INFORMATION Deallocating memory (addr = 94429602473088).
+04/03/2023 19:46:57 INFORMATION Byte representation: 0 0 0 0 1 
+04/03/2023 19:46:57 INFORMATION Allocating memory for block of size 13.
+04/03/2023 19:46:57 INFORMATION Memory allocated (addr = 94429602475120).
+04/03/2023 19:46:57 INFORMATION Deallocating memory (addr = 94429602475120).
+04/03/2023 19:46:57 INFORMATION Byte representation: 72 101 108 
+04/03/2023 19:46:57 INFORMATION Allocating memory for block of size 4.
+04/03/2023 19:46:57 INFORMATION Memory allocated (addr = 94429602475120).
+04/03/2023 19:46:57 INFORMATION Deallocating memory (addr = 94429602475120).
+04/03/2023 19:46:57 INFORMATION Byte representation: 123 0 0 
