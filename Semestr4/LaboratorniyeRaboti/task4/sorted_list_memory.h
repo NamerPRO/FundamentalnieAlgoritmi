@@ -11,7 +11,7 @@
 #include "nlogger/standard_logger_builder.h"
 #include "memory.h"
 
-#define _RESERVED_SERVICE_MEMORY (sizeof(intptr_t) + sizeof(uint32_t))
+#define _RESERVED_SERVICE_MEMORY_SORTED (sizeof(intptr_t) + sizeof(uint32_t))
 
 namespace nmemory_standards {
 

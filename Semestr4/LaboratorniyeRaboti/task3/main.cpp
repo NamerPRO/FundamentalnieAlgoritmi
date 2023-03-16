@@ -127,6 +127,8 @@ int main() {
 
         delete allocator;
         delete[] my_mem;
+        delete mem_logger;
+        delete mem_builder;
 
     } catch (std::runtime_error const & error) {
         std::cerr << "An error occurred: " << error.what() << std::endl;

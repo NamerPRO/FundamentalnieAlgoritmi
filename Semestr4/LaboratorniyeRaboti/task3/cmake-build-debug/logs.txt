@@ -1,0 +1,696 @@
+16/03/2023 23:37:18 INFORMATION Allocating 25 bytes of memory via first-fit method.
+16/03/2023 23:37:18 INFORMATION Successfully allocated 25 bytes of memory (addr = 24).
+16/03/2023 23:37:18 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:37:18 INFORMATION Target data as byte collection: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+16/03/2023 23:37:25 INFORMATION Allocating 25 bytes of memory via first-fit method.
+16/03/2023 23:37:25 INFORMATION Successfully allocated 25 bytes of memory (addr = 24).
+16/03/2023 23:37:25 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:37:25 INFORMATION Target data as byte collection: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+16/03/2023 23:37:51 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:37:51 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:37:51 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:37:51 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:37:51 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:37:51 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:37:51 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:37:51 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:37:51 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:37:51 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 0 0 0 0 0 0 0 0 
+16/03/2023 23:37:51 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:37:51 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:37:51 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:37:51 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:37:51 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:37:51 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+16/03/2023 23:37:51 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:37:51 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+16/03/2023 23:37:51 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:37:51 INFORMATION Target data as byte collection: 43 2 0 0 
+16/03/2023 23:37:51 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:37:51 INFORMATION Target data as byte collection: 200 1 0 0 
+16/03/2023 23:37:51 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:37:51 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+16/03/2023 23:37:51 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:37:51 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:37:51 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:37:51 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:37:51 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:37:51 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:37:51 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:37:51 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:37:51 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:37:51 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 19 127 0 0 0 0 0 0 
+16/03/2023 23:37:51 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:37:51 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:37:51 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:37:51 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:37:51 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:37:51 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+16/03/2023 23:37:51 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:37:51 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+16/03/2023 23:37:51 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:37:51 INFORMATION Target data as byte collection: 43 2 0 0 
+16/03/2023 23:37:51 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:37:51 INFORMATION Target data as byte collection: 200 1 0 0 
+16/03/2023 23:37:51 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:37:51 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+16/03/2023 23:37:57 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:37:57 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:37:57 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:37:57 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:37:57 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:37:57 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:37:57 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:37:57 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:37:57 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:37:57 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 0 0 0 0 0 0 0 0 
+16/03/2023 23:37:57 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:37:57 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:37:57 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:37:57 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:37:57 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:37:57 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+16/03/2023 23:37:57 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:37:57 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+16/03/2023 23:37:57 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:37:57 INFORMATION Target data as byte collection: 43 2 0 0 
+16/03/2023 23:37:57 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:37:57 INFORMATION Target data as byte collection: 200 1 0 0 
+16/03/2023 23:37:57 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:37:57 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+16/03/2023 23:37:57 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:37:57 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:37:57 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:37:57 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:37:57 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:37:57 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:37:57 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:37:57 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:37:57 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:37:57 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 0 0 0 0 0 0 0 0 
+16/03/2023 23:37:57 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:37:57 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:37:57 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:37:57 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:37:57 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:37:57 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+16/03/2023 23:37:57 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:37:57 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+16/03/2023 23:37:57 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:37:57 INFORMATION Target data as byte collection: 43 2 0 0 
+16/03/2023 23:37:57 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:37:57 INFORMATION Target data as byte collection: 200 1 0 0 
+16/03/2023 23:37:57 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:37:57 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+16/03/2023 23:38:28 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:38:28 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:38:28 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:38:28 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:38:28 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:38:28 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:38:28 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:38:28 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:38:28 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:38:28 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 0 0 0 0 0 0 0 0 
+16/03/2023 23:38:28 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:38:28 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:38:28 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:38:28 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:38:28 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:38:28 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+16/03/2023 23:38:28 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:38:28 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+16/03/2023 23:38:28 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:38:28 INFORMATION Target data as byte collection: 43 2 0 0 
+16/03/2023 23:38:28 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:38:28 INFORMATION Target data as byte collection: 200 1 0 0 
+16/03/2023 23:38:28 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:38:28 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+16/03/2023 23:38:28 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:38:28 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:38:28 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:38:28 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:38:28 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:38:28 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:38:28 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:38:28 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:38:28 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:38:28 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 96 127 0 0 0 0 0 0 
+16/03/2023 23:38:28 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:38:28 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:38:28 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:38:28 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:38:28 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:38:28 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+16/03/2023 23:38:28 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:38:28 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+16/03/2023 23:38:28 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:38:28 INFORMATION Target data as byte collection: 43 2 0 0 
+16/03/2023 23:38:28 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:38:28 INFORMATION Target data as byte collection: 200 1 0 0 
+16/03/2023 23:38:28 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:38:28 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+16/03/2023 23:38:31 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:38:31 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:38:31 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:38:31 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:38:31 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:38:31 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:38:31 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:38:31 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:38:31 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:38:31 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 0 0 0 0 0 0 0 0 
+16/03/2023 23:38:31 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:38:31 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:38:31 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:38:31 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:38:31 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:38:31 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+16/03/2023 23:38:31 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:38:31 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+16/03/2023 23:38:31 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:38:31 INFORMATION Target data as byte collection: 43 2 0 0 
+16/03/2023 23:38:31 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:38:31 INFORMATION Target data as byte collection: 200 1 0 0 
+16/03/2023 23:38:31 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:38:31 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+16/03/2023 23:38:31 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:38:31 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:38:31 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:38:31 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:38:31 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:38:31 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:38:31 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:38:31 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:38:31 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:38:31 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 0 0 0 0 0 0 0 0 
+16/03/2023 23:38:31 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:38:31 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:38:31 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:38:31 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:38:31 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:38:31 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+16/03/2023 23:38:31 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:38:31 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+16/03/2023 23:38:31 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:38:31 INFORMATION Target data as byte collection: 43 2 0 0 
+16/03/2023 23:38:31 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:38:31 INFORMATION Target data as byte collection: 200 1 0 0 
+16/03/2023 23:38:31 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:38:31 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+16/03/2023 23:44:00 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:44:00 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:44:00 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:44:00 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:44:00 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:44:00 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:44:00 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:44:00 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:44:00 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:44:00 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 0 0 0 0 0 0 0 0 
+16/03/2023 23:44:00 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:44:00 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:44:00 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:44:00 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:44:00 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:44:00 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+16/03/2023 23:44:00 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:44:00 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+16/03/2023 23:44:00 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:44:00 INFORMATION Target data as byte collection: 43 2 0 0 
+16/03/2023 23:44:00 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:44:00 INFORMATION Target data as byte collection: 200 1 0 0 
+16/03/2023 23:44:00 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:44:00 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+16/03/2023 23:44:00 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:44:00 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:44:00 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:44:00 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:44:00 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:44:00 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:44:00 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:44:00 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:44:00 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:44:00 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 182 127 0 0 0 0 0 0 
+16/03/2023 23:44:00 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:44:00 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:44:00 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:44:00 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:44:00 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:44:00 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+16/03/2023 23:44:00 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:44:00 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+16/03/2023 23:44:00 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:44:00 INFORMATION Target data as byte collection: 43 2 0 0 
+16/03/2023 23:44:00 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:44:00 INFORMATION Target data as byte collection: 200 1 0 0 
+16/03/2023 23:44:00 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:44:00 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+16/03/2023 23:44:32 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:44:32 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:44:32 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:44:32 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:44:32 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:44:32 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:44:32 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:44:32 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:44:32 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:44:32 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 0 0 0 0 0 0 0 0 
+16/03/2023 23:44:32 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:44:32 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:44:32 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:44:32 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:44:32 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:44:32 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+16/03/2023 23:44:32 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:44:32 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+16/03/2023 23:44:32 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:44:32 INFORMATION Target data as byte collection: 43 2 0 0 
+16/03/2023 23:44:32 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:44:32 INFORMATION Target data as byte collection: 200 1 0 0 
+16/03/2023 23:44:32 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:44:32 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+16/03/2023 23:44:32 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:44:32 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:44:32 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:44:32 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:44:32 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:44:32 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:44:32 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:44:32 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:44:32 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:44:32 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 153 127 0 0 0 0 0 0 
+16/03/2023 23:44:32 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:44:32 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:44:32 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:44:32 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:44:32 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:44:32 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+16/03/2023 23:44:32 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:44:32 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+16/03/2023 23:44:32 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:44:32 INFORMATION Target data as byte collection: 43 2 0 0 
+16/03/2023 23:44:32 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:44:32 INFORMATION Target data as byte collection: 200 1 0 0 
+16/03/2023 23:44:32 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:44:32 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+16/03/2023 23:44:38 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:44:38 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:44:38 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:44:38 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:44:38 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:44:38 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:44:38 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:44:38 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:44:38 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:44:38 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 0 0 0 0 0 0 0 0 
+16/03/2023 23:44:38 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:44:38 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:44:38 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:44:38 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:44:38 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:44:38 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+16/03/2023 23:44:38 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:44:38 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+16/03/2023 23:44:38 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:44:38 INFORMATION Target data as byte collection: 43 2 0 0 
+16/03/2023 23:44:38 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:44:38 INFORMATION Target data as byte collection: 200 1 0 0 
+16/03/2023 23:44:38 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:44:38 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+16/03/2023 23:44:38 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:44:38 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:44:38 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:44:38 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:44:38 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:44:38 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:44:38 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:44:38 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:44:38 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:44:38 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 0 0 0 0 0 0 0 0 
+16/03/2023 23:44:38 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:44:38 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:44:38 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:44:38 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:44:38 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:44:38 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+16/03/2023 23:44:38 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:44:38 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+16/03/2023 23:44:38 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:44:38 INFORMATION Target data as byte collection: 43 2 0 0 
+16/03/2023 23:44:38 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:44:38 INFORMATION Target data as byte collection: 200 1 0 0 
+16/03/2023 23:44:38 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:44:38 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+16/03/2023 23:48:55 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:48:55 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:48:55 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:48:55 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:48:55 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:48:55 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:48:55 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:48:55 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:48:55 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:48:55 INFORMATION Target data as byte collection: 
+16/03/2023 23:48:55 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:48:55 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:48:55 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:48:55 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:48:55 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:48:55 INFORMATION Target data as byte collection: 
+16/03/2023 23:48:55 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:48:55 INFORMATION Target data as byte collection: 
+16/03/2023 23:48:55 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:48:55 INFORMATION Target data as byte collection: 
+16/03/2023 23:48:55 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:48:55 INFORMATION Target data as byte collection: 
+16/03/2023 23:48:55 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:48:55 INFORMATION Target data as byte collection: 
+16/03/2023 23:48:55 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:48:55 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:48:55 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:48:55 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:48:55 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:48:55 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:48:55 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:48:55 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:48:55 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:48:55 INFORMATION Target data as byte collection: 
+16/03/2023 23:48:55 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:48:55 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:48:55 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:48:55 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:48:55 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:48:55 INFORMATION Target data as byte collection: 
+16/03/2023 23:48:55 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:48:55 INFORMATION Target data as byte collection: 
+16/03/2023 23:48:55 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:48:55 INFORMATION Target data as byte collection: 
+16/03/2023 23:48:55 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:48:55 INFORMATION Target data as byte collection: 
+16/03/2023 23:48:55 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:48:55 INFORMATION Target data as byte collection: 
+16/03/2023 23:49:02 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:49:02 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:49:02 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:49:02 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:49:02 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:49:02 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:49:02 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:49:02 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:49:02 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:49:02 INFORMATION Target data as byte collection: 
+16/03/2023 23:49:02 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:49:02 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:49:02 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:49:02 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:49:02 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:49:02 INFORMATION Target data as byte collection: 
+16/03/2023 23:49:02 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:49:02 INFORMATION Target data as byte collection: 
+16/03/2023 23:49:02 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:49:02 INFORMATION Target data as byte collection: 
+16/03/2023 23:49:02 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:49:02 INFORMATION Target data as byte collection: 
+16/03/2023 23:49:02 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:49:02 INFORMATION Target data as byte collection: 
+16/03/2023 23:49:02 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:49:02 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:49:02 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:49:02 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:49:02 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:49:02 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:49:02 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:49:02 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:49:02 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:49:02 INFORMATION Target data as byte collection: 
+16/03/2023 23:49:02 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:49:02 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:49:02 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:49:02 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:49:02 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:49:02 INFORMATION Target data as byte collection: 
+16/03/2023 23:49:02 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:49:02 INFORMATION Target data as byte collection: 
+16/03/2023 23:49:02 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:49:02 INFORMATION Target data as byte collection: 
+16/03/2023 23:49:02 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:49:02 INFORMATION Target data as byte collection: 
+16/03/2023 23:49:02 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:49:02 INFORMATION Target data as byte collection: 
+16/03/2023 23:55:55 INFORMATION Allocating 12 bytes of memory via first-fit method.
+16/03/2023 23:55:55 INFORMATION Successfully allocated 12 bytes of memory (addr = 24).
+16/03/2023 23:55:55 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:55:55 INFORMATION Target data as byte collection: 
+16/03/2023 23:56:24 INFORMATION Allocating 12 bytes of memory via first-fit method.
+16/03/2023 23:56:24 INFORMATION Successfully allocated 12 bytes of memory (addr = 24).
+16/03/2023 23:56:24 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:56:24 INFORMATION Target data as byte collection: 
+16/03/2023 23:57:11 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:57:11 INFORMATION Successfully allocated 20 bytes of memory (addr = 24).
+16/03/2023 23:57:11 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:57:11 INFORMATION Target data as byte collection: 
+16/03/2023 23:57:18 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:57:18 INFORMATION Successfully allocated 20 bytes of memory (addr = 24).
+16/03/2023 23:57:18 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:57:18 INFORMATION Target data as byte collection: 
+16/03/2023 23:59:40 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:59:40 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:59:40 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:59:40 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:59:40 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:59:40 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:59:40 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:59:40 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:59:40 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:59:40 INFORMATION Target data as byte collection: 
+16/03/2023 23:59:40 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:59:40 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:59:40 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:59:40 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:59:40 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:59:40 INFORMATION Target data as byte collection: 
+16/03/2023 23:59:40 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:59:40 INFORMATION Target data as byte collection: 
+16/03/2023 23:59:40 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:59:40 INFORMATION Target data as byte collection: 
+16/03/2023 23:59:40 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:59:40 INFORMATION Target data as byte collection: 
+16/03/2023 23:59:40 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:59:40 INFORMATION Target data as byte collection: 
+16/03/2023 23:59:40 INFORMATION Allocating 40 bytes of memory via first-fit method.
+16/03/2023 23:59:40 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+16/03/2023 23:59:40 INFORMATION Allocating 20 bytes of memory via first-fit method.
+16/03/2023 23:59:40 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+16/03/2023 23:59:40 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:59:40 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+16/03/2023 23:59:40 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:59:40 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+16/03/2023 23:59:40 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:59:40 INFORMATION Target data as byte collection: 
+16/03/2023 23:59:40 INFORMATION Allocating 4 bytes of memory via first-fit method.
+16/03/2023 23:59:40 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+16/03/2023 23:59:40 INFORMATION Allocating 8 bytes of memory via first-fit method.
+16/03/2023 23:59:40 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+16/03/2023 23:59:40 INFORMATION Deallocating memory at address: 24.
+16/03/2023 23:59:40 INFORMATION Target data as byte collection: 
+16/03/2023 23:59:40 INFORMATION Deallocating memory at address: 108.
+16/03/2023 23:59:40 INFORMATION Target data as byte collection: 
+16/03/2023 23:59:40 INFORMATION Deallocating memory at address: 128.
+16/03/2023 23:59:40 INFORMATION Target data as byte collection: 
+16/03/2023 23:59:40 INFORMATION Deallocating memory at address: 76.
+16/03/2023 23:59:40 INFORMATION Target data as byte collection: 
+16/03/2023 23:59:40 INFORMATION Deallocating memory at address: 144.
+16/03/2023 23:59:40 INFORMATION Target data as byte collection: 
+17/03/2023 00:00:40 INFORMATION Allocating 40 bytes of memory via first-fit method.
+17/03/2023 00:00:40 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+17/03/2023 00:00:40 INFORMATION Allocating 20 bytes of memory via first-fit method.
+17/03/2023 00:00:40 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+17/03/2023 00:00:40 INFORMATION Allocating 8 bytes of memory via first-fit method.
+17/03/2023 00:00:40 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+17/03/2023 00:00:40 INFORMATION Allocating 4 bytes of memory via first-fit method.
+17/03/2023 00:00:40 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+17/03/2023 00:00:40 INFORMATION Deallocating memory at address: 76.
+17/03/2023 00:00:40 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 0 0 0 0 0 0 0 0 
+17/03/2023 00:00:40 INFORMATION Allocating 4 bytes of memory via first-fit method.
+17/03/2023 00:00:40 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+17/03/2023 00:00:40 INFORMATION Allocating 8 bytes of memory via first-fit method.
+17/03/2023 00:00:40 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+17/03/2023 00:00:40 INFORMATION Deallocating memory at address: 24.
+17/03/2023 00:00:40 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+17/03/2023 00:00:40 INFORMATION Deallocating memory at address: 108.
+17/03/2023 00:00:40 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+17/03/2023 00:00:40 INFORMATION Deallocating memory at address: 128.
+17/03/2023 00:00:40 INFORMATION Target data as byte collection: 43 2 0 0 
+17/03/2023 00:00:40 INFORMATION Deallocating memory at address: 76.
+17/03/2023 00:00:40 INFORMATION Target data as byte collection: 200 1 0 0 
+17/03/2023 00:00:40 INFORMATION Deallocating memory at address: 144.
+17/03/2023 00:00:40 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+17/03/2023 00:00:40 INFORMATION Allocating 40 bytes of memory via first-fit method.
+17/03/2023 00:00:40 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+17/03/2023 00:00:40 INFORMATION Allocating 20 bytes of memory via first-fit method.
+17/03/2023 00:00:40 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+17/03/2023 00:00:40 INFORMATION Allocating 8 bytes of memory via first-fit method.
+17/03/2023 00:00:40 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+17/03/2023 00:00:40 INFORMATION Allocating 4 bytes of memory via first-fit method.
+17/03/2023 00:00:40 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+17/03/2023 00:00:40 INFORMATION Deallocating memory at address: 76.
+17/03/2023 00:00:40 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 248 127 0 0 0 0 0 0 
+17/03/2023 00:00:40 INFORMATION Allocating 4 bytes of memory via first-fit method.
+17/03/2023 00:00:40 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+17/03/2023 00:00:40 INFORMATION Allocating 8 bytes of memory via first-fit method.
+17/03/2023 00:00:40 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+17/03/2023 00:00:40 INFORMATION Deallocating memory at address: 24.
+17/03/2023 00:00:40 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+17/03/2023 00:00:40 INFORMATION Deallocating memory at address: 108.
+17/03/2023 00:00:40 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+17/03/2023 00:00:40 INFORMATION Deallocating memory at address: 128.
+17/03/2023 00:00:40 INFORMATION Target data as byte collection: 43 2 0 0 
+17/03/2023 00:00:40 INFORMATION Deallocating memory at address: 76.
+17/03/2023 00:00:40 INFORMATION Target data as byte collection: 200 1 0 0 
+17/03/2023 00:00:40 INFORMATION Deallocating memory at address: 144.
+17/03/2023 00:00:40 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+17/03/2023 00:00:46 INFORMATION Allocating 40 bytes of memory via first-fit method.
+17/03/2023 00:00:46 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+17/03/2023 00:00:46 INFORMATION Allocating 20 bytes of memory via first-fit method.
+17/03/2023 00:00:46 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+17/03/2023 00:00:46 INFORMATION Allocating 8 bytes of memory via first-fit method.
+17/03/2023 00:00:46 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+17/03/2023 00:00:46 INFORMATION Allocating 4 bytes of memory via first-fit method.
+17/03/2023 00:00:46 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+17/03/2023 00:00:46 INFORMATION Deallocating memory at address: 76.
+17/03/2023 00:00:46 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 0 0 0 0 0 0 0 0 
+17/03/2023 00:00:46 INFORMATION Allocating 4 bytes of memory via first-fit method.
+17/03/2023 00:00:46 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+17/03/2023 00:00:46 INFORMATION Allocating 8 bytes of memory via first-fit method.
+17/03/2023 00:00:46 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+17/03/2023 00:00:46 INFORMATION Deallocating memory at address: 24.
+17/03/2023 00:00:46 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+17/03/2023 00:00:46 INFORMATION Deallocating memory at address: 108.
+17/03/2023 00:00:46 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+17/03/2023 00:00:46 INFORMATION Deallocating memory at address: 128.
+17/03/2023 00:00:46 INFORMATION Target data as byte collection: 43 2 0 0 
+17/03/2023 00:00:46 INFORMATION Deallocating memory at address: 76.
+17/03/2023 00:00:46 INFORMATION Target data as byte collection: 200 1 0 0 
+17/03/2023 00:00:46 INFORMATION Deallocating memory at address: 144.
+17/03/2023 00:00:46 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+17/03/2023 00:00:46 INFORMATION Allocating 40 bytes of memory via first-fit method.
+17/03/2023 00:00:46 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+17/03/2023 00:00:46 INFORMATION Allocating 20 bytes of memory via first-fit method.
+17/03/2023 00:00:46 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+17/03/2023 00:00:46 INFORMATION Allocating 8 bytes of memory via first-fit method.
+17/03/2023 00:00:46 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+17/03/2023 00:00:46 INFORMATION Allocating 4 bytes of memory via first-fit method.
+17/03/2023 00:00:46 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+17/03/2023 00:00:46 INFORMATION Deallocating memory at address: 76.
+17/03/2023 00:00:46 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 0 0 0 0 0 0 0 0 
+17/03/2023 00:00:46 INFORMATION Allocating 4 bytes of memory via first-fit method.
+17/03/2023 00:00:46 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+17/03/2023 00:00:46 INFORMATION Allocating 8 bytes of memory via first-fit method.
+17/03/2023 00:00:46 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+17/03/2023 00:00:46 INFORMATION Deallocating memory at address: 24.
+17/03/2023 00:00:46 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+17/03/2023 00:00:46 INFORMATION Deallocating memory at address: 108.
+17/03/2023 00:00:46 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+17/03/2023 00:00:46 INFORMATION Deallocating memory at address: 128.
+17/03/2023 00:00:46 INFORMATION Target data as byte collection: 43 2 0 0 
+17/03/2023 00:00:46 INFORMATION Deallocating memory at address: 76.
+17/03/2023 00:00:46 INFORMATION Target data as byte collection: 200 1 0 0 
+17/03/2023 00:00:46 INFORMATION Deallocating memory at address: 144.
+17/03/2023 00:00:46 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+17/03/2023 00:10:51 INFORMATION Allocating 40 bytes of memory via first-fit method.
+17/03/2023 00:10:51 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+17/03/2023 00:10:51 INFORMATION Allocating 20 bytes of memory via first-fit method.
+17/03/2023 00:10:51 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+17/03/2023 00:10:51 INFORMATION Allocating 8 bytes of memory via first-fit method.
+17/03/2023 00:10:51 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+17/03/2023 00:10:51 INFORMATION Allocating 4 bytes of memory via first-fit method.
+17/03/2023 00:10:51 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+17/03/2023 00:10:51 INFORMATION Deallocating memory at address: 76.
+17/03/2023 00:10:51 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 0 0 0 0 0 0 0 0 
+17/03/2023 00:10:51 INFORMATION Allocating 4 bytes of memory via first-fit method.
+17/03/2023 00:10:51 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+17/03/2023 00:10:51 INFORMATION Allocating 8 bytes of memory via first-fit method.
+17/03/2023 00:10:51 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+17/03/2023 00:10:51 INFORMATION Deallocating memory at address: 24.
+17/03/2023 00:10:51 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+17/03/2023 00:10:51 INFORMATION Deallocating memory at address: 108.
+17/03/2023 00:10:51 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+17/03/2023 00:10:51 INFORMATION Deallocating memory at address: 128.
+17/03/2023 00:10:51 INFORMATION Target data as byte collection: 43 2 0 0 
+17/03/2023 00:10:51 INFORMATION Deallocating memory at address: 76.
+17/03/2023 00:10:51 INFORMATION Target data as byte collection: 200 1 0 0 
+17/03/2023 00:10:51 INFORMATION Deallocating memory at address: 144.
+17/03/2023 00:10:51 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+17/03/2023 00:10:51 INFORMATION Allocating 40 bytes of memory via first-fit method.
+17/03/2023 00:10:51 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+17/03/2023 00:10:51 INFORMATION Allocating 20 bytes of memory via first-fit method.
+17/03/2023 00:10:51 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+17/03/2023 00:10:51 INFORMATION Allocating 8 bytes of memory via first-fit method.
+17/03/2023 00:10:51 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+17/03/2023 00:10:51 INFORMATION Allocating 4 bytes of memory via first-fit method.
+17/03/2023 00:10:51 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+17/03/2023 00:10:51 INFORMATION Deallocating memory at address: 76.
+17/03/2023 00:10:51 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 248 127 0 0 0 0 0 0 
+17/03/2023 00:10:51 INFORMATION Allocating 4 bytes of memory via first-fit method.
+17/03/2023 00:10:51 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+17/03/2023 00:10:51 INFORMATION Allocating 8 bytes of memory via first-fit method.
+17/03/2023 00:10:51 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+17/03/2023 00:10:51 INFORMATION Deallocating memory at address: 24.
+17/03/2023 00:10:51 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+17/03/2023 00:10:51 INFORMATION Deallocating memory at address: 108.
+17/03/2023 00:10:51 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+17/03/2023 00:10:51 INFORMATION Deallocating memory at address: 128.
+17/03/2023 00:10:51 INFORMATION Target data as byte collection: 43 2 0 0 
+17/03/2023 00:10:51 INFORMATION Deallocating memory at address: 76.
+17/03/2023 00:10:51 INFORMATION Target data as byte collection: 200 1 0 0 
+17/03/2023 00:10:51 INFORMATION Deallocating memory at address: 144.
+17/03/2023 00:10:51 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+17/03/2023 00:10:58 INFORMATION Allocating 40 bytes of memory via first-fit method.
+17/03/2023 00:10:58 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+17/03/2023 00:10:58 INFORMATION Allocating 20 bytes of memory via first-fit method.
+17/03/2023 00:10:58 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+17/03/2023 00:10:58 INFORMATION Allocating 8 bytes of memory via first-fit method.
+17/03/2023 00:10:58 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+17/03/2023 00:10:58 INFORMATION Allocating 4 bytes of memory via first-fit method.
+17/03/2023 00:10:58 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+17/03/2023 00:10:58 INFORMATION Deallocating memory at address: 76.
+17/03/2023 00:10:58 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 0 0 0 0 0 0 0 0 
+17/03/2023 00:10:58 INFORMATION Allocating 4 bytes of memory via first-fit method.
+17/03/2023 00:10:58 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+17/03/2023 00:10:58 INFORMATION Allocating 8 bytes of memory via first-fit method.
+17/03/2023 00:10:58 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+17/03/2023 00:10:58 INFORMATION Deallocating memory at address: 24.
+17/03/2023 00:10:58 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+17/03/2023 00:10:58 INFORMATION Deallocating memory at address: 108.
+17/03/2023 00:10:58 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+17/03/2023 00:10:58 INFORMATION Deallocating memory at address: 128.
+17/03/2023 00:10:58 INFORMATION Target data as byte collection: 43 2 0 0 
+17/03/2023 00:10:58 INFORMATION Deallocating memory at address: 76.
+17/03/2023 00:10:58 INFORMATION Target data as byte collection: 200 1 0 0 
+17/03/2023 00:10:58 INFORMATION Deallocating memory at address: 144.
+17/03/2023 00:10:58 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 
+17/03/2023 00:10:58 INFORMATION Allocating 40 bytes of memory via first-fit method.
+17/03/2023 00:10:58 INFORMATION Successfully allocated 40 bytes of memory (addr = 24).
+17/03/2023 00:10:58 INFORMATION Allocating 20 bytes of memory via first-fit method.
+17/03/2023 00:10:58 INFORMATION Successfully allocated 20 bytes of memory (addr = 76).
+17/03/2023 00:10:58 INFORMATION Allocating 8 bytes of memory via first-fit method.
+17/03/2023 00:10:58 INFORMATION Successfully allocated 8 bytes of memory (addr = 108).
+17/03/2023 00:10:58 INFORMATION Allocating 4 bytes of memory via first-fit method.
+17/03/2023 00:10:58 INFORMATION Successfully allocated 4 bytes of memory (addr = 128).
+17/03/2023 00:10:58 INFORMATION Deallocating memory at address: 76.
+17/03/2023 00:10:58 INFORMATION Target data as byte collection: 72 101 108 108 111 32 87 111 114 108 100 0 0 0 0 0 0 0 0 0 
+17/03/2023 00:10:58 INFORMATION Allocating 4 bytes of memory via first-fit method.
+17/03/2023 00:10:58 INFORMATION Successfully allocated 4 bytes of memory (addr = 76).
+17/03/2023 00:10:58 INFORMATION Allocating 8 bytes of memory via first-fit method.
+17/03/2023 00:10:58 INFORMATION Successfully allocated 8 bytes of memory (addr = 144).
+17/03/2023 00:10:58 INFORMATION Deallocating memory at address: 24.
+17/03/2023 00:10:58 INFORMATION Target data as byte collection: 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 
+17/03/2023 00:10:58 INFORMATION Deallocating memory at address: 108.
+17/03/2023 00:10:58 INFORMATION Target data as byte collection: 123 0 0 0 0 0 0 0 
+17/03/2023 00:10:58 INFORMATION Deallocating memory at address: 128.
+17/03/2023 00:10:58 INFORMATION Target data as byte collection: 43 2 0 0 
+17/03/2023 00:10:58 INFORMATION Deallocating memory at address: 76.
+17/03/2023 00:10:58 INFORMATION Target data as byte collection: 200 1 0 0 
+17/03/2023 00:10:58 INFORMATION Deallocating memory at address: 144.
+17/03/2023 00:10:58 INFORMATION Target data as byte collection: 9 3 0 0 0 0 0 0 

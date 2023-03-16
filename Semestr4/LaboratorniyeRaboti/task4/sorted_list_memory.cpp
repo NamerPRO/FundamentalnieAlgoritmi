@@ -1,6 +1,6 @@
 #include "sorted_list_memory.h"
 
-// fun minimum_memory_block_size() => return 2 * _RESERVED_SERVICE_MEMORY_FOR_EMPTY_BLOCK
+// fun minimum_memory_block_size() => return 2 * _RESERVED_SERVICE_MEMORY_SORTED_FOR_EMPTY_BLOCK
 
 nmemory_standards::sorted_list_memory::~sorted_list_memory() noexcept {
     if (_was_allocated_via_constructor) {
@@ -9,7 +9,7 @@ nmemory_standards::sorted_list_memory::~sorted_list_memory() noexcept {
 }
 
 nmemory_standards::sorted_list_memory::sorted_list_memory(void const * memory, size_t memory_size, nmemory::memory::allocate_type type, nlogger::logger * memory_logger): _memory_size(memory_size), _alloc_type(type), _was_allocated_via_constructor(memory == nullptr) {
-    if (_memory_size < 2 * _RESERVED_SERVICE_MEMORY) {
+    if (_memory_size < 2 * _RESERVED_SERVICE_MEMORY_SORTED) {
         throw std::runtime_error("Not enough memory to store service information! Consider passing bigger memory block to constructor.");
     }
 
@@ -20,10 +20,10 @@ nmemory_standards::sorted_list_memory::sorted_list_memory(void const * memory, s
     }
     _memory_logger = memory_logger;
 
-    char * working_section_ptr = const_cast<char *>(reinterpret_cast<char const *>(_memory) + _RESERVED_SERVICE_MEMORY);
+    char * working_section_ptr = const_cast<char *>(reinterpret_cast<char const *>(_memory) + _RESERVED_SERVICE_MEMORY_SORTED);
 
-    set_service_block_data(const_cast<void *>(_memory), service_block_type::empty, 0, working_section_ptr); // \/ 2 * _RESERVED_SERVICE_MEMORY_FOR_EMPTY_BLOCK + sizeof(void *)
-    set_service_block_data(working_section_ptr, service_block_type::empty, _memory_size - _RESERVED_SERVICE_MEMORY, nullptr);
+    set_service_block_data(const_cast<void *>(_memory), service_block_type::empty, 0, working_section_ptr); // \/ 2 * _RESERVED_SERVICE_MEMORY_SORTED_FOR_EMPTY_BLOCK + sizeof(void *)
+    set_service_block_data(working_section_ptr, service_block_type::empty, _memory_size - _RESERVED_SERVICE_MEMORY_SORTED, nullptr);
 }
 
 //nmemory_standards::sorted_list_memory::sorted_list_memory(const void * memory, size_t memory_size, nmemory_standards::sorted_list_memory::allocate_type type) : sorted_list_memory(memory, memory_size, type, nullptr) {}
@@ -37,9 +37,9 @@ void nmemory_standards::sorted_list_memory::log_memory(std::string const & messa
 
 uint32_t nmemory_standards::sorted_list_memory::get_balanced_allocation_space(void * to_empty_memory_block_ptr, uint32_t size_to_allocate) {
     std::pair<uint32_t, void *> empty_block_data = get_service_block_data(to_empty_memory_block_ptr, service_block_type::empty);
-    uint32_t memory_delta = empty_block_data.first - size_to_allocate - _RESERVED_SERVICE_MEMORY;
-    if (memory_delta < _RESERVED_SERVICE_MEMORY) {
-        return empty_block_data.first - _RESERVED_SERVICE_MEMORY;
+    uint32_t memory_delta = empty_block_data.first - size_to_allocate - _RESERVED_SERVICE_MEMORY_SORTED;
+    if (memory_delta < _RESERVED_SERVICE_MEMORY_SORTED) {
+        return empty_block_data.first - _RESERVED_SERVICE_MEMORY_SORTED;
     }
     return size_to_allocate;
 }
@@ -99,14 +99,14 @@ void * nmemory_standards::sorted_list_memory::get_memory_heap_start() const {
 void * nmemory_standards::sorted_list_memory::reserve_block(void * prev_node_ptr, void * cur_node_ptr, size_t target_size, std::pair<uint32_t, void *> cur_empty_block_data) {
     uint32_t balanced_target_size = get_balanced_allocation_space(cur_node_ptr, target_size);
     void * to_allocated_memory_ptr;
-    if (balanced_target_size + _RESERVED_SERVICE_MEMORY == cur_empty_block_data.first) { // <=
-        to_allocated_memory_ptr = set_service_block_data(cur_node_ptr, service_block_type::reserved, balanced_target_size + _RESERVED_SERVICE_MEMORY);
+    if (balanced_target_size + _RESERVED_SERVICE_MEMORY_SORTED == cur_empty_block_data.first) { // <=
+        to_allocated_memory_ptr = set_service_block_data(cur_node_ptr, service_block_type::reserved, balanced_target_size + _RESERVED_SERVICE_MEMORY_SORTED);
         set_service_block_data(prev_node_ptr, service_block_type::empty, get_service_block_data(prev_node_ptr, service_block_type::empty).first, cur_empty_block_data.second);
     } else {
-        to_allocated_memory_ptr = set_service_block_data(cur_node_ptr, service_block_type::reserved, balanced_target_size + _RESERVED_SERVICE_MEMORY);
+        to_allocated_memory_ptr = set_service_block_data(cur_node_ptr, service_block_type::reserved, balanced_target_size + _RESERVED_SERVICE_MEMORY_SORTED);
         void * new_node_ptr = reinterpret_cast<char *>(to_allocated_memory_ptr) + balanced_target_size;
         set_service_block_data(prev_node_ptr, service_block_type::empty, get_service_block_data(prev_node_ptr, service_block_type::empty).first, new_node_ptr);
-        set_service_block_data(new_node_ptr, service_block_type::empty, cur_empty_block_data.first - balanced_target_size - _RESERVED_SERVICE_MEMORY, cur_empty_block_data.second); // cur_empty_block_data.first - balanced_target_size - 2 * _RESERVED_SERVICE_MEMORY_FOR_EMPTY_BLOCK
+        set_service_block_data(new_node_ptr, service_block_type::empty, cur_empty_block_data.first - balanced_target_size - _RESERVED_SERVICE_MEMORY_SORTED, cur_empty_block_data.second); // cur_empty_block_data.first - balanced_target_size - 2 * _RESERVED_SERVICE_MEMORY_SORTED_FOR_EMPTY_BLOCK
     }
     return to_allocated_memory_ptr;
 }
@@ -124,7 +124,7 @@ void * nmemory_standards::sorted_list_memory::first_fit_allocator(size_t target_
     std::pair<uint32_t, void *> cur_empty_block_data;
     do {
         cur_empty_block_data = get_service_block_data(cur_node_ptr, service_block_type::empty);
-        if (target_size + _RESERVED_SERVICE_MEMORY <= cur_empty_block_data.first) {
+        if (target_size + _RESERVED_SERVICE_MEMORY_SORTED <= cur_empty_block_data.first) {
             void * memory_address = reserve_block(prev_node_ptr, cur_node_ptr, target_size, cur_empty_block_data);
             log_memory("Successfully allocated " + std::to_string(target_size) + " bytes of memory (addr = " + std::to_string(reinterpret_cast<intptr_t>(memory_address) - reinterpret_cast<intptr_t>(get_memory_heap_start())) + ").", nlogger::logger::severity::information);
             return memory_address;
@@ -155,7 +155,7 @@ void * nmemory_standards::sorted_list_memory::best_fit_allocator(size_t target_s
 
     do {
         cur_empty_block_data = get_service_block_data(cur_node_ptr, service_block_type::empty);
-        if (target_size + _RESERVED_SERVICE_MEMORY <= cur_empty_block_data.first) {
+        if (target_size + _RESERVED_SERVICE_MEMORY_SORTED <= cur_empty_block_data.first) {
             if (best_size >= cur_empty_block_data.first) {
                 best_size = cur_empty_block_data.first;
                 prev_node_ptr_best = prev_node_ptr;
@@ -195,7 +195,7 @@ void * nmemory_standards::sorted_list_memory::worst_fit_allocator(size_t target_
 
     do {
         cur_empty_block_data = get_service_block_data(cur_node_ptr, service_block_type::empty);
-        if (target_size + _RESERVED_SERVICE_MEMORY <= cur_empty_block_data.first) {
+        if (target_size + _RESERVED_SERVICE_MEMORY_SORTED <= cur_empty_block_data.first) {
             if (worst_size <= cur_empty_block_data.first) {
                 worst_size = cur_empty_block_data.first;
                 prev_node_ptr_worst = prev_node_ptr;
@@ -231,12 +231,12 @@ void * nmemory_standards::sorted_list_memory::allocate(size_t target_size) const
 void nmemory_standards::sorted_list_memory::deallocate(const void * target_to_deallocate) const {
     log_memory("Deallocating memory at address: " + std::to_string(reinterpret_cast<intptr_t>(target_to_deallocate) - reinterpret_cast<intptr_t>(get_memory_heap_start())) + ".", nlogger::logger::severity::information);
 
-    char * moving_target_to_deallocate = reinterpret_cast<char *>(const_cast<void *>(target_to_deallocate)) - _RESERVED_SERVICE_MEMORY;
+    char * moving_target_to_deallocate = reinterpret_cast<char *>(const_cast<void *>(target_to_deallocate)) - _RESERVED_SERVICE_MEMORY_SORTED;
     void * working_target_to_deallocate = moving_target_to_deallocate;
 
     std::string data_as_byte_collection;
-    uint32_t target_size = get_service_block_data(working_target_to_deallocate, service_block_type::reserved).first - _RESERVED_SERVICE_MEMORY;
-    auto * memory_block_ptr = reinterpret_cast<unsigned char *>(moving_target_to_deallocate + _RESERVED_SERVICE_MEMORY);
+    uint32_t target_size = get_service_block_data(working_target_to_deallocate, service_block_type::reserved).first - _RESERVED_SERVICE_MEMORY_SORTED;
+    auto * memory_block_ptr = reinterpret_cast<unsigned char *>(const_cast<void *>(target_to_deallocate));
     for (uint32_t i = 0; i < target_size; ++i) {
         data_as_byte_collection += std::to_string(static_cast<int>(*memory_block_ptr)) + ' ';
         ++memory_block_ptr;
