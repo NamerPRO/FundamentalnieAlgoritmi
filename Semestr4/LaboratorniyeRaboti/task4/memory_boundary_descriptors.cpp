@@ -23,8 +23,6 @@ nmemory_standards::boundary_descriptors_memory::boundary_descriptors_memory(
 
 }
 
-
-
 void * nmemory_standards::boundary_descriptors_memory::allocate(
         size_t target_size
         ) const {
@@ -70,7 +68,9 @@ void * nmemory_standards::boundary_descriptors_memory::first_fit_allocator(
 
     uint32_t empty_block_size = get_service_empty_block_size(current_block_ptr, reinterpret_cast<char *>(this->get_memory_heap_start()) + _memory_size);
     if (target_size + _RESERVED_SERVICE_MEMORY <= empty_block_size) {
-        return reserve_block(service_block_type::last, current_block_data, target_size, current_block_ptr);
+        void * memory_address = reserve_block(service_block_type::last, current_block_data, target_size, current_block_ptr);
+        log_memory("Successfully allocated " + std::to_string(target_size) + " bytes of memory (addr = " + std::to_string(reinterpret_cast<intptr_t>(memory_address) - reinterpret_cast<intptr_t>(get_memory_heap_start())) + ").", nlogger::logger::severity::information);
+        return memory_address;
     }
 
     throw std::runtime_error("Memory allocate exception!");
@@ -330,4 +330,3 @@ void nmemory_standards::boundary_descriptors_memory::log_memory(std::string cons
 //    }
 //    return target_size;
 //}
-
