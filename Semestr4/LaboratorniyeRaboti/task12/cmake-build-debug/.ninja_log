@@ -1,0 +1,22 @@
+# ninja log v5
+1	1499	1682453847288290153	CMakeFiles/task12.dir/nmemory/sorted_list_memory.cpp.o	36dd536e53fdd2d
+2	299	1682454273674048501	CMakeFiles/task12.dir/nbst/nmalloc.cpp.o	d79bfd69b91c09af
+4	287	1682453867183994841	CMakeFiles/task12.dir/nmemory/nlogger/cpp_time.cpp.o	33c3fb2fa1876d6f
+0	269	1682453810448838732	CMakeFiles/task12.dir/nmemory/memory.cpp.o	8ca05a8deacf5704
+287	544	1682453867439991046	CMakeFiles/task12.dir/nmemory/nlogger/logger_builder.cpp.o	4ee5284997be13d1
+1	1492	1682453847288290153	CMakeFiles/task12.dir/nmemory/standard_allocator.cpp.o	b6201dad80963e21
+1	265	1682453867163995138	CMakeFiles/task12.dir/nmemory/nlogger/basics.cpp.o	9fc2c92f0a5eb0dd
+0	1509	1682453811688820227	CMakeFiles/task12.dir/nmemory/buddy_memory_allocator.cpp.o	c782d40cbbd2362f
+266	519	1682453867415991402	CMakeFiles/task12.dir/nmemory/nlogger/logger.cpp.o	c2f43552a4e28e6a
+269	1709	1682453811888817243	CMakeFiles/task12.dir/nmemory/memory_boundary_descriptors.cpp.o	f758b829e0744c6b
+1	1452	1682453943730864007	CMakeFiles/task12.dir/nmemory/nlogger/logger_helper.cpp.o	d6244b85f99d9e90
+0	14	1682509675260843784	build.ninja	74b6297de7d00441
+1	323	1682509675584825349	CMakeFiles/task12.dir/nmemory/memory.cpp.o	a05ca2e4a5aec95a
+1	1554	1682509676816755541	CMakeFiles/task12.dir/nmemory/buddy_memory_allocator.cpp.o	8b6de090181072b4
+323	1898	1682509677156736369	CMakeFiles/task12.dir/nmemory/memory_boundary_descriptors.cpp.o	e2cbed9e7e5304ce
+1	1619	1682509718014711762	CMakeFiles/task12.dir/nmemory/sorted_list_memory.cpp.o	845d2b66511e3d53
+1	1630	1682509718030711075	CMakeFiles/task12.dir/nmemory/standard_allocator.cpp.o	a7b6999ed772a0af
+1	298	1682509731726147839	CMakeFiles/task12.dir/nmemory/nlogger/cpp_time.cpp.o	a5975e1627a396a7
+1	313	1682509731742147211	CMakeFiles/task12.dir/nmemory/nlogger/basics.cpp.o	9c54bccfb0ba9c83
+298	604	1682509732030135924	CMakeFiles/task12.dir/nmemory/nlogger/logger.cpp.o	39bbc5d026918abb
+313	613	1682509732042135457	CMakeFiles/task12.dir/nmemory/nlogger/logger_builder.cpp.o	2e1899a3ab71b041
