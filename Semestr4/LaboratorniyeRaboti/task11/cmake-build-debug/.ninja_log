@@ -1,0 +1,22 @@
+# ninja log v5
+1677	3197	1681496748733908344	CMakeFiles/task11.dir/nmemory/standard_allocator.cpp.o	c623d32ad861763c
+1613	3169	1681496748705901093	CMakeFiles/task11.dir/nmemory/sorted_list_memory.cpp.o	22f5ba85dc4b484
+327	1890	1681496803860417197	CMakeFiles/task11.dir/nmemory/nlogger/logger_helper.cpp.o	41ef07a1e2b94c0f
+2	338	1681496802308002615	CMakeFiles/task11.dir/nmemory/nlogger/cpp_time.cpp.o	6a78979d1ffe1f12
+2	315	1681511140662527688	CMakeFiles/task11.dir/nmalloc.cpp.o	c7b1a131945e73f5
+1	387	1681577043634622782	CMakeFiles/task11.dir/binary_search_tree.cpp.o	3d1661f9af889e8a
+1734	1890	1681577285401003641	task11	3393f42943f1b7a8
+1	1734	1681577285245019966	CMakeFiles/task11.dir/main.cpp.o	d82bc72020817eb
+2	14	1681510425649029348	CMakeFiles/task11.dir/associative_container.cpp.o	b15727705ec375fb
+1	13	1682434507727880232	build.ninja	6936466cbf4dbe07
+1	1612	1681496747145497273	CMakeFiles/task11.dir/nmemory/buddy_memory_allocator.cpp.o	a658952a12f3fd79
+1	319	1681496802287997274	CMakeFiles/task11.dir/nmemory/nlogger/basics.cpp.o	11bcda6f2f6b5768
+1	317	1681496745845161071	CMakeFiles/task11.dir/nmemory/memory.cpp.o	cec2cec7f646b5a
+338	2154	1681496804124487751	CMakeFiles/task11.dir/nmemory/nlogger/standard_logger.cpp.o	21638391413b2ae5
+317	2081	1681496747613618384	CMakeFiles/task11.dir/nmemory/memory_boundary_descriptors.cpp.o	ad2566674f3e4964
+2	327	1681496802295999410	CMakeFiles/task11.dir/nmemory/nlogger/logger.cpp.o	f254c7f1fe8a45b8
+319	620	1681496802588077390	CMakeFiles/task11.dir/nmemory/nlogger/logger_builder.cpp.o	6ee590e5db26c3b4
+620	3436	1681496805400828906	CMakeFiles/task11.dir/nmemory/nlogger/standard_logger_builder.cpp.o	a30d870b8f6dfb58
+1	383	1682434780030181381	CMakeFiles/task11.dir/binary_search_tree.cpp.o	3d1661f9af889e8a
+0	1652	1682434781298144257	CMakeFiles/task11.dir/main.cpp.o	d82bc72020817eb
+1652	1905	1682434781554136781	task11	3393f42943f1b7a8
