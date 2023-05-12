@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task15/main.cpp
+iostream
+-
+./nbtree/btree.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task15/nbtree/btree.h
+
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task15/nbtree/associative_container.h
+iostream
+-
+
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task15/nbtree/btree.h
+iterator
+-
+stack
+-
+stdexcept
+-
+tuple
+-
+associative_container.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task15/nbtree/associative_container.h
+nmalloc.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task15/nbtree/nmalloc.h
+
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task15/nbtree/nmalloc.h
+../nmemory/memory.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task15/nmemory/memory.h
+
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task15/nmemory/memory.h
+iostream
+-
+
