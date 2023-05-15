@@ -1,0 +1,82 @@
+[
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/main.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/main.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/main.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/nbst/nmalloc.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbst/nmalloc.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbst/nmalloc.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/nmemory/buddy_memory_allocator.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/buddy_memory_allocator.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/buddy_memory_allocator.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/nmemory/memory_boundary_descriptors.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/memory_boundary_descriptors.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/memory_boundary_descriptors.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/nmemory/memory.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/memory.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/memory.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/nmemory/sorted_list_memory.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/sorted_list_memory.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/sorted_list_memory.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/nmemory/standard_allocator.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/standard_allocator.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/standard_allocator.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/nmemory/nlogger/basics.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/basics.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/basics.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/nmemory/nlogger/cpp_time.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/cpp_time.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/cpp_time.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/nmemory/nlogger/logger_builder.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/logger_builder.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/logger_builder.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/nmemory/nlogger/logger_helper.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/logger_helper.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/logger_helper.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/nmemory/nlogger/logger.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/logger.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/logger.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/nmemory/nlogger/standard_logger_builder.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/standard_logger_builder.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/standard_logger_builder.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/nmemory/nlogger/standard_logger.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/standard_logger.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/standard_logger.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_comporators.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_comporators.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_interpriter.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_interpriter.cpp"
+}
+]

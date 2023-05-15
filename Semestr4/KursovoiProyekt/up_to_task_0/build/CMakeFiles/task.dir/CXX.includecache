@@ -1,0 +1,82 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/main.cpp
+iostream
+-
+string
+-
+utility
+-
+./pipeline_manager/pipeline.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline.h
+
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/navl/avl_tree.h
+../nbst/binary_search_tree.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbst/binary_search_tree.h
+../nbst/associative_container.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbst/associative_container.h
+
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbst/associative_container.h
+iostream
+-
+
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbst/binary_search_tree.h
+iostream
+-
+memory
+-
+new
+-
+stack
+-
+tuple
+-
+type_traits
+-
+associative_container.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbst/associative_container.h
+./nmalloc.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbst/nmalloc.h
+../nmemory/memory.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/memory.h
+
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbst/nmalloc.h
+../nmemory/memory.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/memory.h
+
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/memory.h
+iostream
+-
+
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline.h
+any
+-
+fstream
+-
+functional
+-
+ios
+-
+iostream
+-
+stdexcept
+-
+string
+-
+variant
+-
+vector
+-
+boost/algorithm/string.hpp
+-
+../nbst/associative_container.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbst/associative_container.h
+../navl/avl_tree.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/navl/avl_tree.h
+
