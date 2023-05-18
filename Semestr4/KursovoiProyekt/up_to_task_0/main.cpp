@@ -6,12 +6,36 @@
 
 int main(int argc, char * argv[]) {
 
-    if (argc != 2) {
+    npipeline::pipeline * my_pipe;
+
+    switch (argc) {
+
+    case 1: {
+        my_pipe = new npipeline::pipeline(
+            npipeline::pipeline::tree_type::avl,
+            npipeline::pipeline::interpriter_type::user_input_interpriter
+        );
+        break;
+    }
+
+    case 2: {
+        my_pipe = new npipeline::pipeline(
+            npipeline::pipeline::tree_type::avl,
+            npipeline::pipeline::interpriter_type::file_input_interpriter,
+            argv[1]
+        );
+        break;
+    }
+
+    default: {
         throw std::runtime_error("Wrong arguments exception! Program requires ONE file with commands to run.");
     }
 
-    npipeline::pipeline my_pipe(npipeline::pipeline::tree_type::avl);
-    my_pipe.run(argv[1]); // "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build/insts"
+    }
+
+    my_pipe->run();
+
+     // "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build/insts"
 
 
 

@@ -44,6 +44,9 @@ add_executable(
     pipeline_manager/pipeline_comporators.cpp
     pipeline_manager/pipeline_interpriter.cpp
     pipeline_manager/pipeline.h
+    pipeline_manager/user_interpriter.cpp
+    interpritator_manager/interpritator.h
+    pipeline_manager/standard_pipeline_interpriter_kit.cpp
     )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
