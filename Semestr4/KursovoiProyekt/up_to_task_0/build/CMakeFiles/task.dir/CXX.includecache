@@ -9,11 +9,11 @@
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/main.cpp
 iostream
 -
-string
+stdexcept
 -
-utility
--
-./pipeline_manager/pipeline.h
+navl/avl_tree.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/navl/avl_tree.h
+pipeline_manager/pipeline.h
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline.h
 
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/navl/avl_tree.h
@@ -55,13 +55,7 @@ iostream
 -
 
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline.h
-any
--
 fstream
--
-functional
--
-ios
 -
 iostream
 -
@@ -69,11 +63,7 @@ stdexcept
 -
 string
 -
-variant
--
 vector
--
-boost/algorithm/string.hpp
 -
 ../nbst/associative_container.h
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbst/associative_container.h

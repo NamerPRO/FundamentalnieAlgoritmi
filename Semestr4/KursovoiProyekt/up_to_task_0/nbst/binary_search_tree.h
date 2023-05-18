@@ -60,6 +60,7 @@ namespace nbst {
                 tree_node * right_child;
 
                 virtual ~tree_node() noexcept = default;
+
             };
 
             tree_node * _root_node;

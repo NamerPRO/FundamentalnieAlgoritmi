@@ -3,8 +3,8 @@
 namespace npipeline {
 
     bool pipeline::pipeline_comporators::standard_pipeline_comporator(
-        const pipeline_key & lhs,
-        const pipeline_key & rhs
+        pipeline_key const  & lhs,
+        pipeline_key const & rhs
     ) {
         if (lhs.build_id != rhs.build_id) {
             return lhs.build_id < rhs.build_id;
@@ -13,8 +13,8 @@ namespace npipeline {
     }
 
     bool pipeline::pipeline_comporators::standard_string_comporator(
-        const std::string & lhs,
-        const std::string & rhs
+        std::string const & lhs,
+        std::string const & rhs
     ) {
         for (int i = 0; i < lhs.size(); ++i) {
             if (lhs[i] == rhs[i]) {

@@ -1,64 +1,19 @@
 #include <iostream>
-#include <string>
-#include <utility>
+#include <stdexcept>
 
-#include "./pipeline_manager/pipeline.h"
+#include "navl/avl_tree.h"
+#include "pipeline_manager/pipeline.h"
+
+int main(int argc, char * argv[]) {
+
+    if (argc != 2) {
+        throw std::runtime_error("Wrong arguments exception! Program requires ONE file with commands to run.");
+    }
+
+    npipeline::pipeline my_pipe(npipeline::pipeline::tree_type::avl);
+    my_pipe.run(argv[1]); // "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build/insts"
 
 
-
-int main() {
-    npipeline::pipeline pipe(npipeline::pipeline::tree_type::avl);
-    pipe.run("./insts");
-
-    // npipeline::pipeline::collection * my_collection = a.insert_collection(
-    //     "MAIN_POOL",
-    //     "SCHEME_1",
-    //     "super cool collection"
-    // );
-
-    // npipeline::pipeline::pipeline_passage db = {
-    //         1,
-    //         2,
-    //         {
-    //             111,
-    //             "222",
-    //             "333"
-    //         },
-    //         "aaa",
-    //         "bbb",
-    //         "ccc",
-    //         "ddd",
-    //         "eee",
-    //         "fff"
-    // };
-
-    // my_collection->insert({ 1, 2 }, std::move(&db));
-
-    // std::cout << my_collection->find({1, 2})->commit_information.developer_email << std::endl;
-
-    // npipeline::pipeline::pipeline_passage db2 = {
-    //         1,
-    //         2,
-    //         {
-    //             111,
-    //             "222",
-    //             "whats the kursach?"
-    //         },
-    //         "aaa",
-    //         "bbb",
-    //         "ccc",
-    //         "ddd",
-    //         "eee",
-    //         "fff"
-    // };
-
-    // my_collection->insert({ 1, 2 }, std::move(&db2));
-
-    // std::cout << my_collection->find({1, 2})->commit_information.developer_email << std::endl;
-
-    // a.remove_pool("MAIN_POOL");
-
-    // std::cout << a.find("MAIN_POOL") << std::endl;
 
     return 0;
 }
