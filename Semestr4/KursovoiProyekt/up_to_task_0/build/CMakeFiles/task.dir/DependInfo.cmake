@@ -18,10 +18,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/standard_logger_builder.cpp" "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build/CMakeFiles/task.dir/nmemory/nlogger/standard_logger_builder.cpp.o"
   "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/sorted_list_memory.cpp" "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build/CMakeFiles/task.dir/nmemory/sorted_list_memory.cpp.o"
   "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/standard_allocator.cpp" "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build/CMakeFiles/task.dir/nmemory/standard_allocator.cpp.o"
-  "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_comporators.cpp" "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build/CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o"
-  "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_interpriter.cpp" "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build/CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o"
-  "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/standard_pipeline_interpriter_kit.cpp" "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build/CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_kit.cpp.o"
-  "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/user_interpriter.cpp" "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build/CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

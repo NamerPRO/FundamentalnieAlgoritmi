@@ -87,22 +87,20 @@ namespace nbst {
         public:
 
             explicit binary_search_tree(
-                    nmemory::memory * allocator
+                    nmemory::memory * allocator = nullptr
                     ) noexcept : ntools::nmalloc(allocator) {
                 _root_node = nullptr;
             }
 
-            explicit binary_search_tree() noexcept : binary_search_tree(nullptr) {}
-
             binary_search_tree(
-                    binary_search_tree const & tree
+                    binary_search_tree<tkey, tvalue, tkey_comporator> const & tree
                     ) noexcept : ntools::nmalloc(tree._allocator) {
                 _root_node = nullptr;
                 clone(tree);
             }
 
-            binary_search_tree & operator=(
-                    binary_search_tree const & tree
+            binary_search_tree<tkey, tvalue, tkey_comporator> & operator=(
+                    binary_search_tree<tkey, tvalue, tkey_comporator> const & tree
                     ) noexcept {
                 if (&tree == this) {
                     return *this;
@@ -113,15 +111,15 @@ namespace nbst {
             }
 
             binary_search_tree(
-                    binary_search_tree && tree
+                    binary_search_tree<tkey, tvalue, tkey_comporator> && tree
                     ) noexcept : ntools::nmalloc(tree._allocator) {
                 _root_node = tree._root_node;
                 tree._root_node = nullptr;
                 tree._allocator = nullptr;
             }
 
-            binary_search_tree & operator=(
-                    binary_search_tree && tree
+            binary_search_tree<tkey, tvalue, tkey_comporator> & operator=(
+                    binary_search_tree<tkey, tvalue, tkey_comporator> && tree
                     ) noexcept {
                 if (&tree == this) {
                     return *this;

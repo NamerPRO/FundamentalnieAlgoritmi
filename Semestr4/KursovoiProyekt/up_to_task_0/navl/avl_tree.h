@@ -8,6 +8,39 @@ namespace navl {
 
     template<typename tkey, typename tvalue, bool (*tkey_comporator)(tkey const &, tkey const &) = nbst::standard_comporators::basic_comporator>
     class avl_tree final : public nbst::binary_search_tree<tkey, tvalue, tkey_comporator> {
+    
+    public:
+
+        explicit avl_tree(
+            nmemory::memory * allocator = nullptr
+        ) noexcept : nbst::binary_search_tree<tkey, tvalue, tkey_comporator>(allocator) {}
+
+        avl_tree(
+            avl_tree<tkey, tvalue, tkey_comporator> const & tree
+        ) noexcept : nbst::binary_search_tree<tkey, tvalue, tkey_comporator>(tree) {
+            // TODO: copy nodes heights
+        }
+
+        avl_tree<tkey, tvalue, tkey_comporator> & operator=(
+            avl_tree<tkey, tvalue, tkey_comporator> const & tree
+        ) noexcept {
+            // TODO: copy nodes heights
+            return static_cast<avl_tree<tkey, tvalue, tkey_comporator>>(*reinterpret_cast<nbst::binary_search_tree<tkey, tvalue, tkey_comporator > *>(this) = tree);
+            // return nbst::binary_search_tree<tkey, tvalue, tkey_comporator>::operator=(*reinterpret_cast<nbst::binary_search_tree<tkey, tvalue, tkey_comporator > *>(this), tree);
+        }
+
+        avl_tree(
+            avl_tree<tkey, tvalue, tkey_comporator> && tree
+        ) noexcept {}
+
+        avl_tree<tkey, tvalue, tkey_comporator> & operator=(
+            avl_tree<tkey, tvalue, tkey_comporator> && tree
+        ) noexcept {
+            return static_cast<avl_tree<tkey, tvalue, tkey_comporator> >(*reinterpret_cast<nbst::binary_search_tree<tkey, tvalue, tkey_comporator> *>(this) = std::move(tree));
+            // return nbst::binary_search_tree<tkey, tvalue, tkey_comporator>::operator=(*reinterpret_cast<nbst::binary_search_tree<tkey, tvalue, tkey_comporator> *>(this), tree);
+        }
+
+        ~avl_tree() noexcept = default;
 
     protected:
 
@@ -80,7 +113,7 @@ namespace navl {
         avl_node * to_avl_node(
                 typename bst::tree_node * node
                 ) noexcept {
-            return static_cast<avl_node *>(node);
+            return reinterpret_cast<avl_node *>(node);
         }
 
         void restore_avl_tree(

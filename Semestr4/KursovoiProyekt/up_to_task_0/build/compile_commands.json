@@ -68,25 +68,5 @@
   "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
   "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/nmemory/nlogger/standard_logger.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/standard_logger.cpp\"",
   "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/standard_logger.cpp"
-},
-{
-  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
-  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_comporators.cpp\"",
-  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_comporators.cpp"
-},
-{
-  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
-  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_interpriter.cpp\"",
-  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_interpriter.cpp"
-},
-{
-  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
-  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/user_interpriter.cpp\"",
-  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/user_interpriter.cpp"
-},
-{
-  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build",
-  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_kit.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/standard_pipeline_interpriter_kit.cpp\"",
-  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/standard_pipeline_interpriter_kit.cpp"
 }
 ]

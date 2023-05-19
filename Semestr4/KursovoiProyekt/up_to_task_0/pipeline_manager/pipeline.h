@@ -242,7 +242,7 @@ namespace npipeline {
             switch (_container_type) {
                 
             case tree_type::avl:
-                _dbase = new navl::avl_tree<std::string, pool, pipeline_comporators::standard_string_comporator>;
+                _dbase = new navl::avl_tree<std::string, pool, pipeline_comporators::standard_string_comporator>(allocator);
                 break;
             
             }

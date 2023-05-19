@@ -13,10 +13,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/task.dir/nmemory/nlogger/standard_logger_builder.cpp.o"
   "CMakeFiles/task.dir/nmemory/sorted_list_memory.cpp.o"
   "CMakeFiles/task.dir/nmemory/standard_allocator.cpp.o"
-  "CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o"
-  "CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o"
-  "CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_kit.cpp.o"
-  "CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o"
   "task"
   "task.pdb"
 )

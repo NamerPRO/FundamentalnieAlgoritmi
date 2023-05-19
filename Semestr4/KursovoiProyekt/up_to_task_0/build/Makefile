@@ -898,114 +898,6 @@ nmemory/standard_allocator.cpp.s:
 	$(MAKE) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/nmemory/standard_allocator.cpp.s
 .PHONY : nmemory/standard_allocator.cpp.s
 
-pipeline_manager/pipeline_comporators.o: pipeline_manager/pipeline_comporators.cpp.o
-
-.PHONY : pipeline_manager/pipeline_comporators.o
-
-# target to build an object file
-pipeline_manager/pipeline_comporators.cpp.o:
-	$(MAKE) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o
-.PHONY : pipeline_manager/pipeline_comporators.cpp.o
-
-pipeline_manager/pipeline_comporators.i: pipeline_manager/pipeline_comporators.cpp.i
-
-.PHONY : pipeline_manager/pipeline_comporators.i
-
-# target to preprocess a source file
-pipeline_manager/pipeline_comporators.cpp.i:
-	$(MAKE) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.i
-.PHONY : pipeline_manager/pipeline_comporators.cpp.i
-
-pipeline_manager/pipeline_comporators.s: pipeline_manager/pipeline_comporators.cpp.s
-
-.PHONY : pipeline_manager/pipeline_comporators.s
-
-# target to generate assembly for a file
-pipeline_manager/pipeline_comporators.cpp.s:
-	$(MAKE) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.s
-.PHONY : pipeline_manager/pipeline_comporators.cpp.s
-
-pipeline_manager/pipeline_interpriter.o: pipeline_manager/pipeline_interpriter.cpp.o
-
-.PHONY : pipeline_manager/pipeline_interpriter.o
-
-# target to build an object file
-pipeline_manager/pipeline_interpriter.cpp.o:
-	$(MAKE) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o
-.PHONY : pipeline_manager/pipeline_interpriter.cpp.o
-
-pipeline_manager/pipeline_interpriter.i: pipeline_manager/pipeline_interpriter.cpp.i
-
-.PHONY : pipeline_manager/pipeline_interpriter.i
-
-# target to preprocess a source file
-pipeline_manager/pipeline_interpriter.cpp.i:
-	$(MAKE) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.i
-.PHONY : pipeline_manager/pipeline_interpriter.cpp.i
-
-pipeline_manager/pipeline_interpriter.s: pipeline_manager/pipeline_interpriter.cpp.s
-
-.PHONY : pipeline_manager/pipeline_interpriter.s
-
-# target to generate assembly for a file
-pipeline_manager/pipeline_interpriter.cpp.s:
-	$(MAKE) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.s
-.PHONY : pipeline_manager/pipeline_interpriter.cpp.s
-
-pipeline_manager/standard_pipeline_interpriter_kit.o: pipeline_manager/standard_pipeline_interpriter_kit.cpp.o
-
-.PHONY : pipeline_manager/standard_pipeline_interpriter_kit.o
-
-# target to build an object file
-pipeline_manager/standard_pipeline_interpriter_kit.cpp.o:
-	$(MAKE) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_kit.cpp.o
-.PHONY : pipeline_manager/standard_pipeline_interpriter_kit.cpp.o
-
-pipeline_manager/standard_pipeline_interpriter_kit.i: pipeline_manager/standard_pipeline_interpriter_kit.cpp.i
-
-.PHONY : pipeline_manager/standard_pipeline_interpriter_kit.i
-
-# target to preprocess a source file
-pipeline_manager/standard_pipeline_interpriter_kit.cpp.i:
-	$(MAKE) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_kit.cpp.i
-.PHONY : pipeline_manager/standard_pipeline_interpriter_kit.cpp.i
-
-pipeline_manager/standard_pipeline_interpriter_kit.s: pipeline_manager/standard_pipeline_interpriter_kit.cpp.s
-
-.PHONY : pipeline_manager/standard_pipeline_interpriter_kit.s
-
-# target to generate assembly for a file
-pipeline_manager/standard_pipeline_interpriter_kit.cpp.s:
-	$(MAKE) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_kit.cpp.s
-.PHONY : pipeline_manager/standard_pipeline_interpriter_kit.cpp.s
-
-pipeline_manager/user_interpriter.o: pipeline_manager/user_interpriter.cpp.o
-
-.PHONY : pipeline_manager/user_interpriter.o
-
-# target to build an object file
-pipeline_manager/user_interpriter.cpp.o:
-	$(MAKE) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o
-.PHONY : pipeline_manager/user_interpriter.cpp.o
-
-pipeline_manager/user_interpriter.i: pipeline_manager/user_interpriter.cpp.i
-
-.PHONY : pipeline_manager/user_interpriter.i
-
-# target to preprocess a source file
-pipeline_manager/user_interpriter.cpp.i:
-	$(MAKE) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.i
-.PHONY : pipeline_manager/user_interpriter.cpp.i
-
-pipeline_manager/user_interpriter.s: pipeline_manager/user_interpriter.cpp.s
-
-.PHONY : pipeline_manager/user_interpriter.s
-
-# target to generate assembly for a file
-pipeline_manager/user_interpriter.cpp.s:
-	$(MAKE) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.s
-.PHONY : pipeline_manager/user_interpriter.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1088,18 +980,6 @@ help:
 	@echo "... nmemory/standard_allocator.o"
 	@echo "... nmemory/standard_allocator.i"
 	@echo "... nmemory/standard_allocator.s"
-	@echo "... pipeline_manager/pipeline_comporators.o"
-	@echo "... pipeline_manager/pipeline_comporators.i"
-	@echo "... pipeline_manager/pipeline_comporators.s"
-	@echo "... pipeline_manager/pipeline_interpriter.o"
-	@echo "... pipeline_manager/pipeline_interpriter.i"
-	@echo "... pipeline_manager/pipeline_interpriter.s"
-	@echo "... pipeline_manager/standard_pipeline_interpriter_kit.o"
-	@echo "... pipeline_manager/standard_pipeline_interpriter_kit.i"
-	@echo "... pipeline_manager/standard_pipeline_interpriter_kit.s"
-	@echo "... pipeline_manager/user_interpriter.o"
-	@echo "... pipeline_manager/user_interpriter.i"
-	@echo "... pipeline_manager/user_interpriter.s"
 .PHONY : help
 
 
