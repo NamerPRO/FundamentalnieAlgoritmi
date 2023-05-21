@@ -9,11 +9,16 @@ enable_testing()
 add_executable(
     task
     main.cpp
+    
     navl/avl_tree.h
+    nsplay/splay_tree.h
+    nbtree/btree.h
+
     nbst/associative_container.h
     nbst/binary_search_tree.h
     nbst/nmalloc.cpp
     nbst/nmalloc.h
+
     nmemory/allocate_type_helper.h
     nmemory/buddy_memory_allocator.cpp
     nmemory/buddy_memory_allocator.h
@@ -41,12 +46,17 @@ add_executable(
     nmemory/nlogger/standard_logger.h
     nmemory/nlogger/nlohmann/json.hpp
 
-    # pipeline_manager/pipeline_comporators.cpp
-    # pipeline_manager/pipeline_interpriter.cpp
-    # pipeline_manager/pipeline.h
-    # pipeline_manager/user_interpriter.cpp
-    # interpritator_manager/interpritator.h
-    # pipeline_manager/standard_pipeline_interpriter_kit.cpp
+    pipeline_manager/pipeline_base.h
+    pipeline_manager/pipeline_command_invoker.h
+    pipeline_manager/pipeline_comporators.cpp
+    pipeline_manager/pipeline_interpriter.cpp
+    pipeline_manager/pipeline_interpriters.h
+    pipeline_manager/pipeline.h
+    pipeline_manager/standard_pipeline_interpriter_commands.cpp
+    pipeline_manager/standard_pipeline_interpriter_commands.h
+    pipeline_manager/user_interpriter.cpp
+    
+    interpritator_manager/interpritator.h
     )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

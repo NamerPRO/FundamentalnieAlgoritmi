@@ -7,6 +7,7 @@ CMakeFiles/task.dir/main.cpp.o: ../navl/avl_tree.h
 CMakeFiles/task.dir/main.cpp.o: ../nbst/associative_container.h
 CMakeFiles/task.dir/main.cpp.o: ../nbst/binary_search_tree.h
 CMakeFiles/task.dir/main.cpp.o: ../nbst/nmalloc.h
+CMakeFiles/task.dir/main.cpp.o: ../nbtree/btree.h
 CMakeFiles/task.dir/main.cpp.o: ../nmemory/allocate_type_helper.h
 CMakeFiles/task.dir/main.cpp.o: ../nmemory/memory.h
 CMakeFiles/task.dir/main.cpp.o: ../nmemory/memory_boundary_descriptors.h
@@ -18,7 +19,12 @@ CMakeFiles/task.dir/main.cpp.o: ../nmemory/nlogger/logger_helper.h
 CMakeFiles/task.dir/main.cpp.o: ../nmemory/nlogger/nlohmann/json.hpp
 CMakeFiles/task.dir/main.cpp.o: ../nmemory/nlogger/standard_logger.h
 CMakeFiles/task.dir/main.cpp.o: ../nmemory/nlogger/standard_logger_builder.h
+CMakeFiles/task.dir/main.cpp.o: ../nsplay/splay_tree.h
 CMakeFiles/task.dir/main.cpp.o: ../pipeline_manager/pipeline.h
+CMakeFiles/task.dir/main.cpp.o: ../pipeline_manager/pipeline_base.h
+CMakeFiles/task.dir/main.cpp.o: ../pipeline_manager/pipeline_command_invoker.h
+CMakeFiles/task.dir/main.cpp.o: ../pipeline_manager/pipeline_interpriters.h
+CMakeFiles/task.dir/main.cpp.o: ../pipeline_manager/standard_pipeline_interpriter_commands.h
 
 CMakeFiles/task.dir/nbst/nmalloc.cpp.o: ../nbst/nmalloc.cpp
 CMakeFiles/task.dir/nbst/nmalloc.cpp.o: ../nbst/nmalloc.h
@@ -114,4 +120,56 @@ CMakeFiles/task.dir/nmemory/standard_allocator.cpp.o: ../nmemory/nlogger/standar
 CMakeFiles/task.dir/nmemory/standard_allocator.cpp.o: ../nmemory/nlogger/standard_logger_builder.h
 CMakeFiles/task.dir/nmemory/standard_allocator.cpp.o: ../nmemory/standard_allocator.cpp
 CMakeFiles/task.dir/nmemory/standard_allocator.cpp.o: ../nmemory/standard_allocator.hpp
+
+CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o: ../navl/avl_tree.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o: ../nbst/associative_container.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o: ../nbst/binary_search_tree.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o: ../nbst/nmalloc.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o: ../nmemory/memory.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o: ../pipeline_manager/pipeline_base.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o: ../pipeline_manager/pipeline_comporators.cpp
+
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../interpritator_manager/interpritator.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../navl/avl_tree.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../nbst/associative_container.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../nbst/binary_search_tree.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../nbst/nmalloc.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../nbtree/btree.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../nmemory/memory.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../nmemory/nlogger/logger.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../nsplay/splay_tree.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../pipeline_manager/pipeline.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../pipeline_manager/pipeline_base.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../pipeline_manager/pipeline_command_invoker.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../pipeline_manager/pipeline_interpriter.cpp
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../pipeline_manager/pipeline_interpriters.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../pipeline_manager/standard_pipeline_interpriter_commands.h
+
+CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../interpritator_manager/interpritator.h
+CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../navl/avl_tree.h
+CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../nbst/associative_container.h
+CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../nbst/binary_search_tree.h
+CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../nbst/nmalloc.h
+CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../nmemory/memory.h
+CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../pipeline_manager/pipeline_base.h
+CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../pipeline_manager/pipeline_command_invoker.h
+CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../pipeline_manager/pipeline_interpriters.h
+CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../pipeline_manager/standard_pipeline_interpriter_commands.cpp
+CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../pipeline_manager/standard_pipeline_interpriter_commands.h
+
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../interpritator_manager/interpritator.h
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../navl/avl_tree.h
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../nbst/associative_container.h
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../nbst/binary_search_tree.h
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../nbst/nmalloc.h
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../nbtree/btree.h
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../nmemory/memory.h
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../nmemory/nlogger/logger.h
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../nsplay/splay_tree.h
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../pipeline_manager/pipeline.h
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../pipeline_manager/pipeline_base.h
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../pipeline_manager/pipeline_command_invoker.h
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../pipeline_manager/pipeline_interpriters.h
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../pipeline_manager/standard_pipeline_interpriter_commands.h
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../pipeline_manager/user_interpriter.cpp
 

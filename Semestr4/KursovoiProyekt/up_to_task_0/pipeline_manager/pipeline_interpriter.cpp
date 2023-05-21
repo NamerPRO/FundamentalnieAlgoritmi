@@ -1,11 +1,9 @@
-#include "pipeline.h"
+#include "./pipeline.h"
 
 namespace npipeline {
 
-    // pipeline::tree_type pipeline::pipeline_interpriter::_content_type = _content_type;
-
     // Assuming that file has valid syntax
-    void pipeline::pipeline_interpriter::interpritate() {
+    void pipeline_interpriter::interpritate() {
         std::ifstream file(_file_to_interpritate_path);
         if (!file.is_open()) {
             throw std::runtime_error("File to interpritate cannot be opened! Does it exist at given path?");
@@ -42,13 +40,17 @@ namespace npipeline {
             }
 
             if (symbol == '\n' || symbol == EOF) {
-                for (int i = 0; i < _actions.size(); ++i) {
-                    if (_commands[i] == tokens_list[0]) {
-                        _actions[i](_dbase, tokens_list);
-                    }
+
+                if (!tokens_list[0].empty()) {
+                    ninterpritator::interpritator::command * cmd = command_helper::get_cmd_ptr_by_name(_dbase, tokens_list, std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count(), _commands, _invoker); // REAL DATE IN MILLISECONDS HERE
+                
+                    _invoker->add(cmd);
+                    _invoker->invoke();
                 }
+
                 tokens_list.clear();
             }
+
         }
         file.close();
     }

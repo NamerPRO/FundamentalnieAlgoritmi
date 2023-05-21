@@ -1,10 +1,11 @@
 #include "pipeline.h"
+#include "standard_pipeline_interpriter_commands.h"
 #include <ios>
 #include <vector>
 
 namespace npipeline {
 
-    void pipeline::user_interpriter::interpritate() {
+    void user_interpriter::interpritate() {
         std::vector<std::string> tokens_list(17); // Vector cannot contain more than 17 elements
         std::cout << "Enter an action: ";
         std::noskipws(std::cin);
@@ -71,9 +72,9 @@ namespace npipeline {
                 std::getline(std::cin, tokens_list[2]);
                 std::cout << "Enter collection: ";
                 std::getline(std::cin, tokens_list[3]);
-                std::cout << "Enter start build id: ";
+                std::cout << "Enter build id: ";
                 std::getline(std::cin, tokens_list[4]);
-                std::cout << "Enter start build version: ";
+                std::cout << "Enter build version: ";
                 std::getline(std::cin, tokens_list[5]);
                 if (tokens_list[0].ends_with("range")) {
                     std::cout << "Enter end build id: ";
@@ -84,29 +85,20 @@ namespace npipeline {
             } else if (tokens_list[0].starts_with("run")) {
                 std::cout << "Enter path to file: ";
                 std::getline(std::cin, tokens_list[1]);
-                run_file(_dbase, tokens_list);
-                tokens_list.clear();
-                std::cout << "Enter an action: ";
-                continue;
             }
-            for (int i = 0; i < _actions.size(); ++i) {
-                if (_commands[i] == tokens_list[0]) {
-                    _actions[i](_dbase, tokens_list);
-                }
+
+            if (!tokens_list[0].empty()) {
+                ninterpritator::interpritator::command * cmd = command_helper::get_cmd_ptr_by_name(_dbase, tokens_list, std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count(), _commands, _invoker);
+
+                _invoker->add(cmd);
+                _invoker->invoke();
             }
+
             tokens_list.clear();
+            
             std::cout << "Enter an action: ";
         }
         std::cout << std::endl;
-    }
-
-    void pipeline::user_interpriter::run_file(
-        data_base * dbase,
-        std::vector<std::string> const & data
-    ) {
-        ninterpritator::interpritator * temp_interpriter = new pipeline_interpriter(dbase, data[1]);
-        temp_interpriter->interpritate();
-        delete temp_interpriter;
     }
 
 }

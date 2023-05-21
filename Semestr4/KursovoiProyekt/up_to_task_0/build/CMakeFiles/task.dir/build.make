@@ -239,6 +239,58 @@ CMakeFiles/task.dir/nmemory/nlogger/standard_logger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task.dir/nmemory/nlogger/standard_logger.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/standard_logger.cpp" -o CMakeFiles/task.dir/nmemory/nlogger/standard_logger.cpp.s
 
+CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o: CMakeFiles/task.dir/flags.make
+CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o: ../pipeline_manager/pipeline_comporators.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o -c "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_comporators.cpp"
+
+CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_comporators.cpp" > CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.i
+
+CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_comporators.cpp" -o CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.s
+
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: CMakeFiles/task.dir/flags.make
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../pipeline_manager/pipeline_interpriter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o -c "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_interpriter.cpp"
+
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_interpriter.cpp" > CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.i
+
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_interpriter.cpp" -o CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.s
+
+CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: CMakeFiles/task.dir/flags.make
+CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../pipeline_manager/standard_pipeline_interpriter_commands.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o -c "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/standard_pipeline_interpriter_commands.cpp"
+
+CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/standard_pipeline_interpriter_commands.cpp" > CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.i
+
+CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/standard_pipeline_interpriter_commands.cpp" -o CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.s
+
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: CMakeFiles/task.dir/flags.make
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../pipeline_manager/user_interpriter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o -c "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/user_interpriter.cpp"
+
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/user_interpriter.cpp" > CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.i
+
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/user_interpriter.cpp" -o CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.s
+
 # Object files for target task
 task_OBJECTS = \
 "CMakeFiles/task.dir/main.cpp.o" \
@@ -254,7 +306,11 @@ task_OBJECTS = \
 "CMakeFiles/task.dir/nmemory/nlogger/logger_helper.cpp.o" \
 "CMakeFiles/task.dir/nmemory/nlogger/logger.cpp.o" \
 "CMakeFiles/task.dir/nmemory/nlogger/standard_logger_builder.cpp.o" \
-"CMakeFiles/task.dir/nmemory/nlogger/standard_logger.cpp.o"
+"CMakeFiles/task.dir/nmemory/nlogger/standard_logger.cpp.o" \
+"CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o" \
+"CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o" \
+"CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o" \
+"CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o"
 
 # External object files for target task
 task_EXTERNAL_OBJECTS =
@@ -273,9 +329,13 @@ task: CMakeFiles/task.dir/nmemory/nlogger/logger_helper.cpp.o
 task: CMakeFiles/task.dir/nmemory/nlogger/logger.cpp.o
 task: CMakeFiles/task.dir/nmemory/nlogger/standard_logger_builder.cpp.o
 task: CMakeFiles/task.dir/nmemory/nlogger/standard_logger.cpp.o
+task: CMakeFiles/task.dir/pipeline_manager/pipeline_comporators.cpp.o
+task: CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o
+task: CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o
+task: CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o
 task: CMakeFiles/task.dir/build.make
 task: CMakeFiles/task.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable task"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable task"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/task.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

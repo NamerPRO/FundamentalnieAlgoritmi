@@ -17,27 +17,43 @@ namespace navl {
 
         avl_tree(
             avl_tree<tkey, tvalue, tkey_comporator> const & tree
-        ) noexcept : nbst::binary_search_tree<tkey, tvalue, tkey_comporator>(tree) {
-            // TODO: copy nodes heights
+        ) noexcept {
+            bst::_root_node = nullptr;
+            bst::clone(tree);
         }
 
         avl_tree<tkey, tvalue, tkey_comporator> & operator=(
             avl_tree<tkey, tvalue, tkey_comporator> const & tree
         ) noexcept {
-            // TODO: copy nodes heights
-            return static_cast<avl_tree<tkey, tvalue, tkey_comporator>>(*reinterpret_cast<nbst::binary_search_tree<tkey, tvalue, tkey_comporator > *>(this) = tree);
-            // return nbst::binary_search_tree<tkey, tvalue, tkey_comporator>::operator=(*reinterpret_cast<nbst::binary_search_tree<tkey, tvalue, tkey_comporator > *>(this), tree);
+            if (&tree == this) {
+                return *this;
+            }
+            bst::clear();
+            bst::clone(tree);
+            return *this;
         }
 
         avl_tree(
             avl_tree<tkey, tvalue, tkey_comporator> && tree
-        ) noexcept {}
+        ) noexcept {
+            bst::_root_node = tree._root_node;
+            bst::_allocator = tree._allocator;
+            tree._root_node = nullptr;
+            tree._allocator = nullptr;
+        }
 
         avl_tree<tkey, tvalue, tkey_comporator> & operator=(
             avl_tree<tkey, tvalue, tkey_comporator> && tree
         ) noexcept {
-            return static_cast<avl_tree<tkey, tvalue, tkey_comporator> >(*reinterpret_cast<nbst::binary_search_tree<tkey, tvalue, tkey_comporator> *>(this) = std::move(tree));
-            // return nbst::binary_search_tree<tkey, tvalue, tkey_comporator>::operator=(*reinterpret_cast<nbst::binary_search_tree<tkey, tvalue, tkey_comporator> *>(this), tree);
+            if (&tree == this) {
+                return *this;
+            }
+            bst::clear();
+            bst::_root_node = tree._root_node;
+            bst::_allocator = tree._allocator;
+            tree._root_node = nullptr;
+            tree._allocator = nullptr;
+            return *this;
         }
 
         ~avl_tree() noexcept = default;

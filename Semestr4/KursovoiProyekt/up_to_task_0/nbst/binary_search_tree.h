@@ -65,7 +65,7 @@ namespace nbst {
 
             tree_node * _root_node;
 
-        private:
+        protected:
 
             void clone(binary_search_tree const & tree) {
                 prefix_iterator it_begin = const_cast<binary_search_tree &>(tree).prefix_iterator_begin();
@@ -325,7 +325,7 @@ namespace nbst {
         // Is empty implementation
         public:
 
-            bool empty() override {
+            bool empty() {
                 return _root_node == nullptr;
             }
         // ===

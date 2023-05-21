@@ -7,6 +7,16 @@ namespace ninterpritator {
 
     public:
 
+        class command {
+
+        public:
+
+            virtual void execute() = 0;
+
+            virtual ~command() = default;
+
+        };
+
         virtual void interpritate() = 0;
 
         virtual ~interpritator() = default;

@@ -25,8 +25,6 @@ namespace ncontainer {
                 tkey const & key
         ) = 0;
 
-        virtual bool empty() = 0;
-
         // ===
 
         virtual ~associative_container() = default;
