@@ -1,10 +1,13 @@
 #ifndef PIPELINE_INTERPRITERS
 #define PIPELINE_INTERPRITERS
 
+#include <map>
 #include <vector>
 
 #include "./pipeline_base.h"
 #include "./pipeline_command_invoker.h"
+#include "./commands_creator.h"
+#include "./standard_pipeline_interpriter_commands.h"
 
 namespace npipeline {
 
@@ -28,9 +31,27 @@ namespace npipeline {
 
         void interpritate() override;
 
-        ~pipeline_interpriter() = default;
+        std::map<std::string, command_creator *>  _commands = {
+            { "ADD_POOL", new add_pool::creator },
+            { "ADD_SCHEME", new add_scheme::creator },
+            { "ADD_COLLECTION", new add_collection::creator },
+            { "ADD_OR_UPDATE_NOTE", new add_or_update_note::creator },
+            { "READ_NOTE", new read_note::creator },
+            { "READ_NOTE_TIMED", new read_note_timed::creator },
+            { "REMOVE_NOTE", new remove_note::creator },
+            { "REMOVE_COLLECTION", new remove_collection::creator },
+            { "REMOVE_SCHEME", new remove_scheme::creator },
+            { "REMOVE_POOL", new remove_pool::creator },
+            { "READ_IN_RANGE", new read_in_range::creator },
+            { "RUN_FILE", new run_file::creator }
+        };
 
-        std::vector<std::string> _commands = { "ADD_POOL", "ADD_SCHEME", "ADD_COLLECTION", "ADD_OR_UPDATE_NOTE", "READ_NOTE", "REMOVE_NOTE", "REMOVE_COLLECTION", "REMOVE_SCHEME", "REMOVE_POOL", "READ_IN_RANGE", "RUN_FILE" };
+        ~pipeline_interpriter() {
+            auto it_end = _commands.end();
+            for (auto it_begin = _commands.begin(); it_begin != it_end; ++it_begin) {
+                delete it_begin->second;
+            }
+        }
 
     };
 
@@ -51,9 +72,27 @@ namespace npipeline {
 
         void interpritate() override;
 
-        ~user_interpriter() = default;
+        std::map<std::string, command_creator *>  _commands = {
+            { "add pool", new add_pool::creator },
+            { "add scheme", new add_scheme::creator },
+            { "add collection", new add_collection::creator },
+            { "add or update note", new add_or_update_note::creator },
+            { "read note", new read_note::creator },
+            { "read note timed", new read_note_timed::creator },
+            { "remove note", new remove_note::creator },
+            { "remove collection", new remove_collection::creator },
+            { "remove scheme", new remove_scheme::creator },
+            { "remove pool", new remove_pool::creator },
+            { "read in range", new read_in_range::creator },
+            { "run file", new run_file::creator }
+        };
 
-        std::vector<std::string> _commands = { "add pool", "add scheme", "add collection", "add or update note", "read note", "remove note", "remove collection", "remove scheme", "remove pool", "read in range", "run file" };
+        ~user_interpriter() {
+            auto it_end = _commands.end();
+            for (auto it_begin = _commands.begin(); it_begin != it_end; ++it_begin) {
+                delete it_begin->second;
+            }
+        }
 
     };
     

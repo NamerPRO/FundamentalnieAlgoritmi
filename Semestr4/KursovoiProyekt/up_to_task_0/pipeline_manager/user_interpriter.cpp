@@ -1,7 +1,4 @@
-#include "pipeline.h"
-#include "standard_pipeline_interpriter_commands.h"
-#include <ios>
-#include <vector>
+#include "./pipeline.h"
 
 namespace npipeline {
 
@@ -81,6 +78,19 @@ namespace npipeline {
                     std::getline(std::cin, tokens_list[6]);
                     std::cout << "Enter end build version: ";
                     std::getline(std::cin, tokens_list[7]);
+                } else if (tokens_list[0].ends_with("timed")) {
+                    std::cout << "Enter a day: ";
+                    std::getline(std::cin, tokens_list[6]);
+                    std::cout << "Enter a month: ";
+                    std::getline(std::cin, tokens_list[7]);
+                    std::cout << "Enter a year: ";
+                    std::getline(std::cin, tokens_list[8]);
+                    std::cout << "Enter hours: ";
+                    std::getline(std::cin, tokens_list[9]);
+                    std::cout << "Enter minutes: ";
+                    std::getline(std::cin, tokens_list[10]);
+                    std::cout << "Enter seconds: ";
+                    std::getline(std::cin, tokens_list[11]);
                 }
             } else if (tokens_list[0].starts_with("run")) {
                 std::cout << "Enter path to file: ";
@@ -88,7 +98,7 @@ namespace npipeline {
             }
 
             if (!tokens_list[0].empty()) {
-                ninterpritator::interpritator::command * cmd = command_helper::get_cmd_ptr_by_name(_dbase, tokens_list, std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count(), _commands, _invoker);
+                ninterpritator::interpritator::command * cmd = _commands[tokens_list[0]]->create_command(_dbase, tokens_list, std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count());
 
                 _invoker->add(cmd);
                 _invoker->invoke();

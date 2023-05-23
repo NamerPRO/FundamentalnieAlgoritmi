@@ -28,6 +28,13 @@ namespace npipeline {
                 _commands_list.pop_back();
             }
         }
+
+        ~invoker() {
+            while (!_commands_list.empty()) {
+                delete _commands_list.back();
+                _commands_list.pop_back();
+            }
+        }
     
     };
 

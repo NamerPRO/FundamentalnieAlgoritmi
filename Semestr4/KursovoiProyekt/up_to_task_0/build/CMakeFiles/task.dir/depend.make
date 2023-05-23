@@ -20,6 +20,7 @@ CMakeFiles/task.dir/main.cpp.o: ../nmemory/nlogger/nlohmann/json.hpp
 CMakeFiles/task.dir/main.cpp.o: ../nmemory/nlogger/standard_logger.h
 CMakeFiles/task.dir/main.cpp.o: ../nmemory/nlogger/standard_logger_builder.h
 CMakeFiles/task.dir/main.cpp.o: ../nsplay/splay_tree.h
+CMakeFiles/task.dir/main.cpp.o: ../pipeline_manager/commands_creator.h
 CMakeFiles/task.dir/main.cpp.o: ../pipeline_manager/pipeline.h
 CMakeFiles/task.dir/main.cpp.o: ../pipeline_manager/pipeline_base.h
 CMakeFiles/task.dir/main.cpp.o: ../pipeline_manager/pipeline_command_invoker.h
@@ -138,6 +139,7 @@ CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../nbtree/btree
 CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../nmemory/memory.h
 CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../nmemory/nlogger/logger.h
 CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../nsplay/splay_tree.h
+CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../pipeline_manager/commands_creator.h
 CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../pipeline_manager/pipeline.h
 CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../pipeline_manager/pipeline_base.h
 CMakeFiles/task.dir/pipeline_manager/pipeline_interpriter.cpp.o: ../pipeline_manager/pipeline_command_invoker.h
@@ -151,6 +153,7 @@ CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.
 CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../nbst/binary_search_tree.h
 CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../nbst/nmalloc.h
 CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../nmemory/memory.h
+CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../pipeline_manager/commands_creator.h
 CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../pipeline_manager/pipeline_base.h
 CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../pipeline_manager/pipeline_command_invoker.h
 CMakeFiles/task.dir/pipeline_manager/standard_pipeline_interpriter_commands.cpp.o: ../pipeline_manager/pipeline_interpriters.h
@@ -166,6 +169,7 @@ CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../nbtree/btree.h
 CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../nmemory/memory.h
 CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../nmemory/nlogger/logger.h
 CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../nsplay/splay_tree.h
+CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../pipeline_manager/commands_creator.h
 CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../pipeline_manager/pipeline.h
 CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../pipeline_manager/pipeline_base.h
 CMakeFiles/task.dir/pipeline_manager/user_interpriter.cpp.o: ../pipeline_manager/pipeline_command_invoker.h

@@ -1,9 +1,25 @@
 #include "./standard_pipeline_interpriter_commands.h"
-#include "./pipeline_base.h"
-#include "pipeline_command_invoker.h"
-#include "pipeline_interpriters.h"
+#include "./pipeline_interpriters.h"
+#include "pipeline_base.h"
+#include <stdexcept>
 
 namespace npipeline {
+
+    pipeline_base::pipeline_passage pipeline_base::_empty_pipeline_passage = {
+        .build_id = 0,
+        .build_version = 0,
+        .commit_information {
+            .commit_hash = 0,
+            .developer_login = "",
+            .developer_email = ""
+        },
+        .build_script_link = "",
+        .build_name = "",
+        .build_error_information = "",
+        .code_analysis_information = "",
+        .test_error_information = "",
+        .link_to_artifacts = ""
+    };
 
     void add_pool::execute() {
         pipeline_base::pool inserted_pool;
@@ -54,21 +70,49 @@ namespace npipeline {
             _test_error_information,
             _link_to_artifacts
         };
-        _dbase->find(_pool_name)
-                 .find(_scheme_name)
-                 .find(_collection_name)
-                 .insert({ _build_id, _build_version }, std::move(struct_to_insert));
+        auto & found_collection = _dbase->find(_pool_name)
+                                            .find(_scheme_name)
+                                            .find(_collection_name);
+        try {
+            found_collection.find({ _build_id, _build_version })
+                                .push_back({ _date, std::move(struct_to_insert) });
+        } catch (std::runtime_error &) {
+            found_collection.insert({ _build_id, _build_version }, { { _date, std::move(struct_to_insert) } });
+        }
     }
 
     void read_note::execute() {
-        std::cout << _dbase->find(_pool_name).find(_scheme_name).find(_collection_name).find({ _build_id, _build_version }).to_string() << std::endl;
+        auto & found_note = _dbase->find(_pool_name).find(_scheme_name).find(_collection_name).find({ _build_id, _build_version }).back().second;
+        if (found_note == pipeline_base::_empty_pipeline_passage) {
+            throw std::runtime_error("No such element exception! Could not find requested element by key.");
+        }
+        std::cout << found_note.to_string() << std::endl;
+    }
+
+    void read_note_timed::execute() {
+        auto & found_note = _dbase->find(_pool_name).find(_scheme_name).find(_collection_name).find({ _build_id, _build_version });
+        auto it_begin = found_note.begin();
+        auto it_end = found_note.end();
+        while (it_begin != it_end && it_begin->first <= _time) {
+            ++it_begin;
+        }
+        if (it_begin == found_note.begin()) {
+            throw std::runtime_error("No such element exception! Could not find requested element by key.");
+        }
+        --it_begin;
+        if (it_begin->second == pipeline_base::_empty_pipeline_passage) {
+            throw std::runtime_error("No such element exception! Could not find requested element by key.");
+        }
+        std::cout << (it_begin->second).to_string() << std::endl;
     }
 
     void remove_note::execute() {
-        _dbase->find(_pool_name)
-                 .find(_scheme_name)
-                 .find(_collection_name)
-                 .remove({ _build_id, _build_version });
+        auto & found_data = _dbase->find(_pool_name)
+                                    .find(_scheme_name)
+                                    .find(_collection_name)
+                                    .find({ _build_id, _build_version });
+        
+        found_data.push_back({ _date, std::move(pipeline_base::_empty_pipeline_passage) });
     }
 
     void read_in_range::execute() {
@@ -83,7 +127,9 @@ namespace npipeline {
         }
 
         while (true) {
-            std::cout << std::get<2>(*it_begin).to_string() << std::endl;
+            if (std::get<2>(*it_begin).back().second != pipeline_base::_empty_pipeline_passage) {
+                std::cout << std::get<2>(*it_begin).back().second.to_string() << std::endl;
+            }
             if (std::get<1>(*it_begin).build_id == _build_id_end
                     && std::get<1>(*it_begin).build_version == _build_version_end) {
                 break;
@@ -91,44 +137,11 @@ namespace npipeline {
             ++it_begin;
         }
     }
-
+    
     void run_file::execute() {
         ninterpritator::interpritator * temp_interpriter = new pipeline_interpriter(_dbase, _path_to_file, _cmd_invoker);
         temp_interpriter->interpritate();
         delete temp_interpriter;
-    }
-
-    ninterpritator::interpritator::command * command_helper::get_cmd_ptr_by_name(
-        pipeline_base::data_base * dbase,
-        std::vector<std::string> & args,
-        unsigned long long date,
-        std::vector<std::string> & commands,
-        invoker * cmd_invoker
-    ) {
-        if (args[0] == commands[0]) {
-            return new add_pool(dbase, args[1], date);
-        } else if (args[0] == commands[1]) {
-            return new add_scheme(dbase, args[1], args[2], date);
-        } else if (args[0] == commands[2]) {
-            return new add_collection(dbase, args[1], args[2], args[3], date);
-        } else if (args[0] == commands[3]) {
-            return new add_or_update_note(dbase, args[1], args[2], args[3], std::stoul(args[6]), std::stoul(args[7]), std::stoul(args[8]), args[9], args[10], args[11], args[12], args[13], args[14], args[15], args[16], date);
-        } else if (args[0] == commands[4]) {
-            return new read_note(dbase, args[1], args[2], args[3], std::stoul(args[4]), std::stoul(args[5]), date);
-        } else if (args[0] == commands[5]) {
-            return new remove_note(dbase, args[1], args[2], args[3], std::stoul(args[4]), std::stoul(args[5]), date);
-        } else if (args[0] == commands[6]) {
-            return new remove_collection(dbase, args[1], args[2], args[3], date);
-        } else if (args[0] == commands[7]) {
-            return new remove_scheme(dbase, args[1], args[2], date);
-        } else if (args[0] == commands[8]) {
-            return new remove_pool(dbase, args[1], date);
-        } else if (args[0] == commands[9]) {
-            return new read_in_range(dbase, args[1], args[2], args[3], std::stoul(args[4]), std::stoul(args[5]), std::stoul(args[6]), std::stoul(args[7]), date);
-        } else if (args[0] == commands[10]) {
-            return new run_file(dbase, args[1], cmd_invoker, date);
-        }
-        throw std::runtime_error("Undefined command exception! Cannot find input command in list.");
     }
 
 }

@@ -24,6 +24,8 @@ namespace npipeline {
                 tokens_list.push_back(std::move(token));
                 break;
 
+            case '-':
+            case '.':
             case ':':
             case '/':
             case ',':
@@ -42,8 +44,8 @@ namespace npipeline {
             if (symbol == '\n' || symbol == EOF) {
 
                 if (!tokens_list[0].empty()) {
-                    ninterpritator::interpritator::command * cmd = command_helper::get_cmd_ptr_by_name(_dbase, tokens_list, std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count(), _commands, _invoker); // REAL DATE IN MILLISECONDS HERE
-                
+                    ninterpritator::interpritator::command * cmd = _commands[tokens_list[0]]->create_command(_dbase, tokens_list, std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count());
+
                     _invoker->add(cmd);
                     _invoker->invoke();
                 }

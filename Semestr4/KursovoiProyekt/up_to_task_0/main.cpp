@@ -1,4 +1,5 @@
 #include <iostream>
+#include <new>
 #include <stdexcept>
 
 #include "navl/avl_tree.h"
@@ -9,44 +10,64 @@
 #include "pipeline_manager/pipeline.h"
 #include "nmemory/memory_boundary_descriptors.h"
 
-int main(int argc, char * argv[]) {
+int main(
+    int argc,
+    char * argv[]
+) {
+    
+    nmemory::memory * my_allocator;
 
-    nmemory::memory * my_allocator = new nmemory_standards::boundary_descriptors_memory(
-        nullptr,
-        9999999,
-        nmemory_standards::allocate_type_helper::allocate_type::first_fit,
-        nullptr
-    );
-
+    try {
+        my_allocator = new nmemory_standards::boundary_descriptors_memory(
+            nullptr,
+            9999999,
+            nmemory_standards::allocate_type_helper::allocate_type::first_fit,
+            nullptr
+        );
+    } catch (std::bad_alloc &) {
+        std::cout << "Memory allocate exception! Failed to allocate memory for allocator.";
+        return 0;
+    }
+    
     npipeline::pipeline * my_pipe;
 
-    switch (argc) {
+    try {
+        switch (argc) {
 
-    case 1: {
-        my_pipe = new npipeline::pipeline(
-            npipeline::pipeline_base::tree_type::avl,
-            npipeline::pipeline_base::interpriter_type::user_input_interpriter
-        );
-        break;
+        case 1: {
+            my_pipe = new npipeline::pipeline(
+                npipeline::pipeline_base::tree_type::avl,
+                npipeline::pipeline_base::interpriter_type::user_input_interpriter
+            );
+            break;
+        }
+
+        case 2: {
+            my_pipe = new npipeline::pipeline(
+                npipeline::pipeline_base::tree_type::avl,
+                npipeline::pipeline_base::interpriter_type::file_input_interpriter,
+                argv[1],
+                my_allocator
+            );
+            break;
+        }
+
+        default: {
+            throw std::runtime_error("Wrong arguments exception! Program requires ONE file with commands to run.");
+        }
+
+        }
+    } catch (std::bad_alloc &) {
+        std::cout << "Memory allocate exception! Failed to allocate memory for pipeline." << std::endl;
+        delete my_allocator;
+        return 0;
     }
 
-    case 2: {
-        my_pipe = new npipeline::pipeline(
-            npipeline::pipeline_base::tree_type::avl,
-            npipeline::pipeline_base::interpriter_type::file_input_interpriter,
-            argv[1],
-            my_allocator
-        );
-        break;
+    try {
+        my_pipe->run();
+    } catch (std::runtime_error & error) {
+        std::cout << error.what() << std::endl;
     }
-
-    default: {
-        throw std::runtime_error("Wrong arguments exception! Program requires ONE file with commands to run.");
-    }
-
-    }
-
-    my_pipe->run();
 
     delete my_pipe;
     delete my_allocator;
