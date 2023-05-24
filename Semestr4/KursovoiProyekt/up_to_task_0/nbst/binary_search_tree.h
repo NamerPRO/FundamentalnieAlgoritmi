@@ -149,7 +149,9 @@ namespace nbst {
 
         protected:
 
-            virtual void initialize_memory(tree_node * node_ptr) {
+            virtual void initialize_memory(
+                    tree_node * node_ptr
+            ) {
                 new (node_ptr)tree_node;
             }
 

@@ -3,6 +3,7 @@
 
 #include <list>
 #include <string>
+#include <utility>
 
 #include "../navl/avl_tree.h"
 
@@ -105,10 +106,21 @@ namespace npipeline {
 
             // Data base implementation
 
+            // Search by { build_id, build_version }
+
             using collection = navl::avl_tree<pipeline_key, std::list<std::pair<unsigned long long, pipeline_passage>>, pipeline_comporators::standard_pipeline_comporator>;
             using scheme = navl::avl_tree<std::string, collection, pipeline_comporators::standard_string_comporator>;
             using pool = navl::avl_tree<std::string, scheme, pipeline_comporators::standard_string_comporator>;
             using data_base = ncontainer::associative_container<std::string, pool, pipeline_comporators::standard_string_comporator>;
+
+            // ===
+
+            // Search by developer login
+
+            using collection_with_developer_login_key = navl::avl_tree<std::string, std::list<std::pair<unsigned long long, pipeline_passage>> *, pipeline_comporators::standard_string_comporator>;
+            using scheme_with_developer_login_key = navl::avl_tree<std::string, collection_with_developer_login_key, pipeline_comporators::standard_string_comporator>;
+            using pool_with_developer_login_key = navl::avl_tree<std::string, scheme_with_developer_login_key, pipeline_comporators::standard_string_comporator>;
+            using data_base_with_developer_login_key = ncontainer::associative_container<std::string, pool_with_developer_login_key, pipeline_comporators::standard_string_comporator>;
 
             // ===
 

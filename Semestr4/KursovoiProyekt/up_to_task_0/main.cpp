@@ -10,6 +10,10 @@
 #include "pipeline_manager/pipeline.h"
 #include "nmemory/memory_boundary_descriptors.h"
 
+// CHANGE INSERT FUNCTION IN BTREE!!!
+// PASS ALLOCATOR IN INSERT COMMANDS, SO INNER TREES CAN USE IT!!!
+// FINISH NUMBER 3!!!
+
 int main(
     int argc,
     char * argv[]
@@ -59,6 +63,10 @@ int main(
         }
     } catch (std::bad_alloc &) {
         std::cout << "Memory allocate exception! Failed to allocate memory for pipeline." << std::endl;
+        delete my_allocator;
+        return 0;
+    } catch (std::runtime_error & error) {
+        std::cout << error.what() << std::endl;
         delete my_allocator;
         return 0;
     }

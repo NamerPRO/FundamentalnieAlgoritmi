@@ -15,8 +15,8 @@ namespace npipeline {
 
         virtual ninterpritator::interpritator::command * create_command(
             pipeline_base::data_base * dbase,
-            std::vector<std::string> & args,
-            unsigned long long date
+            pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
+            std::vector<std::string> & args
         ) = 0;
 
         virtual ~command_creator() = default;

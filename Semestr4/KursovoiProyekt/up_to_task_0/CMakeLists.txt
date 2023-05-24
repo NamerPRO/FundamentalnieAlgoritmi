@@ -46,6 +46,7 @@ add_executable(
     nmemory/nlogger/standard_logger.h
     nmemory/nlogger/nlohmann/json.hpp
 
+    pipeline_manager/commands_creator.h
     pipeline_manager/pipeline_base.h
     pipeline_manager/pipeline_command_invoker.h
     pipeline_manager/pipeline_comporators.cpp

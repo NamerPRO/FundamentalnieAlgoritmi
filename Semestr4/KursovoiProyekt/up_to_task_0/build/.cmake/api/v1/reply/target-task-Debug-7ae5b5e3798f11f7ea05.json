@@ -58,10 +58,10 @@
 				27,
 				29,
 				31,
-				36,
 				37,
-				40,
-				42
+				38,
+				41,
+				43
 			]
 		}
 	],
@@ -108,10 +108,10 @@
 				27,
 				29,
 				31,
-				36,
 				37,
-				40,
-				42
+				38,
+				41,
+				43
 			]
 		},
 		{
@@ -140,10 +140,11 @@
 				33,
 				34,
 				35,
-				38,
+				36,
 				39,
-				41,
-				43
+				40,
+				42,
+				44
 			]
 		}
 	],
@@ -331,6 +332,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "nmemory/nlogger/nlohmann/json.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "pipeline_manager/commands_creator.h",
 			"sourceGroupIndex" : 1
 		},
 		{

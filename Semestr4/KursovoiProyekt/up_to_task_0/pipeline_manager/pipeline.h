@@ -26,8 +26,13 @@ namespace npipeline {
 
         data_base * _dbase;
 
+        data_base_with_developer_login_key * _dbase_with_developer_login_key;
+
         ninterpritator::interpritator * _interpriter;
+
         invoker * _invoker;
+
+        nmemory::memory * _allocator;
 
     public:
 
@@ -40,19 +45,22 @@ namespace npipeline {
             interpriter_type interpriter_to_use,
             std::string && path_to_file = "",
             nmemory::memory * allocator = nullptr
-        ) : ntools::nmalloc(allocator) {
+        ) : _allocator(allocator), ntools::nmalloc(allocator) {
             switch (container_type) {
             
             case tree_type::avl:
-                _dbase = new navl::avl_tree<std::string, pool, pipeline_comporators::standard_string_comporator>(allocator);
+                _dbase = new navl::avl_tree<std::string, pool, pipeline_comporators::standard_string_comporator>(_allocator);
+                _dbase_with_developer_login_key = new navl::avl_tree<std::string, pool_with_developer_login_key, pipeline_comporators::standard_string_comporator>(_allocator);
                 break;
             
             case tree_type::splay:
-                _dbase = new nsplay::splay_tree<std::string, pool, pipeline_comporators::standard_string_comporator>(allocator);
+                _dbase = new nsplay::splay_tree<std::string, pool, pipeline_comporators::standard_string_comporator>(_allocator);
+                _dbase_with_developer_login_key = new nsplay::splay_tree<std::string, pool_with_developer_login_key, pipeline_comporators::standard_string_comporator>(_allocator);
                 break;
             
             case tree_type::btree:
-                _dbase = new nbtree::btree<std::string, pool, pipeline_comporators::standard_string_comporator>(allocator, 2);
+                _dbase = new nbtree::btree<std::string, pool, pipeline_comporators::standard_string_comporator>(_allocator, 2);
+                _dbase_with_developer_login_key = new nbtree::btree<std::string, pool_with_developer_login_key, pipeline_comporators::standard_string_comporator>(_allocator, 2);
                 break;
             
             }
@@ -62,11 +70,11 @@ namespace npipeline {
             switch (interpriter_to_use) {
 
             case interpriter_type::file_input_interpriter:
-                _interpriter = new pipeline_interpriter(_dbase, path_to_file, _invoker);
+                _interpriter = new pipeline_interpriter(_dbase, _dbase_with_developer_login_key, path_to_file, _invoker);
                 break;
 
             case interpriter_type::user_input_interpriter:
-                _interpriter = new user_interpriter(_dbase, _invoker);
+                _interpriter = new user_interpriter(_dbase, _dbase_with_developer_login_key, _invoker);
                 break;
             
             }
@@ -75,6 +83,7 @@ namespace npipeline {
         ~pipeline() {
             delete _interpriter;
             delete _dbase;
+            delete _dbase_with_developer_login_key;
             delete _invoker;
         }
 

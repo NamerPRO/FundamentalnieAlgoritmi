@@ -17,6 +17,8 @@ namespace npipeline {
 
         pipeline_base::data_base * _dbase;
 
+        pipeline_base::data_base_with_developer_login_key * _dbase_with_developer_login_key;
+
         std::string _file_to_interpritate_path;
 
         invoker * _invoker;
@@ -25,9 +27,11 @@ namespace npipeline {
 
         explicit pipeline_interpriter(
             pipeline_base::data_base * dbase,
+            pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
             std::string & file_to_interpritate_path,
             invoker * invoker
-        ) : _dbase(dbase), _file_to_interpritate_path(std::move(file_to_interpritate_path)), _invoker(invoker) {}
+        ) : _dbase(dbase), _dbase_with_developer_login_key(dbase_with_developer_login_key),
+            _file_to_interpritate_path(std::move(file_to_interpritate_path)), _invoker(invoker) {}
 
         void interpritate() override;
 
@@ -61,14 +65,17 @@ namespace npipeline {
 
         pipeline_base::data_base * _dbase;
 
+        pipeline_base::data_base_with_developer_login_key * _dbase_with_developer_login_key;
+
         invoker * _invoker;
 
     public:
 
         explicit user_interpriter(
             pipeline_base::data_base * dbase,
+            pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
             invoker * invoker
-        ) : _dbase(dbase), _invoker(invoker) {}
+        ) : _dbase(dbase), _dbase_with_developer_login_key(dbase_with_developer_login_key), _invoker(invoker) {}
 
         void interpritate() override;
 
@@ -95,8 +102,6 @@ namespace npipeline {
         }
 
     };
-    
-    // ===
 
 }
 
