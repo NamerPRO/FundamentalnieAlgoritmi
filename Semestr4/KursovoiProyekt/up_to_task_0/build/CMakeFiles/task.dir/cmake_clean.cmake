@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/task.dir/flyweight_string/string_manager.cpp.o"
   "CMakeFiles/task.dir/main.cpp.o"
   "CMakeFiles/task.dir/nbst/nmalloc.cpp.o"
   "CMakeFiles/task.dir/nmemory/buddy_memory_allocator.cpp.o"

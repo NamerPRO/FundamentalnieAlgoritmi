@@ -58,6 +58,9 @@ add_executable(
     pipeline_manager/user_interpriter.cpp
     
     interpritator_manager/interpritator.h
+
+    flyweight_string/string_manager.h
+    flyweight_string/string_manager.cpp
     )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

@@ -70,11 +70,11 @@ namespace npipeline {
             switch (interpriter_to_use) {
 
             case interpriter_type::file_input_interpriter:
-                _interpriter = new pipeline_interpriter(_dbase, _dbase_with_developer_login_key, path_to_file, _invoker);
+                _interpriter = new pipeline_interpriter(_dbase, _dbase_with_developer_login_key, path_to_file, _invoker, _allocator);
                 break;
 
             case interpriter_type::user_input_interpriter:
-                _interpriter = new user_interpriter(_dbase, _dbase_with_developer_login_key, _invoker);
+                _interpriter = new user_interpriter(_dbase, _dbase_with_developer_login_key, _invoker, _allocator);
                 break;
             
             }

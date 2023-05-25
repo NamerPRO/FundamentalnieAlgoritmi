@@ -23,30 +23,30 @@ namespace npipeline {
 
     // PASS ALLOCATOR TO EVERY INSERT COMMAND and do insert_pool()
     void add_pool::execute() {
-        pipeline_base::pool inserted_pool;
+        pipeline_base::pool inserted_pool(_allocator);
         _dbase->insert(_pool_name, std::move(inserted_pool));
 
-        pipeline_base::pool_with_developer_login_key inserted_pool_with_developer_login_key;
+        pipeline_base::pool_with_developer_login_key inserted_pool_with_developer_login_key(_allocator);
         _dbase_with_developer_login_key->insert(_pool_name, std::move(inserted_pool_with_developer_login_key));
     }
 
     void add_scheme::execute() {
-        pipeline_base::scheme inserted_scheme;
+        pipeline_base::scheme inserted_scheme(_allocator);
         _dbase->find(_pool_name)
                  .insert(_scheme_name, std::move(inserted_scheme));
 
-        pipeline_base::scheme_with_developer_login_key inserted_scheme_with_developer_login_key;
+        pipeline_base::scheme_with_developer_login_key inserted_scheme_with_developer_login_key(_allocator);
         _dbase_with_developer_login_key->find(_pool_name)
                                             .insert(_scheme_name, std::move(inserted_scheme_with_developer_login_key));
     }
 
     void add_collection::execute() {
-        pipeline_base::collection inserted_collection;
+        pipeline_base::collection inserted_collection(_allocator);
         _dbase->find(_pool_name)
                  .find(_scheme_name)
                  .insert(_collection_name, std::move(inserted_collection));
         
-        pipeline_base::collection_with_developer_login_key inserted_collection_with_developer_login_key;
+        pipeline_base::collection_with_developer_login_key inserted_collection_with_developer_login_key(_allocator);
         _dbase_with_developer_login_key->find(_pool_name)
                                             .find(_scheme_name)
                                             .insert(_collection_name, std::move(inserted_collection_with_developer_login_key));
@@ -99,18 +99,28 @@ namespace npipeline {
                                                                                                 .find(_scheme_name)
                                                                                                 .find(_collection_name);
         
+        bool throw_exception = false;
+
         try {
             auto & found_list = found_collection.find({ _build_id, _build_version });
             
-            std::string & previous_developer_login = found_list.back().second.commit_information.developer_login;
-            found_list.push_back({ _date, std::move(struct_to_insert) });
+            std::string const & previous_developer_login = found_list.back().second.commit_information.developer_login;
             
-            found_collection_with_developer_login_key.remove(previous_developer_login);
-            found_collection_with_developer_login_key.insert(_developer_login, std::move(&found_list));
+            if (previous_developer_login == _developer_login) {
+                found_list.push_back({ _date, std::move(struct_to_insert) });
+            } else {
+                throw_exception = true;
+            }
+
+            // found_collection_with_developer_login_key.insert(_developer_login, std::move(&found_list));
         } catch (std::runtime_error &) {
             found_collection.insert({ _build_id, _build_version }, { { _date, std::move(struct_to_insert) } });
             auto & reference_to_inserted_list = found_collection.find({ _build_id, _build_version });
             found_collection_with_developer_login_key.insert(_developer_login, std::move(&reference_to_inserted_list));
+        }
+
+        if (throw_exception) {
+            throw std::runtime_error("Developer login changed, but it must be immutable due to it is a possible key.");
         }
     }
 
@@ -154,13 +164,12 @@ namespace npipeline {
 
     void read_in_range::execute() {
         if (_key_type == "id+version") {
-            auto collection_tree = _dbase->find(_pool_name)
+            auto & collection_tree = _dbase->find(_pool_name)
                                             .find(_scheme_name)
                                             .find(_collection_name);
 
             auto it_begin = collection_tree.infix_iterator_begin();
-            while (std::get<1>(*it_begin).build_id != _build_id_start
-                    || std::get<1>(*it_begin).build_version != _build_version_start) {
+            while (std::get<1>(*it_begin).build_id != _build_id_start || std::get<1>(*it_begin).build_version != _build_version_start) {
                 ++it_begin;
             }
 
@@ -168,14 +177,13 @@ namespace npipeline {
                 if (std::get<2>(*it_begin).back().second != pipeline_base::_empty_pipeline_passage) {
                     std::cout << std::get<2>(*it_begin).back().second.to_string() << std::endl;
                 }
-                if (std::get<1>(*it_begin).build_id == _build_id_end
-                        && std::get<1>(*it_begin).build_version == _build_version_end) {
+                if (std::get<1>(*it_begin).build_id == _build_id_end && std::get<1>(*it_begin).build_version == _build_version_end) {
                     break;
                 }
                 ++it_begin;
             }
         } else {
-            auto collection_tree = _dbase_with_developer_login_key->find(_pool_name)
+            auto & collection_tree = _dbase_with_developer_login_key->find(_pool_name)
                                                                         .find(_scheme_name)
                                                                         .find(_collection_name);
 
@@ -197,7 +205,7 @@ namespace npipeline {
     }
     
     void run_file::execute() {
-        ninterpritator::interpritator * temp_interpriter = new pipeline_interpriter(_dbase, _dbase_with_developer_login_key, _path_to_file, _cmd_invoker);
+        ninterpritator::interpritator * temp_interpriter = new pipeline_interpriter(_dbase, _dbase_with_developer_login_key, _path_to_file, _cmd_invoker, _allocator);
         temp_interpriter->interpritate();
         delete temp_interpriter;
     }

@@ -1,6 +1,7 @@
 #ifndef PIPELINE_COMMAND_INVOKER
 #define PIPELINE_COMMAND_INVOKER
 
+#include <exception>
 #include <list>
 
 #include "../interpritator_manager/interpritator.h"

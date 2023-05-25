@@ -520,6 +520,33 @@ ContinuousSubmit/fast:
 	$(MAKE) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
 .PHONY : ContinuousSubmit/fast
 
+flyweight_string/string_manager.o: flyweight_string/string_manager.cpp.o
+
+.PHONY : flyweight_string/string_manager.o
+
+# target to build an object file
+flyweight_string/string_manager.cpp.o:
+	$(MAKE) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/flyweight_string/string_manager.cpp.o
+.PHONY : flyweight_string/string_manager.cpp.o
+
+flyweight_string/string_manager.i: flyweight_string/string_manager.cpp.i
+
+.PHONY : flyweight_string/string_manager.i
+
+# target to preprocess a source file
+flyweight_string/string_manager.cpp.i:
+	$(MAKE) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/flyweight_string/string_manager.cpp.i
+.PHONY : flyweight_string/string_manager.cpp.i
+
+flyweight_string/string_manager.s: flyweight_string/string_manager.cpp.s
+
+.PHONY : flyweight_string/string_manager.s
+
+# target to generate assembly for a file
+flyweight_string/string_manager.cpp.s:
+	$(MAKE) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/flyweight_string/string_manager.cpp.s
+.PHONY : flyweight_string/string_manager.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -1046,6 +1073,9 @@ help:
 	@echo "... task"
 	@echo "... ContinuousTest"
 	@echo "... ContinuousSubmit"
+	@echo "... flyweight_string/string_manager.o"
+	@echo "... flyweight_string/string_manager.i"
+	@echo "... flyweight_string/string_manager.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -1,24 +1,27 @@
 #include <iostream>
-#include <new>
 #include <stdexcept>
 
-#include "navl/avl_tree.h"
-#include "nbst/binary_search_tree.h"
-#include "nmemory/allocate_type_helper.h"
-#include "nmemory/memory.h"
-#include "nsplay/splay_tree.h"
-#include "pipeline_manager/pipeline.h"
-#include "nmemory/memory_boundary_descriptors.h"
+#include "./navl/avl_tree.h"
+#include "./nbst/binary_search_tree.h"
+#include "./nmemory/allocate_type_helper.h"
+#include "./nmemory/memory.h"
+#include "./nsplay/splay_tree.h"
+#include "./pipeline_manager/pipeline.h"
+#include "./nmemory/memory_boundary_descriptors.h"
+#include "./nmemory/buddy_memory_allocator.h"
+#include "./nmemory/sorted_list_memory.h"
 
-// CHANGE INSERT FUNCTION IN BTREE!!!
-// PASS ALLOCATOR IN INSERT COMMANDS, SO INNER TREES CAN USE IT!!!
-// FINISH NUMBER 3!!!
+// CHANGE INSERT FUNCTION IN BTREE!!! (>>>not needed<<<)
+// PASS ALLOCATOR IN INSERT COMMANDS, SO INNER TREES CAN USE IT!!! (>>>done<<<)
+// FINISH NUMBER 3!!! (>>>done<<<)
+// implement flyweight pattern for every string in interpriter commands (standard_pipeline_inter...)
+
+#include "./flyweight_string/string_manager.h"
 
 int main(
     int argc,
     char * argv[]
-) {
-    
+) { 
     nmemory::memory * my_allocator;
 
     try {

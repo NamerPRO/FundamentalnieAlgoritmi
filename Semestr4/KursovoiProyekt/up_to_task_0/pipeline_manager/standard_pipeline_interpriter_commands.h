@@ -11,6 +11,7 @@
 #include "./pipeline_command_invoker.h"
 #include "./pipeline_base.h"
 #include "./commands_creator.h"
+#include "../flyweight_string/string_manager.h"
 
 namespace npipeline {
 
@@ -20,6 +21,8 @@ namespace npipeline {
 
         pipeline_base::data_base * _dbase;
         pipeline_base::data_base_with_developer_login_key * _dbase_with_developer_login_key;
+        nmemory::memory * _allocator;
+        
         std::string _pool_name;
 
     public:
@@ -31,9 +34,10 @@ namespace npipeline {
             ninterpritator::interpritator::command * create_command(
                 pipeline_base::data_base * dbase,
                 pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
-                std::vector<std::string> & args
+                std::vector<std::string> & args,
+                nmemory::memory * allocator
             ) override {
-                return new add_pool(dbase, dbase_with_developer_login_key, args[1]);
+                return new add_pool(dbase, dbase_with_developer_login_key, args[1], allocator);
             }
 
         };
@@ -41,9 +45,10 @@ namespace npipeline {
         explicit add_pool(
             pipeline_base::data_base * dbase,
             pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
-            std::string & pool_name
+            std::string & pool_name,
+            nmemory::memory * allocator
         ) : _dbase(dbase), _dbase_with_developer_login_key(dbase_with_developer_login_key),
-            _pool_name(std::move(pool_name)) {}
+            _pool_name(std::move(pool_name)), _allocator(allocator) {}
 
         void execute() override;
 
@@ -68,7 +73,8 @@ namespace npipeline {
             ninterpritator::interpritator::command * create_command(
                 pipeline_base::data_base * dbase,
                 pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
-                std::vector<std::string> & args
+                std::vector<std::string> & args,
+                nmemory::memory * allocator
             ) override {
                 return new remove_pool(dbase, dbase_with_developer_login_key, args[1]);
             }
@@ -94,6 +100,8 @@ namespace npipeline {
 
         pipeline_base::data_base * _dbase;
         pipeline_base::data_base_with_developer_login_key * _dbase_with_developer_login_key;
+        nmemory::memory * _allocator;
+        
         std::string _pool_name;
         std::string _scheme_name;
 
@@ -106,9 +114,10 @@ namespace npipeline {
             ninterpritator::interpritator::command * create_command(
                 pipeline_base::data_base * dbase,
                 pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
-                std::vector<std::string> & args
+                std::vector<std::string> & args,
+                nmemory::memory * allocator
             ) override {
-                return new add_scheme(dbase, dbase_with_developer_login_key, args[1], args[2]);
+                return new add_scheme(dbase, dbase_with_developer_login_key, args[1], args[2], allocator);
             }
 
         };
@@ -117,9 +126,10 @@ namespace npipeline {
             pipeline_base::data_base * dbase,
             pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
             std::string & pool_name,
-            std::string & scheme_name
+            std::string & scheme_name,
+            nmemory::memory * allocator
         ) : _dbase(dbase), _dbase_with_developer_login_key(dbase_with_developer_login_key),
-            _pool_name(std::move(pool_name)), _scheme_name(std::move(scheme_name)) {}
+            _pool_name(std::move(pool_name)), _scheme_name(std::move(scheme_name)), _allocator(allocator) {}
 
         void execute() override;
 
@@ -145,7 +155,8 @@ namespace npipeline {
             ninterpritator::interpritator::command * create_command(
                 pipeline_base::data_base * dbase,
                 pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
-                std::vector<std::string> & args
+                std::vector<std::string> & args,
+                nmemory::memory * allocator
             ) override {
                 return new remove_scheme(dbase, dbase_with_developer_login_key, args[1], args[2]);
             }
@@ -172,6 +183,8 @@ namespace npipeline {
 
         pipeline_base::data_base * _dbase;
         pipeline_base::data_base_with_developer_login_key * _dbase_with_developer_login_key;
+        nmemory::memory * _allocator;
+        
         std::string _pool_name;
         std::string _scheme_name;
         std::string _collection_name;
@@ -185,9 +198,10 @@ namespace npipeline {
             ninterpritator::interpritator::command * create_command(
                 pipeline_base::data_base * dbase,
                 pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
-                std::vector<std::string> & args
+                std::vector<std::string> & args,
+                nmemory::memory * allocator
             ) override {
-                return new add_collection(dbase,dbase_with_developer_login_key, args[1], args[2], args[3]);
+                return new add_collection(dbase,dbase_with_developer_login_key, args[1], args[2], args[3], allocator);
             }
 
         };
@@ -197,9 +211,10 @@ namespace npipeline {
             pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
             std::string & pool_name,
             std::string & scheme_name,
-            std::string & collection_name
-        ) : _dbase(dbase), _dbase_with_developer_login_key(dbase_with_developer_login_key),
-            _pool_name(std::move(pool_name)), _scheme_name(std::move(scheme_name)), _collection_name(std::move(collection_name)) {}
+            std::string & collection_name,
+            nmemory::memory * allocator
+        ) : _dbase(dbase), _dbase_with_developer_login_key(dbase_with_developer_login_key), _pool_name(std::move(pool_name)),
+            _scheme_name(std::move(scheme_name)), _collection_name(std::move(collection_name)), _allocator(allocator) {}
 
         void execute() override;
 
@@ -226,7 +241,8 @@ namespace npipeline {
             ninterpritator::interpritator::command * create_command(
                 pipeline_base::data_base * dbase,
                 pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
-                std::vector<std::string> & args
+                std::vector<std::string> & args,
+                nmemory::memory * allocator
             ) override {
                 return new remove_collection(dbase, dbase_with_developer_login_key, args[1], args[2], args[3]);
             }
@@ -252,25 +268,27 @@ namespace npipeline {
 
     private:
 
+        nstring::string_factory & _factory = nstring::string_factory::get_instance();
+
         unsigned long long _date = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
 
         pipeline_base::data_base * _dbase;
         pipeline_base::data_base_with_developer_login_key * _dbase_with_developer_login_key;
 
-        std::string _pool_name;
-        std::string _scheme_name;
-        std::string _collection_name;
+        std::string const & _pool_name;
+        std::string const & _scheme_name;
+        std::string const & _collection_name;
         unsigned long _build_id;
         unsigned long _build_version;
         unsigned long _commit_hash;
-        std::string _developer_login;
-        std::string _developer_email;
-        std::string _build_script_link;
-        std::string _build_name;
-        std::string _build_error_information;
-        std::string _code_analysis_information;
-        std::string _test_error_information;
-        std::string _link_to_artifacts;
+        std::string const & _developer_login;
+        std::string const & _developer_email;
+        std::string const & _build_script_link;
+        std::string const & _build_name;
+        std::string const & _build_error_information;
+        std::string const & _code_analysis_information;
+        std::string const & _test_error_information;
+        std::string const & _link_to_artifacts;
 
     public:
 
@@ -281,7 +299,8 @@ namespace npipeline {
             ninterpritator::interpritator::command * create_command(
                 pipeline_base::data_base * dbase,
                 pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
-                std::vector<std::string> & args
+                std::vector<std::string> & args,
+                nmemory::memory * allocator
             ) override {
                 return new add_or_update_note(dbase, dbase_with_developer_login_key, args[1], args[2], args[3], std::stoul(args[6]), std::stoul(args[7]), std::stoul(args[8]), args[9], args[10], args[11], args[12], args[13], args[14], args[15], args[16]);
             }
@@ -305,13 +324,13 @@ namespace npipeline {
             std::string & code_analysis_information,
             std::string & test_error_information,
             std::string & link_to_artifacts
-        ) : _dbase(dbase), _dbase_with_developer_login_key(dbase_with_developer_login_key), _pool_name(std::move(pool_name)),
-            _scheme_name(std::move(scheme_name)), _collection_name(std::move(collection_name)),
+        ) : _dbase(dbase), _dbase_with_developer_login_key(dbase_with_developer_login_key), _pool_name(_factory.get_string(std::move(pool_name))),
+            _scheme_name(std::move(_factory.get_string(scheme_name))), _collection_name(_factory.get_string(std::move(collection_name))),
             _build_id(build_id), _build_version(build_version), _commit_hash(commit_hash),
-            _developer_login(std::move(developer_login)), _developer_email(std::move(developer_email)),
-            _build_script_link(std::move(build_script_link)), _build_name(std::move(build_name)),
-            _build_error_information(std::move(build_error_information)), _code_analysis_information(std::move(code_analysis_information)),
-            _test_error_information(std::move(test_error_information)), _link_to_artifacts(std::move(link_to_artifacts)) {}
+            _developer_login(std::move(_factory.get_string(developer_login))), _developer_email(_factory.get_string(std::move(developer_email))),
+            _build_script_link(_factory.get_string(std::move(build_script_link))), _build_name(_factory.get_string(std::move(build_name))),
+            _build_error_information(_factory.get_string(std::move(build_error_information))), _code_analysis_information(_factory.get_string(std::move(code_analysis_information))),
+            _test_error_information(_factory.get_string(std::move(test_error_information))), _link_to_artifacts(_factory.get_string(std::move(link_to_artifacts))) {}
 
         void execute() override;
 
@@ -343,7 +362,8 @@ namespace npipeline {
             ninterpritator::interpritator::command * create_command(
                 pipeline_base::data_base * dbase,
                 pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
-                std::vector<std::string> & args
+                std::vector<std::string> & args,
+                nmemory::memory * allocator
             ) override {
                 if (args[4] == "id+version") {
                     return new read_note(dbase, dbase_with_developer_login_key, args[1], args[2], args[3], args[4], std::stoul(args[5]), std::stoul(args[6]), "");
@@ -399,7 +419,8 @@ namespace npipeline {
             ninterpritator::interpritator::command * create_command(
                 pipeline_base::data_base * dbase,
                 pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
-                std::vector<std::string> & args
+                std::vector<std::string> & args,
+                nmemory::memory * allocator
             ) override {
                 if (args[4] == "id+version") {
                     return new read_note_timed(dbase, dbase_with_developer_login_key, args[1], args[2], args[3], args[4], std::stoul(args[5]), std::stoul(args[6]), to_milliseconds(std::stoi(args[7]), std::stoi(args[8]), std::stoi(args[9]), std::stoi(args[10]), std::stoi(args[11]), std::stoi(args[12])), "");
@@ -474,7 +495,8 @@ namespace npipeline {
             ninterpritator::interpritator::command * create_command(
                 pipeline_base::data_base * dbase,
                 pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
-                std::vector<std::string> & args
+                std::vector<std::string> & args,
+                nmemory::memory * allocator
             ) override {
                 return new remove_note(dbase, dbase_with_developer_login_key, args[1], args[2], args[3], std::stoul(args[4]), std::stoul(args[5]));
             }
@@ -526,7 +548,8 @@ namespace npipeline {
             ninterpritator::interpritator::command * create_command(
                 pipeline_base::data_base * dbase,
                 pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
-                std::vector<std::string> & args
+                std::vector<std::string> & args,
+                nmemory::memory * allocator
             ) override {
                 if (args[4] == "id+version") {
                     return new read_in_range(dbase, dbase_with_developer_login_key, args[1], args[2], args[3], args[4], std::stoul(args[5]), std::stoul(args[6]), std::stoul(args[7]), std::stoul(args[8]), "", "");
@@ -569,6 +592,8 @@ namespace npipeline {
         pipeline_base::data_base * _dbase;
         pipeline_base::data_base_with_developer_login_key * _dbase_with_developer_login_key;
 
+        nmemory::memory * _allocator;
+
         std::string _path_to_file;
         invoker * _cmd_invoker;
 
@@ -581,9 +606,10 @@ namespace npipeline {
             ninterpritator::interpritator::command * create_command(
                 pipeline_base::data_base * dbase,
                 pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
-                std::vector<std::string> & args
+                std::vector<std::string> & args,
+                nmemory::memory * allocator
             ) override {
-                return new run_file(dbase, dbase_with_developer_login_key, args[1]);
+                return new run_file(dbase, dbase_with_developer_login_key, args[1], allocator);
             }
 
         };
@@ -591,9 +617,10 @@ namespace npipeline {
         explicit run_file(
             pipeline_base::data_base * dbase,
             pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
-            std::string & path_to_file
+            std::string & path_to_file,
+            nmemory::memory * allocator
         ) : _dbase(dbase), _dbase_with_developer_login_key(dbase_with_developer_login_key),
-            _path_to_file(std::move(path_to_file)), _cmd_invoker(new invoker) {}
+            _path_to_file(std::move(path_to_file)), _cmd_invoker(new invoker()), _allocator(allocator) {}
 
         void execute() override;
 

@@ -42,16 +42,16 @@ namespace npipeline {
                 struct {
 
                     unsigned long commit_hash;
-                    std::string developer_login;
-                    std::string developer_email;
+                    std::string const & developer_login;
+                    std::string const & developer_email;
 
                 } commit_information;
-                std::string build_script_link;
-                std::string build_name;
-                std::string build_error_information;
-                std::string code_analysis_information;
-                std::string test_error_information;
-                std::string link_to_artifacts;
+                std::string const & build_script_link;
+                std::string const & build_name;
+                std::string const & build_error_information;
+                std::string const & code_analysis_information;
+                std::string const & test_error_information;
+                std::string const & link_to_artifacts;
 
             public:
 

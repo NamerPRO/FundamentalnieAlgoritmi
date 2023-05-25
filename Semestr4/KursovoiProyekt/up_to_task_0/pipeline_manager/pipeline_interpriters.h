@@ -19,6 +19,8 @@ namespace npipeline {
 
         pipeline_base::data_base_with_developer_login_key * _dbase_with_developer_login_key;
 
+        nmemory::memory * _allocator;
+        
         std::string _file_to_interpritate_path;
 
         invoker * _invoker;
@@ -29,9 +31,11 @@ namespace npipeline {
             pipeline_base::data_base * dbase,
             pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
             std::string & file_to_interpritate_path,
-            invoker * invoker
+            invoker * invoker,
+            nmemory::memory * allocator
         ) : _dbase(dbase), _dbase_with_developer_login_key(dbase_with_developer_login_key),
-            _file_to_interpritate_path(std::move(file_to_interpritate_path)), _invoker(invoker) {}
+            _file_to_interpritate_path(std::move(file_to_interpritate_path)), _invoker(invoker),
+            _allocator(allocator) {}
 
         void interpritate() override;
 
@@ -67,6 +71,8 @@ namespace npipeline {
 
         pipeline_base::data_base_with_developer_login_key * _dbase_with_developer_login_key;
 
+        nmemory::memory * _allocator;
+        
         invoker * _invoker;
 
     public:
@@ -74,8 +80,10 @@ namespace npipeline {
         explicit user_interpriter(
             pipeline_base::data_base * dbase,
             pipeline_base::data_base_with_developer_login_key * dbase_with_developer_login_key,
-            invoker * invoker
-        ) : _dbase(dbase), _dbase_with_developer_login_key(dbase_with_developer_login_key), _invoker(invoker) {}
+            invoker * invoker,
+            nmemory::memory * allocator
+        ) : _dbase(dbase), _dbase_with_developer_login_key(dbase_with_developer_login_key),
+            _invoker(invoker), _allocator(allocator) {}
 
         void interpritate() override;
 

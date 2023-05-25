@@ -125,7 +125,7 @@ namespace npipeline {
             }
 
             if (!tokens_list[0].empty()) {
-                ninterpritator::interpritator::command * cmd = _commands[tokens_list[0]]->create_command(_dbase, _dbase_with_developer_login_key, tokens_list);
+                ninterpritator::interpritator::command * cmd = _commands[tokens_list[0]]->create_command(_dbase, _dbase_with_developer_login_key, tokens_list, _allocator);
 
                 _invoker->add(cmd);
                 _invoker->invoke();
