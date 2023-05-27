@@ -56,11 +56,14 @@ add_executable(
     pipeline_manager/standard_pipeline_interpriter_commands.cpp
     pipeline_manager/standard_pipeline_interpriter_commands.h
     pipeline_manager/user_interpriter.cpp
+    pipeline_manager/pipeline_data_save.h
     
     interpritator_manager/interpritator.h
 
     flyweight_string/string_manager.h
     flyweight_string/string_manager.cpp
+
+    iterators_manager/iterators.h
     )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

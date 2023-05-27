@@ -10,13 +10,14 @@
 #include <chrono>
 
 #include "./pipeline_base.h"
+#include "./standard_pipeline_interpriter_commands.h"
+#include "./pipeline_interpriters.h"
+#include "./pipeline_data_save.h"
+
 #include "../interpritator_manager/interpritator.h"
 
 #include "../nsplay/splay_tree.h"
 #include "../nbtree/btree.h"
-#include "../navl/avl_tree.h"
-#include "./standard_pipeline_interpriter_commands.h"
-#include "./pipeline_interpriters.h"
 
 namespace npipeline {
 
@@ -36,6 +37,10 @@ namespace npipeline {
 
     public:
 
+        tree_type _main_tree_type;
+
+    public:
+
         void run() {
             _interpriter->interpritate();
         }
@@ -45,7 +50,8 @@ namespace npipeline {
             interpriter_type interpriter_to_use,
             std::string && path_to_file = "",
             nmemory::memory * allocator = nullptr
-        ) : _allocator(allocator), ntools::nmalloc(allocator) {
+        ) : _allocator(allocator), ntools::nmalloc(allocator), _main_tree_type(container_type) {
+            
             switch (container_type) {
             
             case tree_type::avl:
@@ -78,9 +84,15 @@ namespace npipeline {
                 break;
             
             }
+
+            npipeline_tools::data_save restorer("./pipeline_save", _dbase, _dbase_with_developer_login_key, _main_tree_type);
+            restorer.restore();
         }
 
         ~pipeline() {
+            npipeline_tools::data_save saver("./pipeline_save", _dbase, _dbase_with_developer_login_key, _main_tree_type);
+            saver.save();
+
             delete _interpriter;
             delete _dbase;
             delete _dbase_with_developer_login_key;

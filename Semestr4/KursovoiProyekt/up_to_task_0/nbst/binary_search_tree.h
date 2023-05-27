@@ -8,9 +8,12 @@
 #include <tuple>
 #include <type_traits>
 
-#include "associative_container.h"
+#include "./associative_container.h"
+
 #include "./nmalloc.h"
 #include "../nmemory/memory.h"
+
+#include "../iterators_manager/iterators.h"
 
 namespace nbst {
 
@@ -463,11 +466,11 @@ namespace nbst {
             }
         // ===
 
-            // ===
+        // ===
 
         public:
 
-            class prefix_iterator final {
+            class prefix_iterator final : public niterators::iterator<prefix_iterator, tkey, tvalue> {
 
             private:
 
@@ -525,7 +528,7 @@ namespace nbst {
 
             public:
 
-                prefix_iterator & operator++() {
+                prefix_iterator & operator++() override {
                     if (is_end_iterator()) {
                         return *this;
                     }
@@ -533,7 +536,7 @@ namespace nbst {
                     return *this;
                 }
 
-                prefix_iterator operator++(int) {
+                prefix_iterator operator++(int) override {
                     if (is_end_iterator()) {
                         return *this;
                     }
@@ -542,15 +545,13 @@ namespace nbst {
                     return previous_state_iterator_copy;
                 }
 
-                bool operator==(prefix_iterator const & other) const {
-                    return _traversal.top() == other._traversal.top();
+                bool equals(
+                    prefix_iterator const & other
+                ) const override {
+                    return _traversal.top() == other._traversal.top(); 
                 }
 
-                bool operator!=(prefix_iterator const & other) const {
-                    return _traversal.top() != other._traversal.top();
-                }
-
-                std::tuple<unsigned int, tkey, tvalue> operator*() const {
+                std::tuple<unsigned int, tkey, tvalue &> operator*() const override {
                     if (is_end_iterator()) {
                         throw std::runtime_error("An attempt was made to dereference an iterator pointing to the end. But such iterator does not point to an element of the tree.");
                     } else {
@@ -568,7 +569,7 @@ namespace nbst {
                 return prefix_iterator(*this, false);
             }
 
-            class infix_iterator final{
+            class infix_iterator final : public niterators::iterator<infix_iterator, tkey, tvalue> {
 
             private:
 
@@ -638,7 +639,7 @@ namespace nbst {
 
             public:
 
-                infix_iterator & operator++() {
+                infix_iterator & operator++() override {
                     if (is_end_iterator()) {
                         return *this;
                     }
@@ -646,7 +647,7 @@ namespace nbst {
                     return *this;
                 }
 
-                infix_iterator operator++(int) {
+                infix_iterator operator++(int) override {
                     if (is_end_iterator()) {
                         return *this;
                     }
@@ -655,15 +656,13 @@ namespace nbst {
                     return previous_iterator_state_copy;
                 }
 
-                bool operator==(infix_iterator const & other) const {
+                bool equals(
+                    infix_iterator const & other
+                ) const override {
                     return _traversal.top() == other._traversal.top();
                 }
 
-                bool operator!=(infix_iterator const & other) const {
-                    return _traversal.top() != other._traversal.top();
-                }
-
-                std::tuple<unsigned int, tkey, tvalue> operator*() const {
+                std::tuple<unsigned int, tkey, tvalue &> operator*() const override {
                     if (is_end_iterator()) {
                         throw std::runtime_error("An attempt was made to dereference an iterator pointing to the end. But such iterator does not point to an element of the tree.");
                     } else {
@@ -681,7 +680,7 @@ namespace nbst {
                 return infix_iterator(*this, false);
             }
 
-            class postfix_iterator final {
+            class postfix_iterator final : public niterators::iterator<postfix_iterator, tkey, tvalue> {
 
             private:
 
@@ -759,7 +758,7 @@ namespace nbst {
 
             public:
 
-                postfix_iterator & operator++() {
+                postfix_iterator & operator++() override {
                     if (is_end_iterator()) {
                         return *this;
                     }
@@ -767,7 +766,7 @@ namespace nbst {
                     return *this;
                 }
 
-                postfix_iterator operator++(int) {
+                postfix_iterator operator++(int) override {
                     if (is_end_iterator()) {
                         return *this;
                     }
@@ -776,15 +775,13 @@ namespace nbst {
                     return previous_iterator_state_copy;
                 }
 
-                bool operator==(postfix_iterator const & other) const {
+                bool equals(
+                    postfix_iterator const & other
+                ) const override {
                     return _traversal.top() == other._traversal.top();
                 }
 
-                bool operator!=(postfix_iterator const & other) const {
-                    return _traversal.top() != other._traversal.top();
-                }
-                // вернуть const &
-                std::tuple<unsigned int, tkey, tvalue> operator*() const {
+                std::tuple<unsigned int, tkey, tvalue &> operator*() const override {
                     if (is_end_iterator()) {
                         throw std::runtime_error("An attempt was made to dereference an iterator pointing to the end. But such iterator does not point to an element of the tree.");
                     } else {

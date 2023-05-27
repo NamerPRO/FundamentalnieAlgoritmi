@@ -9,8 +9,11 @@
 #include <type_traits>
 
 #include "../nbst/associative_container.h"
+
 #include "../nmemory/nlogger/logger.h"
 #include "../nbst/nmalloc.h"
+
+#include "../iterators_manager/iterators.h"
 
 namespace nbtree {
 
@@ -575,7 +578,7 @@ namespace nbtree {
 
 public:
 
-    class prefix_iterator final {
+    class prefix_iterator final : public niterators::iterator<prefix_iterator, tkey, tvalue> {
 
     friend prefix_iterator nbtree::btree<tkey, tvalue, tkey_comporator>::prefix_iterator_begin();
     friend prefix_iterator nbtree::btree<tkey, tvalue, tkey_comporator>::prefix_iterator_end();
@@ -629,7 +632,7 @@ public:
 
     public:
 
-        prefix_iterator & operator++() {
+        prefix_iterator & operator++() override {
             if (is_end_iterator()) {
                 return *this;
             }
@@ -637,7 +640,7 @@ public:
             return *this;
         }
 
-        prefix_iterator operator++(int) {
+        prefix_iterator operator++(int) override {
             if (is_end_iterator()) {
                 return *this;
             }
@@ -646,22 +649,16 @@ public:
             return previous_iterator_state;
         }
 
-        bool operator==(
+        bool equals(
             prefix_iterator const & other
-        ) const {
+        ) const override {
             if (is_end_iterator() ^ other._traversal.empty()) {
                 return false;
             }
             return (_traversal.empty() && other._traversal.empty()) || (_traversal.top() == other._traversal.top());
         }
 
-        bool operator!=(
-            prefix_iterator const & other
-        ) const {
-            return !(*this == other);
-        }
-
-        std::tuple<unsigned int, tkey, tvalue &> operator*() const {
+        std::tuple<unsigned int, tkey, tvalue &> operator*() const override {
             if (is_end_iterator()) {
                 throw std::runtime_error("An attempt was made to dereference an iterator pointing to the end. But such iterator does not point to an element of the tree.");
             } else {
@@ -679,7 +676,7 @@ public:
         return prefix_iterator(*this, false);
     }
 
-    class infix_iterator final {
+    class infix_iterator final : niterators::iterator<infix_iterator, tkey, tvalue> {
 
     friend infix_iterator nbtree::btree<tkey, tvalue, tkey_comporator>::infix_iterator_begin();
     friend infix_iterator nbtree::btree<tkey, tvalue, tkey_comporator>::infix_iterator_end();
@@ -740,7 +737,7 @@ public:
 
     public:
 
-        infix_iterator & operator++() {
+        infix_iterator & operator++() override {
             if (is_end_iterator()) {
                 return *this;
             }
@@ -748,7 +745,7 @@ public:
             return *this;
         }
 
-        infix_iterator operator++(int) {
+        infix_iterator operator++(int) override {
             if (is_end_iterator()) {
                 return *this;
             }
@@ -757,22 +754,16 @@ public:
             return previous_iterator_state;
         }
 
-        bool operator==(
+        bool equals(
             infix_iterator const & other
-        ) const {
+        ) const override {
             if (is_end_iterator() ^ other._traversal.empty()) {
                 return false;
             }
             return (_traversal.empty() && other._traversal.empty()) || (_traversal.top() == other._traversal.top());
         }
 
-        bool operator!=(
-            infix_iterator const & other
-        ) const {
-            return !(*this == other);
-        }
-
-        std::tuple<unsigned int, tkey, tvalue &> operator*() const {
+        std::tuple<unsigned int, tkey, tvalue &> operator*() const override {
             if (is_end_iterator()) {
                 throw std::runtime_error("An attempt was made to dereference an iterator pointing to the end. But such iterator does not point to an element of the tree.");
             } else {
@@ -790,7 +781,7 @@ public:
         return infix_iterator(*this, false);
     }
 
-    class postfix_iterator final {
+    class postfix_iterator final : niterators::iterator<postfix_iterator, tkey, tvalue> {
 
     friend postfix_iterator nbtree::btree<tkey, tvalue, tkey_comporator>::postfix_iterator_begin();
     friend postfix_iterator nbtree::btree<tkey, tvalue, tkey_comporator>::postfix_iterator_end();
@@ -847,7 +838,7 @@ public:
 
     public:
 
-        postfix_iterator & operator++() {
+        postfix_iterator & operator++() override {
             if (is_end_iterator()) {
                 return *this;
             }
@@ -855,7 +846,7 @@ public:
             return *this;
         }
 
-        postfix_iterator operator++(int) {
+        postfix_iterator operator++(int) override {
             if (is_end_iterator()) {
                 return *this;
             }
@@ -864,22 +855,16 @@ public:
             return previous_iterator_state;
         }
 
-        bool operator==(
+        bool equals(
             postfix_iterator const & other
-        ) const {
+        ) const override {
             if (is_end_iterator() ^ other._traversal.empty()) {
                 return false;
             }
             return (_traversal.empty() && other._traversal.empty()) || (_traversal.top() == other._traversal.top());
         }
 
-        bool operator!=(
-            postfix_iterator const & other
-        ) const {
-            return !(*this == other);
-        }
-
-        std::tuple<unsigned int, tkey, tvalue &> operator*() const {
+        std::tuple<unsigned int, tkey, tvalue &> operator*() const override {
             if (is_end_iterator()) {
                 throw std::runtime_error("An attempt was made to dereference an iterator pointing to the end. But such iterator does not point to an element of the tree.");
             } else {

@@ -55,16 +55,18 @@ namespace npipeline {
 
             public:
 
-                std::string to_string() {
-                    return std::to_string(build_id) + '&' + std::to_string(build_version) +
-                            '&' + std::to_string(commit_information.commit_hash) + '&' + commit_information.developer_login +
-                            '&' + commit_information.developer_email + '&' + build_script_link + '&' + build_name + '&' + build_error_information +
-                            '&' + code_analysis_information + '&' + test_error_information + '&' + link_to_artifacts;
+                std::string to_string(
+                    char sep = '&'
+                ) {
+                    return std::to_string(build_id) + sep + std::to_string(build_version) +
+                            sep + std::to_string(commit_information.commit_hash) + sep + commit_information.developer_login +
+                            sep + commit_information.developer_email + sep + build_script_link + sep + build_name + sep + build_error_information +
+                            sep + code_analysis_information + sep + test_error_information + sep + link_to_artifacts;
                 }
 
                 bool operator==(
-                    pipeline_passage & rhs
-                ) {
+                    pipeline_passage const & rhs
+                ) const {
                     if (build_id == rhs.build_id && build_version == rhs.build_version && commit_information.commit_hash == rhs.commit_information.commit_hash
                             && commit_information.developer_email == rhs.commit_information.developer_email && commit_information.developer_login == rhs.commit_information.developer_login
                                 && build_script_link == rhs.build_script_link && build_name == rhs.build_name && build_error_information == rhs.build_error_information && code_analysis_information == rhs.code_analysis_information

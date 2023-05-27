@@ -26,6 +26,14 @@ namespace nstring {
 
         static string_factory & get_instance();
 
+        string_factory(
+            string_factory const & unit
+        ) = delete;
+
+        string_factory & operator=(
+            string_factory const & unit
+        ) = delete;
+
     };
 
 }

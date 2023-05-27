@@ -14,6 +14,12 @@ unordered_map
 
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/interpritator_manager/interpritator.h
 
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/iterators_manager/iterators.h
+any
+-
+tuple
+-
+
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/main.cpp
 iostream
 -
@@ -23,14 +29,16 @@ stdexcept
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/navl/avl_tree.h
 ./nbst/binary_search_tree.h
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbst/binary_search_tree.h
-./nmemory/allocate_type_helper.h
-/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/allocate_type_helper.h
-./nmemory/memory.h
-/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/memory.h
 ./nsplay/splay_tree.h
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nsplay/splay_tree.h
 ./pipeline_manager/pipeline.h
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline.h
+./pipeline_manager/pipeline_data_save.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_data_save.h
+./nmemory/allocate_type_helper.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/allocate_type_helper.h
+./nmemory/memory.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/memory.h
 ./nmemory/memory_boundary_descriptors.h
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/memory_boundary_descriptors.h
 ./nmemory/buddy_memory_allocator.h
@@ -63,12 +71,14 @@ tuple
 -
 type_traits
 -
-associative_container.h
+./associative_container.h
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbst/associative_container.h
 ./nmalloc.h
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbst/nmalloc.h
 ../nmemory/memory.h
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/memory.h
+../iterators_manager/iterators.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/iterators_manager/iterators.h
 
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbst/nmalloc.h
 ../nmemory/memory.h
@@ -93,6 +103,8 @@ type_traits
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/nlogger/logger.h
 ../nbst/nmalloc.h
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbst/nmalloc.h
+../iterators_manager/iterators.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/iterators_manager/iterators.h
 
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nmemory/allocate_type_helper.h
 
@@ -633,18 +645,18 @@ chrono
 -
 ./pipeline_base.h
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_base.h
+./standard_pipeline_interpriter_commands.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/standard_pipeline_interpriter_commands.h
+./pipeline_interpriters.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_interpriters.h
+./pipeline_data_save.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_data_save.h
 ../interpritator_manager/interpritator.h
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/interpritator_manager/interpritator.h
 ../nsplay/splay_tree.h
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nsplay/splay_tree.h
 ../nbtree/btree.h
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbtree/btree.h
-../navl/avl_tree.h
-/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/navl/avl_tree.h
-./standard_pipeline_interpriter_commands.h
-/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/standard_pipeline_interpriter_commands.h
-./pipeline_interpriters.h
-/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_interpriters.h
 
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_base.h
 list
@@ -663,6 +675,36 @@ list
 -
 ../interpritator_manager/interpritator.h
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/interpritator_manager/interpritator.h
+
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_comporators.cpp
+./pipeline_base.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_base.h
+
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_data_save.h
+cstdlib
+-
+stdexcept
+-
+string
+-
+fstream
+-
+type_traits
+-
+variant
+-
+vector
+-
+./pipeline_base.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_base.h
+../flyweight_string/string_manager.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/flyweight_string/string_manager.h
+../nbtree/btree.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbtree/btree.h
+../nbst/binary_search_tree.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/nbst/binary_search_tree.h
+../navl/avl_tree.h
+/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/navl/avl_tree.h
 
 /home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/KursovoiProyekt/up_to_task_0/pipeline_manager/pipeline_interpriter.cpp
 ./pipeline.h

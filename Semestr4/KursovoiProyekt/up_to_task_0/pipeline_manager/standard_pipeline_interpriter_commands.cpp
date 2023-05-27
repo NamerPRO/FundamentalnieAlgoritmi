@@ -111,8 +111,6 @@ namespace npipeline {
             } else {
                 throw_exception = true;
             }
-
-            // found_collection_with_developer_login_key.insert(_developer_login, std::move(&found_list));
         } catch (std::runtime_error &) {
             found_collection.insert({ _build_id, _build_version }, { { _date, std::move(struct_to_insert) } });
             auto & reference_to_inserted_list = found_collection.find({ _build_id, _build_version });
