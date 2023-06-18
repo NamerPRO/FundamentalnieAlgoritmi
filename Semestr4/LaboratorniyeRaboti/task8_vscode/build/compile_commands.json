@@ -1,0 +1,57 @@
+[
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task8.dir/main.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/main.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/main.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task8.dir/nbigint/fft.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nbigint/fft.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nbigint/fft.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task8.dir/nbigint/karacuba.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nbigint/karacuba.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nbigint/karacuba.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task8.dir/nbigint/standard_bigint.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nbigint/standard_bigint.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nbigint/standard_bigint.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task8.dir/nlogger/basics.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nlogger/basics.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nlogger/basics.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task8.dir/nlogger/cpp_time.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nlogger/cpp_time.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nlogger/cpp_time.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task8.dir/nlogger/logger_builder.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nlogger/logger_builder.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nlogger/logger_builder.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task8.dir/nlogger/logger_helper.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nlogger/logger_helper.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nlogger/logger_helper.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task8.dir/nlogger/logger.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nlogger/logger.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nlogger/logger.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task8.dir/nlogger/standard_logger_builder.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nlogger/standard_logger_builder.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nlogger/standard_logger_builder.cpp"
+},
+{
+  "directory": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++2a -o CMakeFiles/task8.dir/nlogger/standard_logger.cpp.o -c \"/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nlogger/standard_logger.cpp\"",
+  "file": "/home/petera/Рабочий стол/FundamentalnieAlgoritmi/Semestr4/LaboratorniyeRaboti/task8_vscode/nlogger/standard_logger.cpp"
+}
+]
