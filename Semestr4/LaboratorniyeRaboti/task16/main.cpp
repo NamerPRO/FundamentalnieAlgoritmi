@@ -9,8 +9,6 @@
 
 #define NUM 10000
 
-// Сделать связывание элементов в список (добавить строчку в merge и split)
-
 int main() {
 
     std::vector<int> my_vec(NUM);
@@ -61,6 +59,7 @@ int main() {
     // my_tree.remove(4);
     // my_tree.remove(5);
 
+    // my_tree.insert(2, 2);
 
     // my_tree.print(false);
 

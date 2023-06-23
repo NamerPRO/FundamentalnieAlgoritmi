@@ -621,6 +621,8 @@ namespace nbplustree {
                 std::swap(node, node_to_merge);
             }
 
+            node_to_merge->next = node->next;
+
             // We merge with left neighbour
             
             if (!node->is_leaf) {
